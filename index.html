@@ -747,6 +747,67 @@
       }
     }
 
+    /* Stacked-fraction algebraic formula (matches PDF Proposition 5) */
+    .algebra-formula--math {
+      white-space: normal;
+      line-height: 1.15;
+    }
+
+    .algebra-math-expr {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.26em;
+      direction: ltr;
+    }
+
+    .algebra-math-expr var {
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .algebra-paren-group {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .algebra-paren {
+      inline-size: 0.48em;
+      block-size: 1.92em;
+      flex-shrink: 0;
+      color: currentColor;
+    }
+
+    .algebra-frac {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.8em;
+      line-height: 1.12;
+      margin-inline: 0.04em;
+    }
+
+    .algebra-frac-num {
+      padding-block-end: 0.14em;
+      padding-inline: 0.14em;
+      border-block-end: 0.11em solid currentColor;
+      white-space: nowrap;
+    }
+
+    .algebra-frac-den {
+      padding-block-start: 0.14em;
+    }
+
+    .algebra-power {
+      align-self: flex-start;
+      margin-block-start: -0.06em;
+      margin-inline-start: -0.04em;
+      font-size: 0.68em;
+      line-height: 1;
+    }
+
     /* Combined Teorema + Pembuktian compact layout (Slide 19: Prop 6) */
     .prop-left--compact {
       padding-block-start: 8.6cqb;
@@ -2744,8 +2805,30 @@
 
           <div class="algebra-card">
             <p class="algebra-title">Bentuk Aljabar</p>
-            <p class="algebra-formula algebra-formula--compact">(m + d)(m &#8722; d) + d&#178; = m&#178; (CB=m, CD=d)</p>
-            <p class="algebra-formula algebra-formula--compact">ab + ((a &#8722; b)/2)&#178; = ((a + b)/2)&#178; (AD=a, DB=b)</p>
+            <p class="algebra-formula algebra-formula--math">
+              <span class="algebra-math-expr" role="math" aria-label="a b ditambah kurung buka a dikurangi b per 2 kurung tutup kuadrat sama dengan kurung buka a ditambah b per 2 kurung tutup kuadrat">
+                <span aria-hidden="true"><var>ab</var> +</span>
+                <span class="algebra-paren-group" aria-hidden="true">
+                  <svg class="algebra-paren" viewBox="0 0 12 48"><path d="M9.5 3 C3.5 12.5 3.5 35.5 9.5 45" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                  <span class="algebra-frac">
+                    <span class="algebra-frac-num"><var>a</var> &#8722; <var>b</var></span>
+                    <span class="algebra-frac-den">2</span>
+                  </span>
+                  <svg class="algebra-paren" viewBox="0 0 12 48"><path d="M2.5 3 C8.5 12.5 8.5 35.5 2.5 45" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                  <sup class="algebra-power">2</sup>
+                </span>
+                <span aria-hidden="true">=</span>
+                <span class="algebra-paren-group" aria-hidden="true">
+                  <svg class="algebra-paren" viewBox="0 0 12 48"><path d="M9.5 3 C3.5 12.5 3.5 35.5 9.5 45" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                  <span class="algebra-frac">
+                    <span class="algebra-frac-num"><var>a</var> + <var>b</var></span>
+                    <span class="algebra-frac-den">2</span>
+                  </span>
+                  <svg class="algebra-paren" viewBox="0 0 12 48"><path d="M2.5 3 C8.5 12.5 8.5 35.5 2.5 45" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                  <sup class="algebra-power">2</sup>
+                </span>
+              </span>
+            </p>
           </div>
         </div>
       </section>
