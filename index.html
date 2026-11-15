@@ -206,7 +206,7 @@
     }
 
     /* ============================================================
-       SLIDE 1: COVER
+       SLIDE 1: COVER & ANGGOTA KELOMPOK
        ============================================================ */
     .slide-cover {
       background: radial-gradient(circle at 82% 20%, var(--lavender) 0%, transparent 42%),
@@ -216,10 +216,10 @@
 
     .cover-paper-shadow {
       position: absolute;
-      inset-block-start: 17.5%;
+      inset-block-start: 16%;
       inset-inline-start: 16.8%;
       inline-size: 67.5%;
-      block-size: 84%;
+      block-size: 85.5%;
       background: var(--lavender-mid);
       border-radius: 1.4cqi 1.4cqi 0 0;
       transform: rotate(0.9deg);
@@ -227,42 +227,43 @@
 
     .cover-paper {
       position: absolute;
-      inset-block-start: 19.6%;
+      inset-block-start: 17.8%;
       inset-inline-start: 15.2%;
       inline-size: 67.5%;
-      block-size: 82%;
+      block-size: 84%;
       background: var(--white);
       border: 0.28cqi solid var(--paper-shadow);
       border-radius: 1.4cqi 1.4cqi 0 0;
       transform: rotate(0.9deg);
       display: grid;
       place-items: center;
-      padding-block-end: 9%;
-      padding-inline: 6%;
+      padding-block: 3.6cqb 5.5cqb;
+      padding-inline: 5.5%;
       text-align: center;
     }
 
     .cover-content {
       transform: rotate(-0.9deg);
       display: grid;
-      gap: 1.6cqb;
+      gap: 1.4cqb;
       justify-items: center;
+      inline-size: min(100%, 46cqi);
     }
 
     .cover-title {
       font-family: var(--font-display);
       font-weight: 700;
-      line-height: 1.18;
+      line-height: 1.15;
       letter-spacing: 0.02em;
       text-transform: uppercase;
       text-wrap: balance;
       color: var(--ink);
-      font-size: clamp(1.75rem, 4.35vw, 4.35rem);
+      font-size: clamp(1.65rem, 3.6vw, 4rem);
     }
 
     @supports (font-size: 1cqi) {
       .cover-title {
-        font-size: clamp(1.75rem, 4.35cqi, 4.35rem);
+        font-size: clamp(1.65rem, 3.6cqi, 4rem);
       }
     }
 
@@ -270,90 +271,53 @@
       display: inline-block;
       background: var(--butter);
       border: 0.2cqi solid var(--butter-border);
-      padding-block: 0.55cqb;
-      padding-inline: 2.2cqi;
+      padding-block: 0.45cqb;
+      padding-inline: 2cqi;
       border-radius: 999px;
       font-family: var(--font-body);
       font-weight: 700;
       line-height: 1.3;
       color: var(--ink);
-      font-size: clamp(1rem, 1.9vw, 2.3rem);
+      font-size: clamp(0.95rem, 1.68vw, 2.05rem);
     }
 
     @supports (font-size: 1cqi) {
       .cover-subtitle {
-        font-size: clamp(1rem, 1.9cqi, 2.3rem);
+        font-size: clamp(0.95rem, 1.68cqi, 2.05rem);
       }
     }
 
-    /* ============================================================
-       SLIDE 2: ANGGOTA KELOMPOK
-       ============================================================ */
-    .slide-members {
-      background: radial-gradient(circle at 86% 14%, var(--peach) 0%, transparent 38%),
-                  radial-gradient(circle at 15% 88%, var(--mint) 0%, transparent 36%),
-                  var(--bg-sky);
-    }
-
-    .members-paper-shadow {
-      position: absolute;
-      inset-block-start: 16.8%;
-      inset-inline-start: 21.8%;
-      inline-size: 67.5%;
-      block-size: 85%;
-      background: var(--paper-shadow);
-      border-radius: 1.2cqi 1.2cqi 0 0;
-    }
-
-    .members-paper {
-      position: absolute;
-      inset-block-start: 16%;
-      inset-inline-start: 19.2%;
-      inline-size: 67.5%;
-      block-size: 85.5%;
-      background-color: var(--white);
+    .cover-members-box {
+      inline-size: min(100%, 44cqi);
+      margin-block-start: 0.6cqb;
+      padding-block: 1.6cqb 1.8cqb;
+      padding-inline: 2.2cqi;
+      background-color: var(--bg-sky-soft);
       background-image:
-        linear-gradient(to right, rgba(169, 211, 245, 0.22) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(169, 211, 245, 0.22) 1px, transparent 1px);
-      background-size: 2.8cqi 2.8cqi;
-      border: 0.24cqi solid var(--paper-shadow);
-      border-radius: 1.2cqi 1.2cqi 0 0;
-      padding-block-start: 11.5cqb;
-      padding-inline: 5.5%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .members-holes {
-      position: absolute;
-      inset-block-start: 0;
-      inset-inline-start: 0;
-      inline-size: 100%;
-      block-size: 7.5cqb;
-      pointer-events: none;
-    }
-
-    .members-title {
-      font-family: var(--font-display);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      text-align: center;
-      text-wrap: balance;
-      color: var(--ink);
-      background: var(--butter);
-      border: 0.2cqi solid var(--butter-border);
-      padding-block: 0.7cqb;
-      padding-inline: 2.5cqi;
+        linear-gradient(to right, rgba(169, 211, 245, 0.24) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(169, 211, 245, 0.24) 1px, transparent 1px);
+      background-size: 2.1cqi 2.1cqi;
+      border: 0.2cqi solid var(--paper-shadow);
       border-radius: 1cqi;
-      margin-block-end: 5.5cqb;
-      font-size: clamp(1.45rem, 3.2vw, 3.4rem);
+      box-shadow: 0.3cqi 0.4cqb 0 rgba(169, 211, 245, 0.55);
+      display: grid;
+      gap: 1.3cqb;
+      justify-items: center;
+      text-align: start;
+    }
+
+    .cover-members-heading {
+      font-family: var(--font-body);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      font-size: clamp(0.85rem, 1.25vw, 1.55rem);
     }
 
     @supports (font-size: 1cqi) {
-      .members-title {
-        font-size: clamp(1.45rem, 3.2cqi, 3.4rem);
+      .cover-members-heading {
+        font-size: clamp(0.85rem, 1.25cqi, 1.55rem);
       }
     }
 
@@ -361,19 +325,19 @@
       list-style: none;
       display: grid;
       grid-template-columns: auto auto;
-      column-gap: 3.4cqi;
-      row-gap: 4.8cqb;
+      column-gap: 2.8cqi;
+      row-gap: 1.35cqb;
       align-items: center;
       inline-size: fit-content;
-      max-inline-size: 96%;
-      font-size: clamp(0.95rem, 1.72vw, 2.2rem);
+      max-inline-size: 100%;
+      font-size: clamp(0.88rem, 1.35vw, 1.75rem);
       font-weight: 700;
-      line-height: 1.3;
+      line-height: 1.28;
     }
 
     @supports (font-size: 1cqi) {
       .members-list {
-        font-size: clamp(0.95rem, 1.72cqi, 2.2rem);
+        font-size: clamp(0.88rem, 1.35cqi, 1.75rem);
       }
     }
 
@@ -384,13 +348,13 @@
     .member-name {
       display: flex;
       align-items: center;
-      gap: 1.3cqi;
+      gap: 1.05cqi;
       white-space: nowrap;
     }
 
     .member-bullet {
-      inline-size: 2.2cqi;
-      block-size: 1.6cqi;
+      inline-size: 1.85cqi;
+      block-size: 1.35cqi;
       flex-shrink: 0;
     }
 
@@ -398,14 +362,14 @@
       font-variant-numeric: tabular-nums;
       text-align: end;
       white-space: nowrap;
-      padding-block: 0.35cqb;
-      padding-inline: 1cqi;
-      border-radius: 0.6cqi;
+      padding-block: 0.25cqb;
+      padding-inline: 0.85cqi;
+      border-radius: 0.55cqi;
       background: var(--lavender);
     }
 
     /* ============================================================
-       SLIDE 3: DEFINISI
+       SLIDE 2: DEFINISI
        ============================================================ */
     .slide-definition {
       background: radial-gradient(circle at 12% 16%, var(--peach) 0%, transparent 34%),
@@ -1057,7 +1021,7 @@
 
 
     /* ============================================================
-       SLIDE 16: CLOSING (TERIMA KASIH + 2D ANIMATION & WEB AUDIO)
+       SLIDE 15: CLOSING (TERIMA KASIH + 2D ANIMATION & WEB AUDIO)
        ============================================================ */
     .presentation-viewport[data-theme="closing"] {
       background: #bae9d7;
@@ -1530,7 +1494,7 @@
       .slide-cover {
         display: grid;
         place-items: center;
-        padding: 1.5rem 1rem;
+        padding: 1.25rem 0.875rem;
       }
 
       .cover-paper-shadow {
@@ -1541,19 +1505,20 @@
         position: relative;
         inset: auto;
         inline-size: 100%;
-        max-inline-size: 32rem;
+        max-inline-size: 36rem;
         block-size: auto;
-        min-block-size: 17.5rem;
+        min-block-size: 0;
         border-radius: 1.125rem;
         border-width: 2.5px;
         transform: none;
-        padding: 2.25rem 1.25rem;
+        padding: 1.75rem 1rem 1.35rem;
         box-shadow: 0.45rem 0.5rem 0 var(--lavender-mid);
       }
 
       .cover-content {
         transform: none;
-        gap: 1rem;
+        gap: 0.9rem;
+        inline-size: 100%;
       }
 
       .cover-title {
@@ -1562,52 +1527,32 @@
 
       .cover-subtitle {
         font-size: clamp(0.95rem, 0.85rem + 1.5vw, 1.35rem);
-        padding: 0.45rem 1.25rem;
+        padding: 0.4rem 1.15rem;
         border-width: 2px;
       }
 
-      .slide-members {
-        display: grid;
-        place-items: center;
-        padding: 1.25rem 0.875rem;
-      }
-
-      .members-paper-shadow {
-        display: none;
-      }
-
-      .members-paper {
-        position: relative;
-        inset: auto;
+      .cover-members-box {
         inline-size: 100%;
-        max-inline-size: 36rem;
-        block-size: auto;
-        background-size: 22px 22px;
-        border-width: 2.5px;
-        border-radius: 1.125rem;
-        box-shadow: 0.45rem 0.5rem 0 var(--paper-shadow);
-        padding: 3.1rem 1rem 1.5rem;
-      }
-
-      .members-holes {
-        block-size: 2.2rem;
-      }
-
-      .members-title {
-        font-size: clamp(1.25rem, 1rem + 2.5vw, 1.85rem);
+        margin-block-start: 0.35rem;
+        padding: 0.95rem 0.8rem;
+        background-size: 20px 20px;
         border-width: 2px;
-        border-radius: 0.75rem;
-        padding: 0.45rem 1.1rem;
-        margin-block-end: 1.25rem;
+        border-radius: 0.9rem;
+        box-shadow: none;
+        gap: 0.75rem;
+      }
+
+      .cover-members-heading {
+        font-size: clamp(0.95rem, 0.85rem + 1vw, 1.2rem);
       }
 
       .members-list {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 0.85rem;
+        gap: 0.65rem;
         inline-size: 100%;
         max-inline-size: 100%;
-        font-size: clamp(0.95rem, 0.86rem + 0.8vw, 1.15rem);
+        font-size: clamp(0.92rem, 0.85rem + 0.7vw, 1.1rem);
       }
 
       .members-list li {
@@ -1615,10 +1560,10 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        gap: 0.45rem 0.75rem;
-        padding: 0.75rem 0.85rem;
-        border-radius: 0.75rem;
-        background: var(--bg-sky-soft);
+        gap: 0.4rem 0.75rem;
+        padding: 0.65rem 0.8rem;
+        border-radius: 0.7rem;
+        background: var(--white);
         border: 1.5px solid var(--paper-shadow);
       }
 
@@ -1633,7 +1578,7 @@
       }
 
       .member-nim {
-        font-size: 0.92rem;
+        font-size: 0.9rem;
         padding: 0.25rem 0.65rem;
         border-radius: 0.45rem;
       }
@@ -2054,7 +1999,7 @@
     /* High contrast / Forced colors safety */
     @media (forced-colors: active) {
       .cover-paper,
-      .members-paper,
+      .cover-members-box,
       .def-paper,
       .closing-paper,
       .prop-badge,
@@ -2161,9 +2106,9 @@
     <div class="slide-stage" id="slide-stage" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Slide presentasi">
 
       <!-- ========================================================
-           SLIDE 1: COVER (Geometric Drafting Theme, Bright Pastel)
+           SLIDE 1: COVER & ANGGOTA KELOMPOK
            ======================================================== -->
-      <section class="slide slide-cover" role="group" aria-roledescription="slide" aria-label="Slide 1 dari 16: Fundamentals of Geometric Algebra" data-theme="mint" data-title="Fundamentals of Geometric Algebra | Kelompok 1">
+      <section class="slide slide-cover" role="group" aria-roledescription="slide" aria-label="Slide 1 dari 15: Fundamentals of Geometric Algebra dan Anggota Kelompok" data-theme="mint" data-title="Fundamentals of Geometric Algebra | Kelompok 1">
         <!-- Geometric sparkle & right-angle doodles -->
         <svg class="decor" aria-hidden="true" style="inset-block-start:2%; inset-inline-start:15%; inline-size:4.5cqi; block-size:8cqb;" viewBox="0 0 60 60">
           <path d="M30 4 C32 22,38 28,56 30 C38 32,32 38,30 56 C28 38,22 32,4 30 C22 28,28 22,30 4Z" fill="#A9D3F5"/>
@@ -2231,6 +2176,45 @@
           <div class="cover-content">
             <h1 class="cover-title" lang="en">Fundamentals of<br>Geometric Algebra</h1>
             <p class="cover-subtitle">Kelompok 1</p>
+
+            <div class="cover-members-box">
+              <h2 class="cover-members-heading">Anggota Kelompok</h2>
+              <ul class="members-list">
+                <li>
+                  <span class="member-name">
+                    <svg class="member-bullet" aria-hidden="true" viewBox="0 0 42 26">
+                      <rect x="2" y="8" width="10" height="10" rx="2" transform="rotate(45 7 13)" fill="#FF9C97"/>
+                      <polygon points="15,4 27,13 15,22" fill="#8EA9FF"/>
+                      <polygon points="25,2 40,13 25,24" fill="#5C76D8"/>
+                    </svg>
+                    <span>Muhammad Fariyd</span>
+                  </span>
+                  <span class="member-nim">21108052610071</span>
+                </li>
+                <li>
+                  <span class="member-name">
+                    <svg class="member-bullet" aria-hidden="true" viewBox="0 0 42 26">
+                      <rect x="2" y="8" width="10" height="10" rx="2" transform="rotate(45 7 13)" fill="#FF9C97"/>
+                      <polygon points="15,4 27,13 15,22" fill="#8EA9FF"/>
+                      <polygon points="25,2 40,13 25,24" fill="#5C76D8"/>
+                    </svg>
+                    <span>Priesnayla Dafa Makarim</span>
+                  </span>
+                  <span class="member-nim">21108052610079</span>
+                </li>
+                <li>
+                  <span class="member-name">
+                    <svg class="member-bullet" aria-hidden="true" viewBox="0 0 42 26">
+                      <rect x="2" y="8" width="10" height="10" rx="2" transform="rotate(45 7 13)" fill="#FF9C97"/>
+                      <polygon points="15,4 27,13 15,22" fill="#8EA9FF"/>
+                      <polygon points="25,2 40,13 25,24" fill="#5C76D8"/>
+                    </svg>
+                    <span>Qonita Faiha Qurrotu’Aini</span>
+                  </span>
+                  <span class="member-nim">21108052610080</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -2270,132 +2254,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 2: ANGGOTA KELOMPOK (3 Members + Geometry Theme)
+           SLIDE 2: DEFINISI (Gnomon & Right-Angle Theme Graphics)
            ======================================================== -->
-      <section class="slide slide-members" role="group" aria-roledescription="slide" aria-label="Slide 2 dari 16: Anggota Kelompok" data-theme="mint" data-title="Anggota Kelompok | Fundamentals of Geometric Algebra" hidden>
-        <!-- Left pastel area blocks + 30-60-90 triangle ruler -->
-        <svg class="decor" aria-hidden="true" style="inset-block-start:0; inset-inline-start:0; inline-size:26cqi; block-size:74cqb;" viewBox="0 0 360 540">
-          <rect x="-10" y="0" width="235" height="290" rx="22" fill="#FFE2CC" stroke="#FFBFA0" stroke-width="6"/>
-          <rect x="20" y="34" width="110" height="110" rx="12" fill="#FFF1A8" opacity="0.9"/>
-          <g transform="rotate(-12 130 340)">
-            <polygon points="10,200 245,450 10,450" fill="#CCF5E1" stroke="#8EE0BA" stroke-width="6" stroke-linejoin="round"/>
-            <polygon points="48,295 148,408 48,408" fill="#DDF3FF" stroke="#8EE0BA" stroke-width="4" stroke-linejoin="round"/>
-          </g>
-        </svg>
-
-        <!-- Geometry doodles -->
-        <svg class="decor" aria-hidden="true" style="inset-block-start:3.5%; inset-inline-start:40%; inline-size:8cqi; block-size:7cqb;" viewBox="0 0 120 60">
-          <rect x="12" y="14" width="32" height="32" rx="6" fill="#CBB8FB"/>
-          <circle cx="66" cy="30" r="15" fill="#9AE8DE"/>
-          <polygon points="98,14 114,46 82,46" fill="#FF9C97"/>
-        </svg>
-        <svg class="decor" aria-hidden="true" style="inset-block-start:16%; inset-inline-end:1%; inline-size:6cqi; block-size:16cqb;" viewBox="0 0 90 140">
-          <rect x="20" y="18" width="22" height="22" rx="6" transform="rotate(-12 31 29)" fill="#CBB8FB"/>
-          <rect x="52" y="10" width="22" height="22" rx="6" transform="rotate(-12 63 21)" fill="#A9D3F5"/>
-          <rect x="12" y="54" width="22" height="22" rx="6" transform="rotate(-12 23 65)" fill="#8EE0BA"/>
-          <rect x="44" y="46" width="22" height="22" rx="6" transform="rotate(-12 55 57)" fill="#FFBFA0"/>
-          <rect x="28" y="88" width="22" height="22" rx="6" transform="rotate(-12 39 99)" fill="#CBB8FB"/>
-        </svg>
-
-        <!-- Graph-paper spiral notebook sheet -->
-        <div class="members-paper-shadow" aria-hidden="true"></div>
-        <div class="members-paper">
-          <!-- Perforated spiral holes at top of notebook -->
-          <svg class="members-holes" aria-hidden="true" viewBox="0 0 1000 72" preserveAspectRatio="none">
-            <g fill="#A9D3F5">
-              <circle cx="48" cy="36" r="14"/><circle cx="118" cy="36" r="14"/><circle cx="188" cy="36" r="14"/>
-              <circle cx="258" cy="36" r="14"/><circle cx="328" cy="36" r="14"/><circle cx="398" cy="36" r="14"/>
-              <circle cx="468" cy="36" r="14"/><circle cx="538" cy="36" r="14"/><circle cx="608" cy="36" r="14"/>
-              <circle cx="678" cy="36" r="14"/><circle cx="748" cy="36" r="14"/><circle cx="818" cy="36" r="14"/>
-              <circle cx="888" cy="36" r="14"/><circle cx="958" cy="36" r="14"/>
-            </g>
-            <g fill="none" stroke="#8EA9FF" stroke-width="10" stroke-linecap="round">
-              <path d="M48 34 C48 2,96 2,96 14"/><path d="M118 34 C118 2,166 2,166 14"/>
-              <path d="M188 34 C188 2,236 2,236 14"/><path d="M258 34 C258 2,306 2,306 14"/>
-              <path d="M328 34 C328 2,376 2,376 14"/><path d="M398 34 C398 2,446 2,446 14"/>
-              <path d="M468 34 C468 2,516 2,516 14"/><path d="M538 34 C538 2,586 2,586 14"/>
-              <path d="M608 34 C608 2,656 2,656 14"/><path d="M678 34 C678 2,726 2,726 14"/>
-              <path d="M748 34 C748 2,796 2,796 14"/><path d="M818 34 C818 2,866 2,866 14"/>
-              <path d="M888 34 C888 2,936 2,936 14"/><path d="M958 34 C958 2,996 2,996 14"/>
-            </g>
-          </svg>
-
-          <h1 class="members-title">Anggota Kelompok:</h1>
-          <ul class="members-list">
-            <li>
-              <span class="member-name">
-                <svg class="member-bullet" aria-hidden="true" viewBox="0 0 42 26">
-                  <rect x="2" y="8" width="10" height="10" rx="2" transform="rotate(45 7 13)" fill="#FF9C97"/>
-                  <polygon points="15,4 27,13 15,22" fill="#8EA9FF"/>
-                  <polygon points="25,2 40,13 25,24" fill="#5C76D8"/>
-                </svg>
-                <span>Muhammad Fariyd</span>
-              </span>
-              <span class="member-nim">21108052610071</span>
-            </li>
-            <li>
-              <span class="member-name">
-                <svg class="member-bullet" aria-hidden="true" viewBox="0 0 42 26">
-                  <rect x="2" y="8" width="10" height="10" rx="2" transform="rotate(45 7 13)" fill="#FF9C97"/>
-                  <polygon points="15,4 27,13 15,22" fill="#8EA9FF"/>
-                  <polygon points="25,2 40,13 25,24" fill="#5C76D8"/>
-                </svg>
-                <span>Priesnayla Dafa Makarim</span>
-              </span>
-              <span class="member-nim">21108052610079</span>
-            </li>
-            <li>
-              <span class="member-name">
-                <svg class="member-bullet" aria-hidden="true" viewBox="0 0 42 26">
-                  <rect x="2" y="8" width="10" height="10" rx="2" transform="rotate(45 7 13)" fill="#FF9C97"/>
-                  <polygon points="15,4 27,13 15,22" fill="#8EA9FF"/>
-                  <polygon points="25,2 40,13 25,24" fill="#5C76D8"/>
-                </svg>
-                <span>Qonita Faiha Qurrotu’Aini</span>
-              </span>
-              <span class="member-nim">21108052610080</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Pastel Lavender & Lemon Drafting Pen Top-Right -->
-        <svg class="decor" aria-hidden="true" style="inset-block-start:4.5%; inset-inline-end:2%; inline-size:32cqi; block-size:19cqb;" viewBox="0 0 480 150">
-          <g transform="rotate(-12 240 75)">
-            <path d="M46 75 L92 56 L92 94 Z" fill="#FFE2CC"/>
-            <path d="M46 75 L64 67 L64 83 Z" fill="#2B2D5C"/>
-            <rect x="90" y="54" width="328" height="42" rx="14" fill="#FFE26A"/>
-            <rect x="398" y="54" width="38" height="42" rx="12" fill="#FF9C97"/>
-            <rect x="382" y="54" width="16" height="42" fill="#8EA9FF"/>
-            <path d="M290 54 L290 40 L410 40 C418 40,422 45,422 52" fill="none" stroke="#5C76D8" stroke-width="10" stroke-linecap="round"/>
-          </g>
-        </svg>
-
-        <!-- Intersecting Geometric Tile Motif Bottom-Left -->
-        <svg class="decor" aria-hidden="true" style="inset-block-end:3%; inset-inline-start:2.5%; inline-size:13.5cqi; block-size:26cqb;" viewBox="0 0 180 180">
-          <rect x="16" y="16" width="144" height="144" rx="18" fill="#E6DCFF" stroke="#CBB8FB" stroke-width="5"/>
-          <rect x="16" y="16" width="84" height="84" rx="10" fill="#CCF5E1" stroke="#8EE0BA" stroke-width="4"/>
-          <rect x="100" y="100" width="60" height="60" rx="8" fill="#FFF1A8" stroke="#F5CF58" stroke-width="4"/>
-          <line x1="16" y1="160" x2="160" y2="16" stroke="#5C76D8" stroke-width="4" stroke-dasharray="8 6"/>
-        </svg>
-
-        <!-- Pastel Periwinkle Compass Bottom-Right -->
-        <svg class="decor" aria-hidden="true" style="inset-block-end:0; inset-inline-end:1%; inline-size:16.5cqi; block-size:62cqb;" viewBox="0 0 240 460">
-          <g transform="rotate(6 120 230)">
-            <rect x="108" y="18" width="28" height="105" rx="8" fill="#9AE8DE"/>
-            <circle cx="122" cy="138" r="24" fill="#8EA9FF"/>
-            <circle cx="122" cy="138" r="9" fill="#2B2D5C"/>
-            <path d="M106 155 L42 440 L52 444 L66 408 L120 162 Z" fill="#5C76D8"/>
-            <path d="M138 155 L198 440 L188 444 L174 408 L124 162 Z" fill="#5C76D8"/>
-            <polygon points="42,440 34,458 52,444" fill="#2B2D5C"/>
-            <polygon points="198,440 206,458 188,444" fill="#2B2D5C"/>
-          </g>
-        </svg>
-      </section>
-
-      <!-- ========================================================
-           SLIDE 3: DEFINISI (Gnomon & Right-Angle Theme Graphics)
-           ======================================================== -->
-      <section class="slide slide-definition" role="group" aria-roledescription="slide" aria-label="Slide 3 dari 16: Definisi" data-theme="mint" data-title="Definisi | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-definition" role="group" aria-roledescription="slide" aria-label="Slide 2 dari 15: Definisi" data-theme="mint" data-title="Definisi | Fundamentals of Geometric Algebra" hidden>
         <!-- Top pastel divided-segment bar motif -->
         <svg class="decor" aria-hidden="true" style="inset-block-start:2.5%; inset-inline-start:24%; inline-size:21cqi; block-size:7.5cqb;" viewBox="0 0 320 60">
           <rect x="6" y="14" width="90" height="28" rx="14" fill="#CCF5E1" stroke="#8EE0BA" stroke-width="4"/>
@@ -2471,9 +2332,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 4: PROPOSITION 1 (TEOREMA, PEMBUKTIAN & ALJABAR)
+           SLIDE 3: PROPOSITION 1 (TEOREMA, PEMBUKTIAN & ALJABAR)
            ======================================================== -->
-      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 4 dari 16: Proposition 1 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 1 | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 3 dari 15: Proposition 1 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 1 | Fundamentals of Geometric Algebra" hidden>
         <!-- Left white panel -->
         <div class="prop-left prop-left--compact">
           <!-- Left edge pastel geometric dots -->
@@ -2602,9 +2463,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 5: PROPOSITION 2 & 3 (KASUS KHUSUS PROPOSISI 1)
+           SLIDE 4: PROPOSITION 2 & 3 (KASUS KHUSUS PROPOSISI 1)
            ======================================================== -->
-      <section class="slide slide-pair" role="group" aria-roledescription="slide" aria-label="Slide 5 dari 16: Proposition 2 dan 3 - Kasus Khusus Proposisi 1" data-theme="pair" data-title="Proposition 2 &amp; 3 | Fundamentals of Geometric Algebra" data-toc-title="Proposition 2 &amp; 3" data-short-title="Prop. 2 &amp; 3" hidden>
+      <section class="slide slide-pair" role="group" aria-roledescription="slide" aria-label="Slide 4 dari 15: Proposition 2 dan 3 - Kasus Khusus Proposisi 1" data-theme="pair" data-title="Proposition 2 &amp; 3 | Fundamentals of Geometric Algebra" data-toc-title="Proposition 2 &amp; 3" data-short-title="Prop. 2 &amp; 3" hidden>
         <h1 class="visually-hidden">Proposition 2 dan Proposition 3 &mdash; Kasus Khusus Proposisi 1</h1>
 
         <!-- Left card: Proposition 2 -->
@@ -2750,9 +2611,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 6: PROPOSITION 4 (TEOREMA, PEMBUKTIAN & ALJABAR)
+           SLIDE 5: PROPOSITION 4 (TEOREMA, PEMBUKTIAN & ALJABAR)
            ======================================================== -->
-      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 6 dari 16: Proposition 4 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 4 | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 5 dari 15: Proposition 4 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 4 | Fundamentals of Geometric Algebra" hidden>
         <!-- Left white panel -->
         <div class="prop-left prop-left--compact">
           <svg class="decor" aria-hidden="true" style="inset-block-start:3%; inset-inline-start:0.6%; inline-size:4.2cqi; block-size:90cqb;" viewBox="0 0 70 640">
@@ -2888,9 +2749,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 7: PROPOSITION 5 (TEOREMA, PEMBUKTIAN & ALJABAR)
+           SLIDE 6: PROPOSITION 5 (TEOREMA, PEMBUKTIAN & ALJABAR)
            ======================================================== -->
-      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 7 dari 16: Proposition 5 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 5 | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 6 dari 15: Proposition 5 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 5 | Fundamentals of Geometric Algebra" hidden>
         <!-- Left white panel -->
         <div class="prop-left prop-left--compact">
           <svg class="decor" aria-hidden="true" style="inset-block-start:3%; inset-inline-start:0.6%; inline-size:4.2cqi; block-size:90cqb;" viewBox="0 0 70 640">
@@ -3057,9 +2918,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 8: PROPOSITION 6 (TEOREMA, PEMBUKTIAN & ALJABAR)
+           SLIDE 7: PROPOSITION 6 (TEOREMA, PEMBUKTIAN & ALJABAR)
            ======================================================== -->
-      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 8 dari 16: Proposition 6 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 6 | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 7 dari 15: Proposition 6 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 6 | Fundamentals of Geometric Algebra" hidden>
         <!-- Left white panel -->
         <div class="prop-left prop-left--compact">
           <svg class="decor" aria-hidden="true" style="inset-block-start:3%; inset-inline-start:0.6%; inline-size:4.2cqi; block-size:90cqb;" viewBox="0 0 70 640">
@@ -3208,9 +3069,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 9: PROPOSITION 7 (TEOREMA, PEMBUKTIAN & ALJABAR)
+           SLIDE 8: PROPOSITION 7 (TEOREMA, PEMBUKTIAN & ALJABAR)
            ======================================================== -->
-      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 9 dari 16: Proposition 7 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 7 | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 8 dari 15: Proposition 7 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 7 | Fundamentals of Geometric Algebra" hidden>
         <!-- Left white panel -->
         <div class="prop-left prop-left--compact">
           <svg class="decor" aria-hidden="true" style="inset-block-start:3%; inset-inline-start:0.6%; inline-size:4.2cqi; block-size:90cqb;" viewBox="0 0 70 640">
@@ -3354,9 +3215,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 10: PROPOSITION 8 (TEOREMA, PEMBUKTIAN & ALJABAR)
+           SLIDE 9: PROPOSITION 8 (TEOREMA, PEMBUKTIAN & ALJABAR)
            ======================================================== -->
-      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 10 dari 16: Proposition 8 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 8 | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 9 dari 15: Proposition 8 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 8 | Fundamentals of Geometric Algebra" hidden>
         <!-- Left white panel -->
         <div class="prop-left prop-left--compact">
           <svg class="decor" aria-hidden="true" style="inset-block-start:3%; inset-inline-start:0.6%; inline-size:4.2cqi; block-size:90cqb;" viewBox="0 0 70 640">
@@ -3522,9 +3383,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 11: PROPOSITION 9 (TEOREMA, PEMBUKTIAN & ALJABAR)
+           SLIDE 10: PROPOSITION 9 (TEOREMA, PEMBUKTIAN & ALJABAR)
            ======================================================== -->
-      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 11 dari 16: Proposition 9 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 9 | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 10 dari 15: Proposition 9 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 9 | Fundamentals of Geometric Algebra" hidden>
         <!-- Left white panel -->
         <div class="prop-left prop-left--compact">
           <svg class="decor" aria-hidden="true" style="inset-block-start:3%; inset-inline-start:0.6%; inline-size:4.2cqi; block-size:90cqb;" viewBox="0 0 70 640">
@@ -3663,9 +3524,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 12: PROPOSITION 10 (TEOREMA, PEMBUKTIAN & ALJABAR)
+           SLIDE 11: PROPOSITION 10 (TEOREMA, PEMBUKTIAN & ALJABAR)
            ======================================================== -->
-      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 12 dari 16: Proposition 10 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 10 | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 11 dari 15: Proposition 10 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 10 | Fundamentals of Geometric Algebra" hidden>
         <!-- Left white panel -->
         <div class="prop-left prop-left--compact">
           <svg class="decor" aria-hidden="true" style="inset-block-start:3%; inset-inline-start:0.6%; inline-size:4.2cqi; block-size:90cqb;" viewBox="0 0 70 640">
@@ -3803,9 +3664,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 13: PROPOSITION 11 (TEOREMA, PEMBUKTIAN & ALJABAR)
+           SLIDE 12: PROPOSITION 11 (TEOREMA, PEMBUKTIAN & ALJABAR)
            ======================================================== -->
-      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 13 dari 16: Proposition 11 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 11 | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 12 dari 15: Proposition 11 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 11 | Fundamentals of Geometric Algebra" hidden>
         <!-- Left white panel -->
         <div class="prop-left prop-left--compact">
           <svg class="decor" aria-hidden="true" style="inset-block-start:3%; inset-inline-start:0.6%; inline-size:4.2cqi; block-size:90cqb;" viewBox="0 0 70 640">
@@ -3945,9 +3806,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 14: PROPOSITION 12 & 13 (GENERALISASI PYTHAGORAS)
+           SLIDE 13: PROPOSITION 12 & 13 (GENERALISASI PYTHAGORAS)
            ======================================================== -->
-      <section class="slide slide-pair" role="group" aria-roledescription="slide" aria-label="Slide 14 dari 16: Proposition 12 dan 13 - Generalisasi Pythagoras" data-theme="pair" data-title="Proposition 12 &amp; 13 | Fundamentals of Geometric Algebra" data-toc-title="Proposition 12 &amp; 13" data-short-title="Prop. 12 &amp; 13" hidden>
+      <section class="slide slide-pair" role="group" aria-roledescription="slide" aria-label="Slide 13 dari 15: Proposition 12 dan 13 - Generalisasi Pythagoras" data-theme="pair" data-title="Proposition 12 &amp; 13 | Fundamentals of Geometric Algebra" data-toc-title="Proposition 12 &amp; 13" data-short-title="Prop. 12 &amp; 13" hidden>
         <h1 class="visually-hidden">Proposition 12 dan Proposition 13 &mdash; Generalisasi Teorema Pythagoras</h1>
 
         <!-- Left card: Proposition 12 (Obtuse triangle) -->
@@ -4119,9 +3980,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 15: PROPOSITION 14 (TEOREMA, PEMBUKTIAN & ALJABAR)
+           SLIDE 14: PROPOSITION 14 (TEOREMA, PEMBUKTIAN & ALJABAR)
            ======================================================== -->
-      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 15 dari 16: Proposition 14 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 14 | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-prop" role="group" aria-roledescription="slide" aria-label="Slide 14 dari 15: Proposition 14 - Teorema, Pembuktian, dan Bentuk Aljabar" data-theme="split" data-title="Proposition 14 | Fundamentals of Geometric Algebra" hidden>
         <!-- Left white panel -->
         <div class="prop-left prop-left--compact">
           <svg class="decor" aria-hidden="true" style="inset-block-start:3%; inset-inline-start:0.6%; inline-size:4.2cqi; block-size:90cqb;" viewBox="0 0 70 640">
@@ -4262,9 +4123,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 16: PENUTUP (TERIMA KASIH + ANIMASI 2D & WEB AUDIO)
+           SLIDE 15: PENUTUP (TERIMA KASIH + ANIMASI 2D & WEB AUDIO)
            ======================================================== -->
-      <section class="slide slide-closing" id="slide-closing" role="group" aria-roledescription="slide" aria-label="Slide 16 dari 16: Terima Kasih" data-theme="closing" data-title="Terima Kasih | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-closing" id="slide-closing" role="group" aria-roledescription="slide" aria-label="Slide 15 dari 15: Terima Kasih" data-theme="closing" data-title="Terima Kasih | Fundamentals of Geometric Algebra" hidden>
         <!-- Ambient pastel desk doodles & right geometric folder corner -->
         <svg class="decor" aria-hidden="true" style="inset-block-start:11%; inset-inline-start:44.5%; inline-size:8cqi; block-size:10cqb;" viewBox="0 0 120 90">
           <path d="M18 68 C28 60, 26 42, 42 36 C56 31, 68 38, 78 24 C84 16, 94 12, 102 18 C108 24, 100 38, 86 42 C72 46, 62 52, 56 64 C50 76, 32 82, 18 76 Z" fill="#9AC5B7" opacity="0.72"/>
@@ -4446,7 +4307,7 @@
     </button>
 
     <button type="button" class="mobile-nav-toc-btn" id="mobile-btn-toc" aria-haspopup="dialog" aria-controls="mobile-toc-dialog" aria-expanded="false">
-      <span class="mobile-nav-toc-count" id="mobile-toc-count">1/16</span>
+      <span class="mobile-nav-toc-count" id="mobile-toc-count">1/15</span>
       <span class="mobile-nav-toc-label" id="mobile-toc-label">Sampul</span>
       <span aria-hidden="true">&#9662;</span>
     </button>
@@ -4489,13 +4350,10 @@
     let pointerStartY = null;
 
     function getSlideTocMeta(slideEl, index) {
-      if (index === 0) {
-        return { title: 'Sampul Materi', shortTitle: 'Sampul', kind: 'Pengantar', kindClass: 'intro' };
+      if (index === 0 || slideEl.classList.contains('slide-cover')) {
+        return { title: 'Sampul & Anggota Kelompok', shortTitle: 'Sampul', kind: 'Pengantar', kindClass: 'intro' };
       }
-      if (index === 1) {
-        return { title: 'Anggota Kelompok', shortTitle: 'Anggota', kind: 'Pengantar', kindClass: 'intro' };
-      }
-      if (index === 2) {
+      if (slideEl.classList.contains('slide-definition')) {
         return { title: 'Definisi', shortTitle: 'Definisi', kind: 'Pengantar', kindClass: 'intro' };
       }
       if (slideEl.id === 'slide-closing' || index === totalSlides - 1) {
@@ -4817,7 +4675,7 @@
     });
 
     /**
-     * Final closing slide (Slide 16): staged 2D animations + pure Web Audio chime.
+     * Final closing slide (Slide 15): staged 2D animations + pure Web Audio chime.
      */
     function initClosingSlide(slideEl) {
       if (!slideEl) return;
