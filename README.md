@@ -4,7 +4,7 @@ Media pembelajaran interaktif berbasis web untuk materi **Fundamentals of Geomet
 
 ## Daftar Slide (15 Slide)
 - **Slide 1**: Sampul & Anggota Kelompok (`Fundamentals of Geometric Algebra | Kelompok 1`)
-- **Slide 2**: Definisi
+- **Slide 2**: Pengantar Materi
 - **Slide 3**: Proposisi 1 (Teorema, Pembuktian, Diagram Geometris & Bentuk Aljabar)
 - **Slide 4**: Proposisi 2 & 3 (Kasus Khusus Proposisi 1)
 - **Slide 5–12**: Proposisi 4–11 (Teorema, Pembuktian, Diagram Geometris & Bentuk Aljabar)

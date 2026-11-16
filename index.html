@@ -369,9 +369,9 @@
     }
 
     /* ============================================================
-       SLIDE 2: DEFINISI
+       SLIDE 2: PENGANTAR MATERI
        ============================================================ */
-    .slide-definition {
+    .slide-intro {
       background: radial-gradient(circle at 12% 16%, var(--peach) 0%, transparent 34%),
                   radial-gradient(circle at 88% 82%, var(--lavender) 0%, transparent 36%),
                   var(--bg-sky);
@@ -389,15 +389,15 @@
 
     .def-paper {
       position: absolute;
-      inset-block-start: 22.2%;
+      inset-block-start: 21.5%;
       inset-inline-start: 10.5%;
       inline-size: 79%;
-      block-size: 79.5%;
+      block-size: 80%;
       background: var(--white);
       border: 0.24cqi solid var(--paper-shadow);
       border-radius: 1.4cqi 1.4cqi 0 0;
-      padding-block: 5.5cqb 4cqb;
-      padding-inline: 6.5cqi 8cqi;
+      padding-block: 3.8cqb 3.2cqb;
+      padding-inline: 4.8cqi;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -412,49 +412,124 @@
       color: var(--ink);
       background: var(--mint);
       border: 0.2cqi solid var(--mint-mid);
-      padding-block: 0.6cqb;
-      padding-inline: 2.8cqi;
+      padding-block: 0.55cqb;
+      padding-inline: 2.6cqi;
       border-radius: 1cqi;
-      margin-block-end: 4.2cqb;
-      font-size: clamp(1.5rem, 3.45vw, 3.6rem);
+      margin-block-end: 3cqb;
+      font-size: clamp(1.35rem, 2.9vw, 3.2rem);
     }
 
-    @supports (font-size: 1cqi) {
-      .def-title {
-        font-size: clamp(1.5rem, 3.45cqi, 3.6rem);
-      }
-    }
-
-    .def-list {
-      display: grid;
-      gap: 2.8cqb;
+    .intro-body {
       inline-size: 100%;
-      max-inline-size: 56ch;
-      padding-inline-start: 2.4cqi;
-      font-size: clamp(0.92rem, 1.75vw, 2.25rem);
+      flex: 1;
+      min-block-size: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1.38fr) minmax(0, 0.92fr);
+      gap: 2.6cqi;
+      align-items: center;
+    }
+
+    .intro-copy {
+      min-inline-size: 0;
+      display: grid;
+      gap: 1.75cqb;
+      font-size: clamp(0.84rem, 1.34vw, 1.88rem);
       font-weight: 600;
-      line-height: 1.48;
+      line-height: 1.44;
       color: var(--ink);
       text-wrap: pretty;
     }
 
-    @supports (font-size: 1cqi) {
-      .def-list {
-        font-size: clamp(0.92rem, 1.75cqi, 2.25rem);
-      }
+    .intro-formula-box {
+      padding-block: 1.35cqb;
+      padding-inline: 1.6cqi;
+      background: var(--bg-sky-soft);
+      border: 0.18cqi solid var(--paper-shadow);
+      border-radius: 1cqi;
+      display: grid;
+      gap: 0.55cqb;
+      justify-items: center;
+      text-align: center;
     }
 
-    .def-list li {
-      padding-inline-start: 1.2cqi;
+    .intro-formula-lead {
+      font-size: clamp(0.78rem, 1.18vw, 1.62rem);
+      font-weight: 600;
+      color: var(--ink-muted);
     }
 
-    .def-list li::marker {
-      font-weight: 800;
-      color: var(--periwinkle-deep);
+    .intro-formula-main {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 1.95vw, 2.45rem);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: var(--ink);
     }
 
-    .def-italic {
+    .intro-formula-main var,
+    .intro-mini-caption var {
       font-style: italic;
+      font-weight: 700;
+    }
+
+    .intro-mini-card {
+      inline-size: 100%;
+      min-inline-size: 0;
+      padding: 1.25cqi;
+      background: var(--bg-sky-soft);
+      border: 0.2cqi solid var(--paper-shadow);
+      border-radius: 1.15cqi;
+      display: grid;
+      gap: 0.9cqb;
+      justify-items: center;
+    }
+
+    .intro-mini-frame {
+      inline-size: 100%;
+      background-color: var(--white);
+      background-image:
+        linear-gradient(to right, var(--paper-grid) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--paper-grid) 1px, transparent 1px);
+      background-size: 2.2cqi 2.2cqi;
+      border: 0.24cqi solid var(--paper-shadow);
+      border-radius: 0.85cqi;
+      padding: 0.75cqi;
+      display: grid;
+      place-items: center;
+    }
+
+    .intro-mini-frame svg {
+      display: block;
+      inline-size: 100%;
+      max-inline-size: 18cqi;
+      block-size: auto;
+    }
+
+    .intro-mini-caption {
+      font-size: clamp(0.68rem, 0.92vw, 1.28rem);
+      font-weight: 700;
+      line-height: 1.32;
+      text-align: center;
+      text-wrap: balance;
+      color: var(--ink);
+    }
+
+    @supports (font-size: 1cqi) {
+      .def-title {
+        font-size: clamp(1.35rem, 2.9cqi, 3.2rem);
+      }
+      .intro-copy {
+        font-size: clamp(0.84rem, 1.34cqi, 1.88rem);
+      }
+      .intro-formula-lead {
+        font-size: clamp(0.78rem, 1.18cqi, 1.62rem);
+      }
+      .intro-formula-main {
+        font-size: clamp(1rem, 1.95cqi, 2.45rem);
+      }
+      .intro-mini-caption {
+        font-size: clamp(0.68rem, 0.92cqi, 1.28rem);
+      }
     }
 
     /* ============================================================
@@ -557,6 +632,38 @@
       padding-inline-start: 0.4cqi;
       margin-block-end: 0.2cqb;
       font-weight: 700;
+    }
+
+    .prop1-section-label {
+      padding-inline-start: 0.4cqi;
+      margin-block-end: -0.25cqb;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(0.84rem, 1.42vw, 1.9rem);
+      line-height: 1.2;
+      color: var(--periwinkle-deep);
+    }
+
+    .prop1-prose {
+      padding-inline-start: 0.4cqi;
+      display: grid;
+      gap: 0.95cqb;
+    }
+
+    .prop1-bullets {
+      list-style: disc;
+      padding-inline-start: 2.1cqi;
+      display: grid;
+      gap: 0.45cqb;
+    }
+
+    .prop1-bullets li {
+      padding-inline-start: 0.25cqi;
+    }
+
+    .prop1-bullets li::marker {
+      color: var(--periwinkle-deep);
+      font-weight: 800;
     }
 
     .prop1-steps-list {
@@ -784,21 +891,35 @@
     }
 
     .prop-left--compact .prop1-quote {
-      margin-block-end: 1.6cqb;
-      padding-block: 1.05cqb;
+      margin-block-end: 1.25cqb;
+      padding-block: 0.98cqb;
       padding-inline: 1.25cqi;
       line-height: 1.34;
       font-size: clamp(0.78rem, 1.34vw, 1.82rem);
     }
 
     .prop-left--compact .prop1-proof-stack {
-      gap: 1.15cqb;
+      gap: 0.85cqb;
       line-height: 1.32;
-      font-size: clamp(0.75rem, 1.22vw, 1.72rem);
+      font-size: clamp(0.75rem, 1.2vw, 1.68rem);
+    }
+
+    .prop-left--compact .prop1-section-label {
+      font-size: clamp(0.8rem, 1.28vw, 1.72rem);
+      margin-block-end: -0.15cqb;
+    }
+
+    .prop-left--compact .prop1-prose {
+      gap: 0.72cqb;
+    }
+
+    .prop-left--compact .prop1-bullets {
+      gap: 0.34cqb;
+      padding-inline-start: 1.85cqi;
     }
 
     .prop-left--compact .prop1-steps-list {
-      gap: 0.95cqb;
+      gap: 0.82cqb;
     }
 
     .prop-left--compact .prop1-equation {
@@ -807,11 +928,17 @@
     }
 
     @supports (font-size: 1cqi) {
+      .prop1-section-label {
+        font-size: clamp(0.84rem, 1.42cqi, 1.9rem);
+      }
       .prop-left--compact .prop1-quote {
         font-size: clamp(0.78rem, 1.34cqi, 1.82rem);
       }
       .prop-left--compact .prop1-proof-stack {
-        font-size: clamp(0.75rem, 1.22cqi, 1.72rem);
+        font-size: clamp(0.75rem, 1.2cqi, 1.68rem);
+      }
+      .prop-left--compact .prop1-section-label {
+        font-size: clamp(0.8rem, 1.28cqi, 1.72rem);
       }
     }
 
@@ -911,15 +1038,31 @@
       min-inline-size: 0;
       display: flex;
       flex-direction: column;
-      gap: 0.9cqb;
+      gap: 0.58cqb;
       font-weight: 600;
-      line-height: 1.36;
-      font-size: clamp(0.72rem, 1.06vw, 1.4rem);
+      line-height: 1.32;
+      font-size: clamp(0.7rem, 0.98vw, 1.32rem);
+    }
+
+    .pair-proof-stack .prop1-section-label {
+      padding-inline-start: 0;
+      margin-block-end: -0.05cqb;
+      font-size: clamp(0.76rem, 1.12vw, 1.48rem);
+    }
+
+    .pair-proof-stack .prop1-prose {
+      padding-inline-start: 0;
+      gap: 0.48cqb;
+    }
+
+    .pair-proof-stack .prop1-bullets {
+      padding-inline-start: 1.45cqi;
+      gap: 0.28cqb;
     }
 
     .pair-proof-stack .prop1-steps-list {
       padding-inline-start: 0;
-      gap: 0.82cqb;
+      gap: 0.72cqb;
     }
 
     .pair-proof-stack .prop1-steps-list li {
@@ -1003,7 +1146,10 @@
         font-size: clamp(0.72rem, 1.04cqi, 1.4rem);
       }
       .pair-proof-stack {
-        font-size: clamp(0.72rem, 1.06cqi, 1.4rem);
+        font-size: clamp(0.7rem, 0.98cqi, 1.32rem);
+      }
+      .pair-proof-stack .prop1-section-label {
+        font-size: clamp(0.76rem, 1.12cqi, 1.48rem);
       }
       .pair-proof-stack .step-num {
         font-size: clamp(0.65rem, 0.92cqi, 1.2rem);
@@ -1583,7 +1729,7 @@
         border-radius: 0.45rem;
       }
 
-      .slide-definition {
+      .slide-intro {
         display: grid;
         place-items: center;
         padding: 1.25rem 0.875rem;
@@ -1597,7 +1743,7 @@
         position: relative;
         inset: auto;
         inline-size: 100%;
-        max-inline-size: 38rem;
+        max-inline-size: 40rem;
         block-size: auto;
         border-width: 2.5px;
         border-radius: 1.125rem;
@@ -1606,22 +1752,61 @@
       }
 
       .def-title {
-        font-size: clamp(1.3rem, 1rem + 2.5vw, 1.95rem);
+        font-size: clamp(1.25rem, 1rem + 2.2vw, 1.85rem);
         border-width: 2px;
         border-radius: 0.75rem;
-        padding: 0.45rem 1.3rem;
+        padding: 0.45rem 1.2rem;
         margin-block-end: 1.15rem;
       }
 
-      .def-list {
-        gap: 0.95rem;
-        padding-inline-start: 1.4rem;
-        font-size: clamp(0.95rem, 0.88rem + 0.8vw, 1.18rem);
-        line-height: 1.55;
+      .intro-body {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.15rem;
       }
 
-      .def-list li {
-        padding-inline-start: 0.35rem;
+      .intro-copy {
+        gap: 0.9rem;
+        font-size: clamp(0.92rem, 0.86rem + 0.65vw, 1.08rem);
+        line-height: 1.52;
+      }
+
+      .intro-formula-box {
+        padding: 0.85rem 0.95rem;
+        border-width: 1.5px;
+        border-radius: 0.8rem;
+        gap: 0.35rem;
+      }
+
+      .intro-formula-lead {
+        font-size: clamp(0.84rem, 0.8rem + 0.45vw, 0.96rem);
+      }
+
+      .intro-formula-main {
+        font-size: clamp(1.1rem, 0.95rem + 1.4vw, 1.55rem);
+      }
+
+      .intro-mini-card {
+        max-inline-size: 22rem;
+        margin-inline: auto;
+        padding: 0.8rem;
+        border-width: 1.5px;
+        border-radius: 0.85rem;
+        gap: 0.6rem;
+      }
+
+      .intro-mini-frame {
+        border-width: 1.5px;
+        border-radius: 0.65rem;
+        background-size: 18px 18px;
+        padding: 0.55rem;
+      }
+
+      .intro-mini-frame svg {
+        max-inline-size: 14rem;
+      }
+
+      .intro-mini-caption {
+        font-size: clamp(0.8rem, 0.76rem + 0.45vw, 0.95rem);
       }
 
       .slide-prop {
@@ -1667,6 +1852,28 @@
       .prop1-intro {
         padding-inline-start: 0;
         margin-block-end: 0;
+      }
+
+      .prop1-section-label,
+      .prop-left--compact .prop1-section-label,
+      .pair-proof-stack .prop1-section-label {
+        padding-inline-start: 0;
+        margin-block-end: 0;
+        font-size: clamp(0.96rem, 0.9rem + 0.6vw, 1.14rem);
+      }
+
+      .prop1-prose,
+      .prop-left--compact .prop1-prose,
+      .pair-proof-stack .prop1-prose {
+        padding-inline-start: 0;
+        gap: 0.65rem;
+      }
+
+      .prop1-bullets,
+      .prop-left--compact .prop1-bullets,
+      .pair-proof-stack .prop1-bullets {
+        padding-inline-start: 1.35rem;
+        gap: 0.42rem;
       }
 
       .prop1-steps-list,
@@ -2001,6 +2208,9 @@
       .cover-paper,
       .cover-members-box,
       .def-paper,
+      .intro-formula-box,
+      .intro-mini-card,
+      .intro-mini-frame,
       .closing-paper,
       .prop-badge,
       .prop1-quote,
@@ -2254,9 +2464,9 @@
       </section>
 
       <!-- ========================================================
-           SLIDE 2: DEFINISI (Gnomon & Right-Angle Theme Graphics)
+           SLIDE 2: PENGANTAR MATERI (Subdivided Square Motif)
            ======================================================== -->
-      <section class="slide slide-definition" role="group" aria-roledescription="slide" aria-label="Slide 2 dari 15: Definisi" data-theme="mint" data-title="Definisi | Fundamentals of Geometric Algebra" hidden>
+      <section class="slide slide-intro" role="group" aria-roledescription="slide" aria-label="Slide 2 dari 15: Pengantar Materi" data-theme="mint" data-title="Pengantar Materi | Fundamentals of Geometric Algebra" hidden>
         <!-- Top pastel divided-segment bar motif -->
         <svg class="decor" aria-hidden="true" style="inset-block-start:2.5%; inset-inline-start:24%; inline-size:21cqi; block-size:7.5cqb;" viewBox="0 0 320 60">
           <rect x="6" y="14" width="90" height="28" rx="14" fill="#CCF5E1" stroke="#8EE0BA" stroke-width="4"/>
@@ -2273,23 +2483,77 @@
         <!-- White framed paper -->
         <div class="def-paper-shadow" aria-hidden="true"></div>
         <div class="def-paper">
-          <h1 class="def-title">Definisi</h1>
-          <ol class="def-list">
-            <li class="def-italic">Setiap jajaran genjang persegi panjang (<span lang="en">rectanguler parallelogram</span>) dikatakan dilingkupi (dibentuk) oleh dua garis lurus yang memuat sudut siku-siku.</li>
-            <li>Dalam setiap figur jajaran genjang (figur persegi panjang), ambilah salah satu jajaran genjang (persegi panjang) di sekitar diagonalnya, (diambil) bersama kedua komplemennya, sebagai gnomon.</li>
-          </ol>
+          <h1 class="def-title">Pengantar Materi</h1>
+          <div class="intro-body">
+            <div class="intro-copy">
+              <p>Buku II dari <em>Elements</em> karya Euclid membahas hubungan antara garis, persegi panjang, dan persegi dalam geometri. Secara sederhana, Euclid menunjukkan bahwa hubungan yang dikenal sebagai rumus aljabar ternyata dapat dibuktikan menggunakan bangun-bangun geometri.</p>
+
+              <div class="intro-formula-box" role="region" aria-label="Contoh identitas aljabar">
+                <span class="intro-formula-lead">Contohnya, identitas aljabar berikut:</span>
+                <p class="intro-formula-main">(<var>a</var> + <var>b</var>)<sup>2</sup> = <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> + 2<var>ab</var></p>
+              </div>
+
+              <p>Euclid membuktikan hubungan itu dengan membagi sebuah persegi menjadi beberapa bagian, kemudian menunjukkan bahwa jumlah luas seluruh bagian tersebut sama dengan luas persegi semula.</p>
+            </div>
+
+            <figure class="intro-mini-card">
+              <div class="intro-mini-frame">
+                <svg viewBox="0 0 264 252" role="img" aria-labelledby="intro-sq-title">
+                  <title id="intro-sq-title">Diagram pembagian persegi bersisi a + b menjadi a kuadrat, dua ab, dan b kuadrat</title>
+                  <!-- Subdivided square (a + b)^2: x=50..230 (180), y=34..214 (180); cut at a=108, b=72 -->
+                  <rect x="50" y="34" width="108" height="108" fill="#CCF5E1" stroke="#3EA381" stroke-width="2.5"/>
+                  <rect x="158" y="34" width="72" height="108" fill="#FFE2CC" stroke="#FFBFA0" stroke-width="2.5"/>
+                  <rect x="50" y="142" width="108" height="72" fill="#FFE2CC" stroke="#FFBFA0" stroke-width="2.5"/>
+                  <rect x="158" y="142" width="72" height="72" fill="#FFF1A8" stroke="#F5CF58" stroke-width="2.5"/>
+                  <!-- Outer square border & inner partition lines -->
+                  <rect x="50" y="34" width="180" height="180" fill="none" stroke="#2B2D5C" stroke-width="3"/>
+                  <line x1="158" y1="34" x2="158" y2="214" stroke="#2B2D5C" stroke-width="2.5"/>
+                  <line x1="50" y1="142" x2="230" y2="142" stroke="#2B2D5C" stroke-width="2.5"/>
+
+                  <!-- Top segment labels a and b -->
+                  <line x1="50" y1="22" x2="230" y2="22" stroke="#5C76D8" stroke-width="1.8"/>
+                  <line x1="50" y1="16" x2="50" y2="28" stroke="#5C76D8" stroke-width="1.8"/>
+                  <line x1="158" y1="16" x2="158" y2="28" stroke="#5C76D8" stroke-width="1.8"/>
+                  <line x1="230" y1="16" x2="230" y2="28" stroke="#5C76D8" stroke-width="1.8"/>
+                  <text x="104" y="16" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="16" font-style="italic" fill="#2B2D5C">a</text>
+                  <text x="194" y="16" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="16" font-style="italic" fill="#2B2D5C">b</text>
+
+                  <!-- Left segment labels a and b -->
+                  <line x1="36" y1="34" x2="36" y2="214" stroke="#5C76D8" stroke-width="1.8"/>
+                  <line x1="30" y1="34" x2="42" y2="34" stroke="#5C76D8" stroke-width="1.8"/>
+                  <line x1="30" y1="142" x2="42" y2="142" stroke="#5C76D8" stroke-width="1.8"/>
+                  <line x1="30" y1="214" x2="42" y2="214" stroke="#5C76D8" stroke-width="1.8"/>
+                  <text x="20" y="93" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="16" font-style="italic" fill="#2B2D5C">a</text>
+                  <text x="20" y="183" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="16" font-style="italic" fill="#2B2D5C">b</text>
+
+                  <!-- Bottom total span (a + b) -->
+                  <line x1="50" y1="228" x2="230" y2="228" stroke="#2B2D5C" stroke-width="1.8"/>
+                  <line x1="50" y1="222" x2="50" y2="234" stroke="#2B2D5C" stroke-width="1.8"/>
+                  <line x1="230" y1="222" x2="230" y2="234" stroke="#2B2D5C" stroke-width="1.8"/>
+                  <text x="140" y="246" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="15" fill="#2B2D5C"><tspan font-style="italic">a</tspan> + <tspan font-style="italic">b</tspan></text>
+
+                  <!-- Sub-region area labels -->
+                  <text x="104" y="94" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="22" fill="#2B2D5C"><tspan font-style="italic">a</tspan><tspan dy="-8" font-size="14">2</tspan></text>
+                  <text x="194" y="94" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="20" font-style="italic" fill="#2B2D5C">ab</text>
+                  <text x="104" y="184" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="20" font-style="italic" fill="#2B2D5C">ab</text>
+                  <text x="194" y="185" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="21" fill="#2B2D5C"><tspan font-style="italic">b</tspan><tspan dy="-8" font-size="13">2</tspan></text>
+                </svg>
+              </div>
+              <figcaption class="intro-mini-caption">Luas persegi = <var>a</var><sup>2</sup> + <var>ab</var> + <var>ab</var> + <var>b</var><sup>2</sup> = <var>a</var><sup>2</sup> + <var>b</var><sup>2</sup> + 2<var>ab</var></figcaption>
+            </figure>
+          </div>
         </div>
 
-        <!-- Gnomon & Diagonal Geometric Figure Top-Left -->
+        <!-- Subdivided Pastel Square Motif Top-Left -->
         <svg class="decor" aria-hidden="true" style="inset-block-start:3%; inset-inline-start:2%; inline-size:16.5cqi; block-size:29cqb;" viewBox="0 0 220 220">
           <g transform="rotate(-8 110 110)">
-            <rect x="20" y="20" width="180" height="180" rx="18" fill="#FFF1A8" stroke="#F5CF58" stroke-width="6"/>
-            <!-- Gnomon L-shape highlight -->
-            <path d="M28,28 L192,28 L192,192 L122,192 L122,98 L28,98 Z" fill="#FFE2CC"/>
-            <!-- Inner square around diagonal -->
-            <rect x="28" y="98" width="94" height="94" fill="#CCF5E1" stroke="#3EA381" stroke-width="4"/>
-            <line x1="28" y1="192" x2="192" y2="28" stroke="#5C76D8" stroke-width="5" stroke-dasharray="10 7"/>
-            <circle cx="122" cy="98" r="6" fill="#2B2D5C"/>
+            <rect x="20" y="20" width="180" height="180" rx="18" fill="#FFFFFF" stroke="#A9D3F5" stroke-width="6"/>
+            <rect x="28" y="28" width="98" height="98" rx="10" fill="#CCF5E1" stroke="#8EE0BA" stroke-width="4"/>
+            <rect x="132" y="28" width="60" height="98" rx="10" fill="#FFE2CC" stroke="#FFBFA0" stroke-width="4"/>
+            <rect x="28" y="132" width="98" height="60" rx="10" fill="#FFE2CC" stroke="#FFBFA0" stroke-width="4"/>
+            <rect x="132" y="132" width="60" height="60" rx="10" fill="#FFF1A8" stroke="#F5CF58" stroke-width="4"/>
+            <line x1="28" y1="192" x2="192" y2="28" stroke="#5C76D8" stroke-width="4.5" stroke-dasharray="10 7"/>
+            <circle cx="129" cy="129" r="6" fill="#2B2D5C"/>
           </g>
         </svg>
 
@@ -2371,31 +2635,15 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Garis lurus <strong>a</strong> (tak terpotong) dan garis alas yang terbagi menjadi potongan <strong>b</strong>, <strong>c</strong>, dan <strong>d</strong> membentuk luas persegi panjang:</p>
-
-            <ol class="prop1-steps-list">
-              <li>
-                <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi Persegi Panjang Keseluruhan:</strong> Bentuk persegi panjang setinggi <strong>a</strong> dengan alas total sepanjang <strong>b + c + d</strong>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Tarik Garis Pembagi Tegak:</strong> Dari setiap batas potongan <strong>b</strong>, <strong>c</strong>, dan <strong>d</strong> ditarik garis tegak sejajar setinggi <strong>a</strong> hingga alas terbagi tiga bagian.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Identifikasi Bagian Luas:</strong> Persegi panjang keseluruhan tersusun tepat dari tiga petak: <span class="area-tag area-tag--mint">ab</span> (lebar <strong>b</strong>), <span class="area-tag area-tag--peach">ac</span> (lebar <strong>c</strong>), dan <span class="area-tag area-tag--lavender">ad</span> (lebar <strong>d</strong>).</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Kesimpulan Luas:</strong> Karena luas keseluruhan sama dengan jumlah seluruh bagiannya, diperoleh kesetaraan:</span>
-              </li>
-            </ol>
+            <p class="prop1-section-label">Penjelasan:</p>
+            <div class="prop1-prose">
+              <p>Dibentuk suatu garis <strong>a</strong> (tak terpotong) dan garis alas yang terpotong sembarang menjadi bagian <strong>b</strong>, <strong>c</strong>, dan <strong>d</strong>. Dari ujung kiri alas ditarik garis tegak lurus sepanjang <strong>a</strong>, lalu ditarik garis atas sejajar alas. Dari setiap batas potongan <strong>b</strong>, <strong>c</strong>, dan <strong>d</strong> ditarik garis tegak sejajar sisi kiri sehingga panjang seluruh garis tegaknya sama dengan <strong>a</strong>. Sehingga persegi panjang keseluruhan sama dengan jumlah persegi panjang <span class="area-tag area-tag--mint">ab</span> (<strong>a &times; b</strong>), <span class="area-tag area-tag--peach">ac</span> (<strong>a &times; c</strong>), dan <span class="area-tag area-tag--lavender">ad</span> (<strong>a &times; d</strong>).</p>
+            </div>
 
             <div class="prop1-equation">
               <span class="prop1-equation-label">Luas Persegi Panjang</span>
-              <span>= a &times; (b + c + d)</span>
-              <span class="prop1-equation-cont">= (a &times; b) + (a &times; c) + (a &times; d) = ab + ac + ad</span>
+              <span>= (a &times; b) + (a &times; c) + (a &times; d)</span>
+              <span class="prop1-equation-cont">= a(b + c + d) = ab + ac + ad</span>
             </div>
           </div>
         </div>
@@ -2487,20 +2735,10 @@
           </p>
 
           <div class="pair-proof-stack">
-            <ol class="prop1-steps-list">
-              <li>
-                <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi Persegi Bersisi a:</strong> Bentuk persegi bersisi <strong>a = b + c</strong>, lalu tarik garis tegak pemisah antara segmen <strong>b</strong> dan <strong>c</strong> menjadi <span class="area-tag area-tag--mint">ab</span> dan <span class="area-tag area-tag--peach">ac</span>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Luas Tiap Bagian:</strong> Sisi tegak sejajar memiliki tinggi penuh <strong>a</strong>, sehingga bagian kiri seluas <strong>a &times; b = ab</strong> dan bagian kanan seluas <strong>a &times; c = ac</strong>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Kesimpulan Luas:</strong> Karena persegi bersisi <strong>a</strong> tersusun tepat dari <span class="area-tag area-tag--mint">ab</span> dan <span class="area-tag area-tag--peach">ac</span>, berlaku kesamaan luas:</span>
-              </li>
-            </ol>
+            <p class="prop1-section-label">Penjelasan:</p>
+            <div class="prop1-prose">
+              <p>Pertama-tama, buat persegi bersisi <strong>a</strong> (keempat sisinya sama panjang <strong>a = b + c</strong>). Lalu tarik garis tegak pemisah antara segmen <strong>b</strong> dan <strong>c</strong>, sehingga tampak bahwa persegi <strong>a&#178;</strong> dibentuk oleh persegi panjang <span class="area-tag area-tag--mint">ab</span> (<strong>a &times; b</strong>) dan <span class="area-tag area-tag--peach">ac</span> (<strong>a &times; c</strong>). Karena kedua tingginya sama dengan sisi <strong>a</strong>, jumlah luas keduanya tepat sama dengan luas persegi utuh.</p>
+            </div>
 
             <div class="prop1-equation">
               <span class="prop1-equation-label">Luas Persegi a&#178;</span>
@@ -2564,20 +2802,10 @@
           </p>
 
           <div class="pair-proof-stack">
-            <ol class="prop1-steps-list">
-              <li>
-                <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi &amp; Perluasan:</strong> Bentuk persegi bersisi bagian <strong>c</strong> (<span class="area-tag area-tag--butter">c&#178;</span>), lalu perluas sisi alasnya sejauh <strong>b</strong> sehingga terbentuk persegi panjang selebar total <strong>a = b + c</strong>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Identifikasi Bagian Luas:</strong> Persegi panjang tersebut tersusun tepat dari <span class="area-tag area-tag--lavender">bc</span> (alas <strong>b</strong> &times; tinggi <strong>c</strong>) dan persegi <span class="area-tag area-tag--butter">c&#178;</span>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Kesimpulan Luas:</strong> Karena panjang total alas adalah <strong>a = b + c</strong> dan tingginya tepat sama dengan <strong>c</strong>, berlaku kesamaan luas:</span>
-              </li>
-            </ol>
+            <p class="prop1-section-label">Penjelasan:</p>
+            <div class="prop1-prose">
+              <p>Buat garis <strong>a</strong> lalu potong sembarang menjadi bagian <strong>b</strong> dan <strong>c</strong>. Dari sisi <strong>c</strong> ditarik garis tegak ke bawah sepanjang <strong>c</strong> sehingga terbentuk persegi <span class="area-tag area-tag--butter">c&#178;</span>, lalu sisi alasnya diperpanjang sejajar sejauh <strong>b</strong> hingga membentuk persegi panjang penuh selebar <strong>(b + c)</strong> setinggi <strong>c</strong>. Sehingga persegi panjang tersebut dibentuk oleh persegi panjang <span class="area-tag area-tag--lavender">bc</span> (<strong>b &times; c</strong>) dan persegi <span class="area-tag area-tag--butter">c&#178;</span>.</p>
+            </div>
 
             <div class="prop1-equation">
               <span class="prop1-equation-label">Luas Total</span>
@@ -2667,26 +2895,16 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Garis lurus <strong>a</strong> terpotong sembarang menjadi bagian <strong>b</strong> dan <strong>c</strong> (<strong>a = b + c</strong>). Persegi bersisi <strong>a</strong> dibelah secara vertikal &amp; horizontal:</p>
-
-            <ol class="prop1-steps-list">
-              <li>
-                <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi Persegi (b + c)&#178; &amp; Diagonal:</strong> Bentuk persegi bersisi total <strong>a = b + c</strong>, lalu tarik garis diagonal penuh yang membagi sudut siku-siku menjadi 45&deg;.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Garis Pembagi Sejajar Sisi:</strong> Pada batas antara <strong>b</strong> dan <strong>c</strong> ditarik garis tegak memotong diagonal, lalu ditarik garis mendatar sejajar alas melewati titik potong tersebut.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Identifikasi Persegi &amp; Komplemen:</strong> Karena diagonal bersudut 45&deg;, <span class="area-tag area-tag--mint">b&#178;</span> dan <span class="area-tag area-tag--butter">c&#178;</span> terbukti persegi bersisi <strong>b</strong> dan <strong>c</strong>, sedang dua komplemennya sama luas <span class="area-tag area-tag--peach">bc</span>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Kesimpulan Luas Keseluruhan:</strong> Persegi bersisi <strong>(b + c)</strong> tersusun tepat dari kedua persegi tersebut dan dua komplemen yang sama luasnya:</span>
-              </li>
-            </ol>
+            <p class="prop1-section-label">Penjelasan:</p>
+            <div class="prop1-prose">
+              <p>Buat garis lurus <strong>a</strong> lalu potong sembarang menjadi <strong>b</strong> dan <strong>c</strong> (<strong>a = b + c</strong>), kemudian buat persegi besar bersisi <strong>a</strong> dari garis tersebut. Tarik garis diagonalnya, tarik garis tegak pembagi dari batas <strong>b</strong> dan <strong>c</strong> memotong diagonal, lalu tarik garis mendatar sejajar alas melewati titik potong tersebut. Maka terbentuk 4 bangun di dalam persegi besar:</p>
+              <ul class="prop1-bullets">
+                <li>Persegi <span class="area-tag area-tag--mint">b&#178;</span> (dengan sisi <strong>b</strong>)</li>
+                <li>Persegi <span class="area-tag area-tag--butter">c&#178;</span> (dengan sisi <strong>c</strong>)</li>
+                <li>Dua persegi panjang <span class="area-tag area-tag--peach">bc</span> (masing-masing bersisi <strong>b</strong> dan <strong>c</strong>)</li>
+              </ul>
+              <p>Sehingga, seluruh bagian tersebut membentuk persegi besar bersisi <strong>(b + c)</strong>.</p>
+            </div>
 
             <div class="prop1-equation">
               <span class="prop1-equation-label">Luas Persegi a&#178;</span>
@@ -2804,31 +3022,15 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Garis utuh <strong>a + b</strong> terbagi sama besar menjadi dua potongan <strong>&frac12;(a + b)</strong> dan tak sama panjang menjadi <strong>a</strong> &amp; <strong>b</strong> (selisih titik potong = <strong>&frac12;(a &minus; b)</strong>):</p>
-
-            <ol class="prop1-steps-list">
-              <li>
-                <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi Persegi [&frac12;(a + b)]&#178;:</strong> Pada setengah garis kanan <strong>&frac12;(a + b)</strong> dibentuk persegi beserta diagonalnya; tarik garis tegak pemisah selebar <strong>b</strong> serta garis mendatar sejarak <strong>b</strong> dari sisi atas.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Kesamaan Blok Kiri dengan Jalur Bawah:</strong> Karena komplemen diagonal sama luas (<span class="area-tag area-tag--peach">b&middot;&frac12;(a&minus;b) kiri-atas</span>), jalur kiri <span class="area-tag area-tag--mint">&frac12;(a+b)&middot;b</span> tepat sama luas dengan gabungan dua petak mint kanan (<span class="area-tag area-tag--mint">b&#178; + b&middot;&frac12;(a&minus;b)</span>).</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Padankan ab dengan Gnomon:</strong> Penambahan petak peach <span class="area-tag area-tag--peach">b&middot;&frac12;(a&minus;b)</span> menyamakan blok persegi panjang penuh selebar <strong>a</strong> &times; tinggi <strong>b</strong> (luas <strong>ab</strong>) dengan bangun gnomon siku di dalam persegi besar.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Lengkapi Persegi Kuning:</strong> Persegi kecil bersisi selisih <strong>&frac12;(a &minus; b)</strong> (<span class="area-tag area-tag--butter">[&frac12;(a &minus; b)]&#178;</span>) tepat melengkapi gnomon menjadi persegi utuh <strong>[&frac12;(a + b)]&#178;</strong>:</span>
-              </li>
-            </ol>
+            <p class="prop1-section-label">Penjelasan:</p>
+            <div class="prop1-prose">
+              <p>Buat garis lurus <strong>a + b</strong>. Potong menjadi dua bagian sama panjang sebesar <strong>&frac12;(a + b)</strong>, dan potong tidak sama panjang menjadi <strong>a</strong> serta <strong>b</strong> (berselisih <strong>&frac12;(a &minus; b)</strong>). Buat persegi bersisi <strong>&frac12;(a + b)</strong> pada setengah garis kanan, tarik garis tegak batas selebar <strong>b</strong>, tarik garis diagonalnya, lalu tarik garis horizontal melewati titik potong diagonal sepanjang <strong>a + b</strong>. Dalam pembuktian luasnya, persegi panjang kiri <span class="area-tag area-tag--mint">&frac12;(a + b)&middot;b</span> sama luas dengan jalur mint kanan (<span class="area-tag area-tag--mint">b&#178; + b&middot;&frac12;(a &minus; b)</span>), sehingga persegi panjang penuh <strong>ab</strong> (<strong>a &times; b</strong>) sama luas dengan area siku <strong>bangun berbentuk L</strong>. Jika kedua area tersebut sama-sama ditambahkan persegi kecil kuning <span class="area-tag area-tag--butter">[&frac12;(a &minus; b)]&#178;</span>, maka hasilnya membentuk persegi utuh bersisi <strong>&frac12;(a + b)</strong>.</p>
+            </div>
 
             <div class="prop1-equation">
               <span class="prop1-equation-label">Luas Persegi</span>
-              <span>= Gnomon + [&frac12;(a &minus; b)]&#178; = ab + [&frac12;(a &minus; b)]&#178;</span>
-              <span class="prop1-equation-cont">&there4; ab + [&frac12;(a &minus; b)]&#178; = [&frac12;(a + b)]&#178;</span>
+              <span>= ab + [&frac12;(a &minus; b)]&#178;</span>
+              <span class="prop1-equation-cont">= [&frac12;(a + b)]&#178;</span>
             </div>
           </div>
         </div>
@@ -2856,7 +3058,7 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 280">
-                <title>Diagram pembuktian Proposisi 5: persegi panjang kiri dan petak peach seluas total ab berpadanan dengan gnomon pada persegi bersisi setengah jumlah a dan b, ditambah persegi kuning bersisi setengah selisih a dan b</title>
+                <title>Diagram pembuktian Proposisi 5: persegi panjang kiri dan petak peach seluas total ab berpadanan dengan bangun berbentuk L pada persegi bersisi setengah jumlah a dan b, ditambah persegi kuning bersisi setengah selisih a dan b</title>
                 <!-- Top brackets for unequal cut parts a and b -->
                 <line x1="24" y1="36" x2="198" y2="36" stroke="#5C76D8" stroke-width="1.8"/>
                 <line x1="24" y1="32" x2="24" y2="40" stroke="#5C76D8" stroke-width="1.8"/>
@@ -2887,7 +3089,7 @@
                 <line x1="274" y1="80" x2="149" y2="205" stroke="#5C76D8" stroke-width="2.5"/>
                 <circle cx="201" cy="153" r="4" fill="#5C76D8"/>
 
-                <!-- Dashed gnomon arc around corner (201,153) -->
+                <!-- Dashed L-shape arc around corner (201,153) -->
                 <path d="M 183 135 A 20 20 0 1 1 208 172" fill="none" stroke="#5C76D8" stroke-width="1.9" stroke-dasharray="4 3"/>
 
                 <!-- Area labels inside compartments avoiding diagonal & arc -->
@@ -2909,7 +3111,7 @@
                 <line x1="274" y1="215" x2="274" y2="225" stroke="#5C76D8" stroke-width="1.9"/>
                 <text x="211.5" y="239" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">&frac12;(a + b)</text>
 
-                <text x="160" y="264" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">ab = Gnomon &middot; Persegi utuh = [&frac12;(a + b)]&#178;</text>
+                <text x="160" y="264" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="11.5" font-weight="800">ab = bangun berbentuk L &middot; Persegi = [&frac12;(a + b)]&#178;</text>
               </svg>
             </div>
           </div>
@@ -2980,32 +3182,34 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Pembuktian memadankan persegi panjang <strong>(2a + b)&middot;b</strong> dengan gnomon siku di dalam persegi besar bersisi <strong>(a + b)</strong>:</p>
+            <p class="prop1-section-label">Penjelasan:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Bangun Persegi (a + b)&#178; &amp; Garis Bantu:</strong> Pada gabungan <strong>a + b</strong> bentuk persegi besar bersisi <strong>(a + b)</strong> beserta diagonalnya; tarik garis tegak pemisah batas <strong>a</strong> dan <strong>b</strong>, serta garis mendatar sejarak <strong>b</strong> dari sisi atas.</span>
+                <span>Buat persegi besar bersisi <strong>(a + b)</strong>, lalu tarik garis diagonal serta garis bantu sejajar melalui batas <strong>a</strong>, <strong>a</strong>, dan <strong>b</strong>, sehingga gambar terbagi menjadi beberapa bagian.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Buktikan Kesamaan Dua Petak Mint:</strong> Karena dua bagian alas awal sama panjang (<strong>a = a</strong>), petak kiri <span class="area-tag area-tag--mint">ab (kiri)</span> = <span class="area-tag area-tag--peach">ab (atas)</span>; karena komplemen diagonal sama luas, diperoleh <span class="area-tag area-tag--mint">ab (kiri) = ab (bawah)</span>.</span>
+                <span>Karena dua bagian alas awal sama panjang (<strong>a = a</strong>), luas persegi panjang <span class="area-tag area-tag--mint">ab (kiri)</span> sama dengan <span style="white-space: nowrap;"><span class="area-tag area-tag--peach">ab (atas)</span>.</span> Komplemen diagonal <span class="area-tag area-tag--peach">ab (atas)</span> juga sama dengan <span class="area-tag area-tag--mint">ab (bawah)</span>. Jadi <span style="white-space: nowrap;"><span class="area-tag area-tag--mint">ab (kiri) = ab (bawah)</span>.</span></span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Padankan (2a + b)&middot;b dengan Gnomon:</strong> Penambahan bagian gabungan (<span class="area-tag area-tag--peach">ab</span> + <span class="area-tag area-tag--lavender">b&#178;</span>) pada <span class="area-tag area-tag--mint">ab (bawah)</span> menyamakan blok persegi panjang selebar <strong>(2a + b)</strong> setinggi <strong>b</strong> dengan bangun gnomon.</span>
+                <span>Tambahkan petak gabungan (<span class="area-tag area-tag--peach">ab</span> + <span class="area-tag area-tag--lavender">b&#178;</span>) pada <span class="area-tag area-tag--mint">ab (kiri)</span> dan <span class="area-tag area-tag--mint">ab (bawah)</span>. Hasilnya, seluruh jalur atas berukuran <strong>(2a + b) &times; b</strong> sama luas dengan <strong>bangun berbentuk L</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Lengkapi dengan Persegi a&#178;:</strong> Penambahan persegi kuning <span class="area-tag area-tag--butter">a&#178;</span> (bersisi <strong>a</strong>) pada gnomon tepat melengkapi seluruh persegi besar bersisi <strong>(a + b)</strong>:</span>
+                <span>Dengan demikian, <strong>bangun berbentuk L = (2a + b)&middot;b</strong>.</span>
+              </li>
+              <li>
+                <span class="step-num" aria-hidden="true">5</span>
+                <span>Tambahkan persegi kecil kuning <span class="area-tag area-tag--butter">a&#178;</span> pada bangun berbentuk L tersebut. Hasilnya adalah seluruh persegi besar bersisi <strong>(a + b)</strong>.</span>
+              </li>
+              <li>
+                <span class="step-num" aria-hidden="true">6</span>
+                <span>Jadi, <strong>(2a + b)&middot;b + a&#178; = (a + b)&#178;</strong>. <em>(Terbukti)</em></span>
               </li>
             </ol>
-
-            <div class="prop1-equation">
-              <span class="prop1-equation-label">Luas Persegi (a + b)&#178;</span>
-              <span>= Gnomon + a&#178; = (2a + b)&middot;b + a&#178;</span>
-              <span class="prop1-equation-cont">&there4; (2a + b)&middot;b + a&#178; = (a + b)&#178;</span>
-            </div>
           </div>
         </div>
 
@@ -3032,7 +3236,7 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 280">
-                <title>Diagram pembuktian Proposisi 6: persegi panjang kiri seluas ab sama luas dengan jalur mint kanan bawah ab, sehingga persegi panjang utuh selebar 2a tambah b bertinggi b berpadanan dengan gnomon pada persegi bersisi a tambah b yang dilengkapi persegi kuning a kuadrat</title>
+                <title>Diagram pembuktian Proposisi 6: persegi panjang kiri seluas ab sama luas dengan jalur mint kanan bawah ab, sehingga persegi panjang utuh selebar 2a tambah b bertinggi b berpadanan dengan bangun berbentuk L pada persegi bersisi a tambah b yang dilengkapi persegi kuning a kuadrat</title>
                 <!-- Top span 2a + b -->
                 <line x1="54" y1="30" x2="260" y2="30" stroke="#5C76D8" stroke-width="1.8"/>
                 <line x1="54" y1="26" x2="54" y2="34" stroke="#5C76D8" stroke-width="1.8"/>
@@ -3062,7 +3266,7 @@
                 <line x1="134" y1="196" x2="260" y2="70" stroke="#5C76D8" stroke-width="2.6"/>
                 <circle cx="214" cy="116" r="4.2" fill="#5C76D8"/>
 
-                <!-- Dashed gnomon arc around corner (214,116) -->
+                <!-- Dashed L-shape arc around corner (214,116) -->
                 <path d="M 195 110 A 19 19 0 1 1 221 134" fill="none" stroke="#5C76D8" stroke-width="2" stroke-dasharray="4 3"/>
 
                 <!-- Area labels inside compartments avoiding diagonal & arc -->
@@ -3084,7 +3288,7 @@
                 <line x1="260" y1="205" x2="260" y2="215" stroke="#5C76D8" stroke-width="1.9"/>
                 <text x="197" y="230" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="15" font-weight="800">a + b</text>
 
-                <text x="160" y="256" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13" font-weight="800">(2a + b)&middot;b = ab + b&#178; + ab (Gnomon)</text>
+                <text x="160" y="256" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">(2a + b)&middot;b = ab + b&#178; + ab (bangun L)</text>
               </svg>
             </div>
           </div>
@@ -3133,32 +3337,34 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Pembuktian menghubungkan dua persegi panjang tumpang-tindih berukuran <strong>(a + b) &times; a</strong> dengan gnomon siku di dalam persegi besar <strong>(a + b)&#178;</strong>:</p>
+            <p class="prop1-section-label">Penjelasan:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Bangun Persegi (a + b)&#178;:</strong> Pada garis <strong>a + b</strong> dibentuk persegi besar bersisi <strong>(a + b)</strong> dengan diagonalnya; tarik garis tegak pemisah batas <strong>b</strong> dan <strong>a</strong> serta garis mendatar sejarak <strong>a</strong> dari sisi atas.</span>
+                <span>Buat persegi besar bersisi <strong>(a + b)</strong> dengan potongan <strong>b</strong> dan <strong>a</strong>, lalu lengkapi diagonal dan garis bantu pembaginya.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Jumlahkan Dua Jalur (a + b)&middot;a:</strong> Jalur mendatar atas (<span class="area-tag area-tag--peach">ab</span> + <span class="area-tag area-tag--butter">a&#178;</span>) dan jalur tegak kanan (<span class="area-tag area-tag--butter">a&#178;</span> + <span class="area-tag area-tag--peach">ab</span>) masing-masing seluas <strong>(a + b)&middot;a</strong> karena komplemen diagonal sama luas (<span class="area-tag area-tag--peach">ab</span> = <span class="area-tag area-tag--peach">ab</span>).</span>
+                <span>Komplemen diagonal <span class="area-tag area-tag--peach">ab</span> sama luas (<strong>ab = ab</strong>). Tambahkan persegi kuning <span class="area-tag area-tag--butter">a&#178;</span> pada keduanya, maka jalur mendatar atas (<strong>ab + a&#178;</strong>) sama dengan jalur tegak kanan (<strong>a&#178; + ab</strong>), sehingga jumlahnya = <strong>2(a + b)&middot;a</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Hubungkan dengan Gnomon:</strong> Gabungan kedua jalur tersebut membentuk <strong>gnomon</strong> (<span class="area-tag area-tag--peach">ab</span> + <span class="area-tag area-tag--butter">a&#178;</span> + <span class="area-tag area-tag--peach">ab</span>) ditambah satu kali lagi persegi kecil <span class="area-tag area-tag--butter">a&#178;</span>, sehingga luas gabungannya = <strong>2(a + b)&middot;a</strong>.</span>
+                <span>Gabungan keduanya membentuk <strong>bangun berbentuk L</strong> (<span class="area-tag area-tag--peach">ab</span> + <span class="area-tag area-tag--butter">a&#178;</span> + <span class="area-tag area-tag--peach">ab</span>) ditambah sekali lagi persegi <span class="area-tag area-tag--butter">a&#178;</span>. Jadi <strong>bangun berbentuk L + a&#178; = 2(a + b)&middot;a</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Tambahkan Persegi Mint b&#178;:</strong> Menambahkan persegi sisa bersisi <strong>b</strong> (<span class="area-tag area-tag--mint">b&#178;</span>) pada kedua sisi melengkapi gnomon menjadi persegi penuh <strong>(a + b)&#178;</strong>:</span>
+                <span>Tambahkan persegi hijau <span class="area-tag area-tag--mint">b&#178;</span> (sisinya <strong>b</strong>) pada kedua ruas: <strong>bangun berbentuk L + b&#178; + a&#178; = 2(a + b)&middot;a + b&#178;</strong>.</span>
+              </li>
+              <li>
+                <span class="step-num" aria-hidden="true">5</span>
+                <span><strong>Bangun berbentuk L + b&#178;</strong> tepat sama dengan seluruh persegi <strong>(a + b)&#178;</strong>, sehingga ruas kiri sama dengan <strong>(a + b)&#178; + a&#178;</strong>.</span>
+              </li>
+              <li>
+                <span class="step-num" aria-hidden="true">6</span>
+                <span>Jadi, <strong>(a + b)&#178; + a&#178; = 2(a + b)&middot;a + b&#178;</strong>. <em>(Terbukti)</em></span>
               </li>
             </ol>
-
-            <div class="prop1-equation">
-              <span class="prop1-equation-label">Gnomon + a&#178; + b&#178;</span>
-              <span>= (Gnomon + b&#178;) + a&#178; = (a + b)&#178; + a&#178;</span>
-              <span class="prop1-equation-cont">&there4; (a + b)&#178; + a&#178; = 2(a + b)&middot;a + b&#178;</span>
-            </div>
           </div>
         </div>
 
@@ -3185,7 +3391,7 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 280">
-                <title>Diagram pembuktian Proposisi 7: persegi bersisi a tambah b dibagi menjadi komplemen peach ab, persegi kuning a kuadrat, dan persegi hijau b kuadrat dengan busur gnomon melewati ab, a kuadrat, dan ab</title>
+                <title>Diagram pembuktian Proposisi 7: persegi bersisi a tambah b dibagi menjadi komplemen peach ab, persegi kuning a kuadrat, dan persegi hijau b kuadrat dengan busur bangun berbentuk L melewati ab, a kuadrat, dan ab</title>
                 <!-- Top width labels b, a -->
                 <text x="124" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">b</text>
                 <text x="212" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">a</text>
@@ -3210,7 +3416,7 @@
                 <line x1="72" y1="230" x2="248" y2="54" stroke="#5C76D8" stroke-width="2.6"/>
                 <circle cx="176" cy="126" r="4.2" fill="#5C76D8"/>
 
-                <!-- Dashed gnomon arc around corner (176,126) -->
+                <!-- Dashed L-shape arc around corner (176,126) -->
                 <path d="M 157 120 A 20 20 0 1 1 182 145" fill="none" stroke="#5C76D8" stroke-width="2" stroke-dasharray="4 3"/>
 
                 <!-- Area labels avoiding diagonal & arc -->
@@ -3224,7 +3430,7 @@
                 <line x1="72" y1="244" x2="248" y2="244" stroke="#5C76D8" stroke-width="1.9"/>
                 <line x1="72" y1="239" x2="72" y2="249" stroke="#5C76D8" stroke-width="1.9"/>
                 <line x1="248" y1="239" x2="248" y2="249" stroke="#5C76D8" stroke-width="1.9"/>
-                <text x="160" y="263" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">a + b (Gnomon = ab + a&#178; + ab)</text>
+                <text x="160" y="263" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">a + b (Bangun L = ab + a&#178; + ab)</text>
               </svg>
             </div>
           </div>
@@ -3273,32 +3479,34 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Persegi besar bersisi <strong>2a + b</strong> terbagi menjadi kisi 3 &times; 3 (9 petak), dengan 8 petak terluar membentuk gnomon pembungkus persegi sudut kiri bawah:</p>
+            <p class="prop1-section-label">Penjelasan:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi Kisi 3 &times; 3:</strong> Perpanjang garis <strong>b + a</strong> dengan tambahan <strong>a</strong> menjadi sisi total <strong>b + 2a</strong>, bangun persegi besar bersisi total beserta diagonalnya, lalu belah menjadi jalur selebar <strong>b</strong>, <strong>a</strong>, dan <strong>a</strong>.</span>
+                <span>Perpanjang garis <strong>(a + b)</strong> dengan tambahan <strong>a</strong> menjadi sisi total <strong>(a + b) + a</strong>, buat persegi besar kisi 3 &times; 3 beserta diagonalnya, lalu lengkapi garis bantu pemisah <strong>b</strong>, <strong>a</strong>, <strong>a</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Empat Persegi Kuning a&#178;:</strong> Sudut kanan atas memuat empat persegi identik masing-masing bersisi <strong>a</strong> (<span class="area-tag area-tag--butter">4 &times; a&#178;</span>) yang terbukti sama luas melalui kesamaan komplemen pada diagonal.</span>
+                <span>Karena sisi bagian kanan dan atas masing-masing sama dengan <strong>a</strong> dan komplemen pada diagonal sama luas, keempat persegi sudut kanan atas (<span class="area-tag area-tag--butter">a&#178;</span>) luasnya sama, sehingga jumlahnya <strong>4 &times; a&#178;</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Empat Persegi Panjang Peach ab:</strong> Keempat petak berukuran <strong>a &times; b</strong> (<span class="area-tag area-tag--peach">4 &times; ab</span>) terbukti sama luas lewat kesamaan komplemen di sekitar diagonal.</span>
+                <span>Dengan alasan komplemen yang sama di sekitar diagonal, keempat persegi panjang bersisi <strong>a &times; b</strong> (<span class="area-tag area-tag--peach">ab</span>) luasnya sama, sehingga jumlahnya <strong>4 &times; ab</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Gnomon + Persegi Mint b&#178;:</strong> Kedelapan petak terluar tepat berjumlah <strong>4(ab + a&#178;) = 4(a + b)&middot;a</strong>; penambahan persegi <span class="area-tag area-tag--mint">b&#178;</span> melengkapi persegi penuh <strong>[(a + b) + a]&#178;</strong>:</span>
+                <span>Delapan bangun (<strong>4 &times; a&#178;</strong> dan <strong>4 &times; ab</strong>) membentuk <strong>bangun berbentuk L = 4(a&#178; + ab) = 4(a + b)&middot;a</strong>.</span>
+              </li>
+              <li>
+                <span class="step-num" aria-hidden="true">5</span>
+                <span>Tambahkan persegi hijau <span class="area-tag area-tag--mint">b&#178;</span> (sisinya <strong>b</strong>) pada bangun berbentuk L: hasilnya melengkapi seluruh persegi besar bersisi <strong>(a + b) + a</strong>.</span>
+              </li>
+              <li>
+                <span class="step-num" aria-hidden="true">6</span>
+                <span>Jadi, <strong>4(a + b)&middot;a + b&#178; = [(a + b) + a]&#178;</strong>. <em>(Terbukti)</em></span>
               </li>
             </ol>
-
-            <div class="prop1-equation">
-              <span class="prop1-equation-label">4(ab + a&#178;) + b&#178;</span>
-              <span>= 4(a + b)&middot;a + b&#178;</span>
-              <span class="prop1-equation-cont">&there4; 4(a + b)&middot;a + b&#178; = [(a + b) + a]&#178;</span>
-            </div>
           </div>
         </div>
 
@@ -3325,7 +3533,7 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 280">
-                <title>Diagram pembuktian Proposisi 8: persegi besar bersisi b tambah 2a terbagi 3 kali 3 menjadi 4 persegi panjang peach ab, 4 persegi kuning a kuadrat, dan persegi hijau b kuadrat dengan busur gnomon pembungkus</title>
+                <title>Diagram pembuktian Proposisi 8: persegi besar bersisi b tambah 2a terbagi 3 kali 3 menjadi 4 persegi panjang peach ab, 4 persegi kuning a kuadrat, dan persegi hijau b kuadrat dengan busur bangun berbentuk L pembungkus</title>
                 <!-- Top width labels b, a, a -->
                 <text x="108" y="38" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18.5" font-weight="800">b</text>
                 <text x="170" y="38" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18.5" font-weight="800">a</text>
@@ -3362,7 +3570,7 @@
                 <circle cx="144" cy="154" r="4" fill="#5C76D8"/>
                 <circle cx="196" cy="102" r="3.6" fill="#5C76D8"/>
 
-                <!-- Dashed gnomon arc circling corner (144,154) -->
+                <!-- Dashed L-shape arc circling corner (144,154) -->
                 <path d="M 123 148 A 21 21 0 1 1 150 175" fill="none" stroke="#5C76D8" stroke-width="2" stroke-dasharray="4 3"/>
 
                 <!-- Area labels in 9 cells avoiding diagonal -->
@@ -3434,31 +3642,14 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Konstruksi segitiga siku-siku sama kaki dengan garis tinggi <strong>a</strong> di atas alas penuh <strong>2a</strong> menghubungkan kedua pasangan kuadrat lewat hipotenusa bersama <strong>s</strong>:</p>
-
-            <ol class="prop1-steps-list">
-              <li>
-                <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi Segitiga Siku-siku Berdinding a:</strong> Dari titik tengah alas <strong>2a</strong> tarik tinggi tegak lurus <strong>a</strong> lalu hubungkan ke kedua ujung alas membentuk dua segitiga sama kaki siku-siku bersudut <strong>45&deg;</strong> (sudut puncak tepat <strong>90&deg;</strong>).</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Potongan Setinggi (a &minus; b) &amp; Segitiga Sisi b:</strong> Pada jarak <strong>b</strong> ke kanan dari titik tengah tarik garis tegak hingga sisi miring kanan (membentuk segitiga siku-siku sama kaki bersisi <span class="area-tag area-tag--butter">a &minus; b</span>) dan garis mendatar hingga tinggi tengah (bersisi <span class="area-tag area-tag--peach">b</span>).</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Kuadrat Kedua Sisi Miring Kecil:</strong> Dengan Pythagoras pada segitiga sama kaki bertinggi <strong>a</strong> dan bersisi <strong>b</strong>: kuadrat sisi miring kiri = <strong>a&#178; + a&#178; = 2a&#178;</strong>, dan kuadrat sisi miring kanan atas = <strong>b&#178; + b&#178; = 2b&#178;</strong>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Hipotenusa Bersama s:</strong> Kedua segitiga siku-siku (<span class="area-tag area-tag--mint">alas a + b, tinggi a &minus; b</span> dan segitiga di atasnya) berbagi hipotenusa bersama <strong>s</strong>:</span>
-              </li>
-            </ol>
-
-            <div class="prop1-equation">
-              <span class="prop1-equation-label">s&#178;</span>
-              <span>= (a + b)&#178; + (a &minus; b)&#178; = 2a&#178; + 2b&#178;</span>
-              <span class="prop1-equation-cont">&there4; (a + b)&#178; + (a &minus; b)&#178; = 2(a&#178; + b&#178;)</span>
+            <p class="prop1-section-label">Penjelasan:</p>
+            <div class="prop1-prose">
+              <p>Dibentuk alas <strong>2a</strong> dengan garis tinggi tegak lurus <strong>a</strong> di titik tengah, lalu ujung puncak dihubungkan ke kedua ujung alas membentuk segitiga siku-siku (dua segitiga siku-siku sama kaki bersudut <strong>45&deg;</strong>). Pada jarak <strong>b</strong> ke kanan ditarik garis tegak setinggi <strong>(a &minus; b)</strong> dan garis mendatar bersisi <strong>b</strong> hingga tinggi tengah, lalu ditarik hipotenusa biru <strong>s</strong> dari ujung kiri alas ke titik potong kanan.</p>
+              <ul class="prop1-bullets">
+                <li>Dari dua segitiga sama kaki siku-siku: kuadrat sisi miring kiri = <strong>2a&#178;</strong> (<strong>a&#178; + a&#178;</strong>) dan kuadrat sisi miring kanan atas = <strong>2b&#178;</strong> (<strong>b&#178; + b&#178;</strong>).</li>
+                <li>Dari dua segitiga siku-siku berhipotenusa bersama <strong>s</strong>: segitiga bawah menghasilkan <strong>s&#178; = (a + b)&#178; + (a &minus; b)&#178;</strong>, sedangkan segitiga atas menghasilkan <strong>s&#178; = 2a&#178; + 2b&#178;</strong>.</li>
+                <li>Jadi, <strong>(a + b)&#178; + (a &minus; b)&#178; = 2(a&#178; + b&#178;)</strong>. <em>(Terbukti)</em></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -3578,31 +3769,14 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Konstruksi garis tinggi <strong>a</strong> di titik tengah garis awal <strong>2a</strong> serta perpanjangan sisi membentuk segitiga siku-siku besar berhipotenusa bersama <strong>s</strong>:</p>
-
-            <ol class="prop1-steps-list">
-              <li>
-                <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi Segitiga Siku-siku Dasar:</strong> Pada alas <strong>2a</strong> tarik tinggi tegak lurus <strong>a</strong> di titik tengah, lalu hubungkan ke kedua ujung membentuk dua segitiga siku-siku sama kaki bersudut <strong>45&deg;</strong> (sudut puncak tepat <strong>90&deg;</strong>).</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Perpanjangan b &amp; Kotak (a + b):</strong> Tarik garis mendatar sepanjang <span class="area-tag area-tag--peach">a + b</span> dari puncak tinggi serta garis tegak melewati ujung tambahan <strong>b</strong> hingga bertemu perpanjangan sisi miring, membentuk segitiga siku-siku sama kaki bersisi <span class="area-tag area-tag--butter">b</span>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Dua Ruas Siku-siku Kiri &amp; Kanan:</strong> Dari Pythagoras pada segitiga siku-siku sama kaki kiri (penyiku <strong>a</strong>) diperoleh kuadrat miring <strong>2a&#178;</strong>, dan pada segitiga sama kaki atas (penyiku <strong>a + b</strong>) diperoleh kuadrat miring <strong>2(a + b)&#178;</strong>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Hipotenusa Bersama s:</strong> Kedua segitiga siku-siku (<span class="area-tag area-tag--mint">alas 2a + b, tinggi b</span> dan segitiga miring di atasnya) berbagi hipotenusa bersama <strong>s</strong>:</span>
-              </li>
-            </ol>
-
-            <div class="prop1-equation">
-              <span class="prop1-equation-label">s&#178;</span>
-              <span>= (2a + b)&#178; + b&#178; = 2a&#178; + 2(a + b)&#178;</span>
-              <span class="prop1-equation-cont">&there4; (2a + b)&#178; + b&#178; = 2[a&#178; + (a + b)&#178;]</span>
+            <p class="prop1-section-label">Penjelasan:</p>
+            <div class="prop1-prose">
+              <p>Dibentuk garis awal <strong>2a</strong> dengan tinggi tegak lurus <strong>a</strong> di titik tengah dan dihubungkan ke kedua ujung alas menjadi segitiga siku-siku bersudut <strong>45&deg;</strong>. Dari puncak tinggi ditarik garis mendatar sepanjang <strong>(a + b)</strong>, lalu diperpanjang sisi miring kanan dan garis tegak melewati ujung tambahan <strong>b</strong> hingga berpotongan membentuk segitiga sama kaki bersisi <strong>b</strong>, serta ditarik hipotenusa biru <strong>s</strong> dari ujung kiri alas ke titik potong kanan bawah.</p>
+              <ul class="prop1-bullets">
+                <li>Dari Pythagoras pada kedua segitiga sama kaki siku-siku: kuadrat sisi miring kiri = <strong>2a&#178;</strong>, dan kuadrat sisi miring atas bersisi <strong>(a + b)</strong> = <strong>2(a + b)&#178;</strong>.</li>
+                <li>Dari dua segitiga siku-siku berhipotenusa bersama <strong>s</strong>: segitiga alas <strong>(2a + b)</strong> dan tinggi <strong>b</strong> memberi <strong>s&#178; = (2a + b)&#178; + b&#178;</strong>, sedangkan segitiga di atasnya memberi <strong>s&#178; = 2a&#178; + 2(a + b)&#178;</strong>.</li>
+                <li>Jadi, <strong>(2a + b)&#178; + b&#178; = 2[a&#178; + (a + b)&#178;]</strong>. <em>(Terbukti)</em></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -3722,31 +3896,10 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Konstruksi kompas berpusat di titik tengah sisi tegak <strong>(&frac12;a)</strong> menghasilkan potongan rasio emas lewat selisih luas daerah:</p>
-
-            <ol class="prop1-steps-list">
-              <li>
-                <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi Persegi a&#178; &amp; x&#178;:</strong> Lukis persegi besar bersisi <strong>a</strong>, bagi sisi tegak kirinya sama besar menjadi <strong>&frac12;a</strong>, ayunkan kompas dari jarak miring <strong>&frac12;a + x</strong> ke perpanjangan sisi kiri (tambahan <strong>x</strong>), lalu bangun persegi <span class="area-tag area-tag--mint">x&#178;</span> dan perpanjang sisi tegak kanannya ke bawah.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Prop. 2.6 &amp; Pythagoras:</strong> Sisi tegak kiri terbagi dua sebesar <strong>&frac12;a</strong> dan diperpanjang sejauh <strong>x</strong>, sehingga <strong>(a + x)&middot;x + (&frac12;a)&#178; = (&frac12;a + x)&#178; = a&#178; + (&frac12;a)&#178;</strong>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Kesamaan (a + x)&middot;x = a&#178;:</strong> Mengurangi <strong>(&frac12;a)&#178;</strong> dari kedua ruas menghasilkan <strong>(a + x)&middot;x = a&#178;</strong>, yakni jalur tegak kiri berukuran <strong>(a + x) &times; x</strong> sama luas dengan persegi besar bersisi <strong>a</strong>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Eliminasi Daerah <span class="area-tag area-tag--peach">ax</span>:</strong> Pengurangan petak bersama <strong>ax</strong> menyisakan <span class="area-tag area-tag--mint">x&#178;</span> sama dengan <span class="area-tag area-tag--butter">a(a &minus; x)</span>:</span>
-              </li>
-            </ol>
-
-            <div class="prop1-equation">
-              <span class="prop1-equation-label">(a + x)x &minus; ax</span>
-              <span>= a&#178; &minus; ax &rArr; x&#178; = a&#178; &minus; ax</span>
-              <span class="prop1-equation-cont">&there4; a(a &minus; x) = x&#178;</span>
+            <p class="prop1-section-label">Penjelasan:</p>
+            <div class="prop1-prose">
+              <p>Misalkan diberikan garis lurus sepanjang <strong>a</strong>. Konstruksi: lukis persegi besar bersisi <strong>a</strong> [Prop. 1.46]; bagi sisi tegak kirinya sama besar menjadi dua potongan <strong>&frac12;a</strong> [Prop. 1.10] dan tarik garis miring ke pojok kanan atas. Perpanjang sisi kiri ke atas sejauh <strong>x</strong> sehingga jarak dari titik tengah tepat sama dengan panjang miring <strong>&frac12;a + x</strong> [Prop. 1.3]. Lukis persegi <span class="area-tag area-tag--mint">x&#178;</span> [Prop. 1.46] dan perpanjang sisi tegak kanannya sampai alas bawah.</p>
+              <p>Karena sisi tegak kiri terbagi sama sebesar <strong>&frac12;a</strong> dan diperpanjang dengan <strong>x</strong>, maka <strong>(a + x)&middot;x + (&frac12;a)&#178; = (&frac12;a + x)&#178;</strong> [Prop. 2.6]. Pada segitiga siku-siku kiri berlaku <strong>(&frac12;a + x)&#178; = a&#178; + (&frac12;a)&#178;</strong> [Prop. 1.47]. Jadi <strong>(a + x)&middot;x + (&frac12;a)&#178; = a&#178; + (&frac12;a)&#178;</strong>; setelah <strong>(&frac12;a)&#178;</strong> dikurangkan dari kedua ruas, <strong>(a + x)&middot;x = a&#178;</strong>. Kurangkan petak bersama <span class="area-tag area-tag--peach">ax</span> dari keduanya: sisanya persegi hijau <span class="area-tag area-tag--mint">x&#178;</span> sama dengan persegi panjang kuning <span class="area-tag area-tag--butter">a(a &minus; x)</span>. Jadi <strong>a(a &minus; x) = x&#178;</strong>.</p>
             </div>
           </div>
         </div>
@@ -3847,25 +4000,10 @@
           </p>
 
           <div class="pair-proof-stack">
-            <ol class="prop1-steps-list">
-              <li>
-                <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi &amp; Ekspansi Prop. 2.4:</strong> Tarik garis tinggi <strong>h &perp;</strong> perpanjangan alas <strong>b</strong> sepanjang <strong>d</strong> [Prop. 1.12]; pada alas gabungan <strong>(b + d)</strong> berlaku <strong>(b + d)&#178; = b&#178; + d&#178; + 2bd</strong> [Prop. 2.4].</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Penambahan h&#178;:</strong> Tambahkan kuadrat garis tinggi <strong>h&#178;</strong> ke kedua ruas: <strong>(b + d)&#178; + h&#178; = b&#178; + (d&#178; + h&#178;) + 2bd</strong>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Pythagoras (Prop. 1.47):</strong> Pada kedua segitiga siku-siku bertinggi <strong>h</strong>, substitusi <span class="area-tag area-tag--lavender">a&#178; = (b + d)&#178; + h&#178;</span> dan <span class="area-tag area-tag--peach">c&#178; = d&#178; + h&#178;</span> [Prop. 1.47] menghasilkan:</span>
-              </li>
-            </ol>
-
-            <div class="prop1-equation">
-              <span class="prop1-equation-label">Kuadrat a&#178;</span>
-              <span>= b&#178; + c&#178; + 2bd</span>
-              <span class="prop1-equation-cont">&there4; selisih = 2bd</span>
+            <p class="prop1-section-label">Penjelasan:</p>
+            <div class="prop1-prose">
+              <p>Misalkan segitiga tumpul bersisi <strong>a, b, c</strong> memiliki sudut tumpul (<strong>&gt; 90&deg;</strong>) antara <strong>b</strong> dan <strong>c</strong>, dan ditarik garis tinggi luar <strong>h</strong> tegak lurus terhadap perpanjangan alas <strong>b</strong> sepanjang <strong>d</strong> [Prop. 1.12]. Akan ditunjukkan bahwa <strong>a&#178;</strong> lebih besar daripada <strong>b&#178; + c&#178;</strong> sebesar <strong>2bd</strong>.</p>
+              <p>Karena alas gabungan <strong>(b + d)</strong> terpotong menjadi <strong>b</strong> dan <strong>d</strong>, maka <strong>(b + d)&#178; = b&#178; + d&#178; + 2bd</strong> [Prop. 2.4]. Tambahkan <strong>h&#178;</strong> pada kedua ruas: <strong>(b + d)&#178; + h&#178; = b&#178; + d&#178; + h&#178; + 2bd</strong>. Pada siku-siku bertinggi <strong>h</strong>, berlaku <span class="area-tag area-tag--lavender">a&#178; = (b + d)&#178; + h&#178;</span> dan <span class="area-tag area-tag--peach">c&#178; = d&#178; + h&#178;</span> [Prop. 1.47]. Jadi <strong>a&#178; = b&#178; + c&#178; + 2bd</strong>, yaitu <strong>a&#178;</strong> lebih besar daripada <strong>b&#178; + c&#178;</strong> sebesar <strong>2bd</strong>.</p>
             </div>
           </div>
 
@@ -3931,25 +4069,10 @@
           </p>
 
           <div class="pair-proof-stack">
-            <ol class="prop1-steps-list">
-              <li>
-                <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi &amp; Ekspansi Prop. 2.7:</strong> Tarik garis tinggi <strong>h &perp;</strong> alas <strong>a</strong> yang terbagi menjadi <strong>d</strong> dan <strong>(a &minus; d)</strong> [Prop. 1.12]; berlaku <strong>a&#178; + d&#178; = 2ad + (a &minus; d)&#178;</strong> [Prop. 2.7].</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Penambahan h&#178;:</strong> Tambahkan kuadrat garis tinggi <strong>h&#178;</strong> ke kedua ruas: <strong>a&#178; + (d&#178; + h&#178;) = 2ad + [(a &minus; d)&#178; + h&#178;]</strong>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Pythagoras (Prop. 1.47):</strong> Pada kedua segitiga siku-siku bertinggi <strong>h</strong>, substitusi <span class="area-tag area-tag--mint">c&#178; = d&#178; + h&#178;</span> dan <span class="area-tag area-tag--lavender">b&#178; = (a &minus; d)&#178; + h&#178;</span> [Prop. 1.47] menghasilkan:</span>
-              </li>
-            </ol>
-
-            <div class="prop1-equation">
-              <span class="prop1-equation-label">a&#178; + c&#178;</span>
-              <span>= b&#178; + 2ad</span>
-              <span class="prop1-equation-cont">&there4; b&#178; = a&#178; + c&#178; &minus; 2ad</span>
+            <p class="prop1-section-label">Penjelasan:</p>
+            <div class="prop1-prose">
+              <p>Misalkan segitiga lancip bersisi <strong>a, b, c</strong> memiliki sudut lancip (<strong>&lt; 90&deg;</strong>) antara <strong>a</strong> dan <strong>c</strong>, dan ditarik garis tinggi <strong>h</strong> tegak lurus terhadap alas <strong>a</strong> sehingga membagi alas menjadi <strong>d</strong> dan <strong>(a &minus; d)</strong> [Prop. 1.12]. Akan ditunjukkan bahwa <strong>b&#178;</strong> lebih kecil daripada <strong>a&#178; + c&#178;</strong> sebesar <strong>2ad</strong>.</p>
+              <p>Karena alas <strong>a</strong> terpotong sejauh <strong>d</strong>, maka <strong>a&#178; + d&#178; = 2ad + (a &minus; d)&#178;</strong> [Prop. 2.7]. Tambahkan <strong>h&#178;</strong> pada kedua ruas: <strong>a&#178; + d&#178; + h&#178; = 2ad + (a &minus; d)&#178; + h&#178;</strong>. Pada siku-siku bertinggi <strong>h</strong>, berlaku <span class="area-tag area-tag--mint">c&#178; = d&#178; + h&#178;</span> dan <span class="area-tag area-tag--lavender">b&#178; = (a &minus; d)&#178; + h&#178;</span> [Prop. 1.47]. Jadi <strong>a&#178; + c&#178; = b&#178; + 2ad</strong>, yaitu <strong>b&#178; = a&#178; + c&#178; &minus; 2ad</strong>.</p>
             </div>
           </div>
 
@@ -4045,31 +4168,10 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Konstruksi setengah lingkaran berjari-jari <strong>r = &frac12;(p + q)</strong> mengubah persegi panjang perantara berukuran <strong>p &times; q</strong> menjadi persegi <strong>x&#178;</strong>:</p>
-
-            <ol class="prop1-steps-list">
-              <li>
-                <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Persegi Panjang pq &amp; Garis p + q:</strong> Ubah bangun awal menjadi persegi panjang seluas sama berukuran <strong>p &times; q</strong> [Prop. 1.45]; perpanjang sisi <strong>p</strong> sejauh <strong>q</strong> menjadi garis total <strong>p + q</strong>, lalu bagi dua pada pusat berjarak <strong>r = &frac12;(p + q)</strong>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Setengah Lingkaran Berjari-jari r:</strong> Lukis setengah lingkaran berdiameter <strong>p + q</strong> berjari-jari <strong>r</strong>, lalu tarik garis tegak lurus ke atas tepat dari batas antara <strong>p</strong> dan <strong>q</strong> hingga memotong busur sebagai tinggi <strong>x</strong>.</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Prop. 2.5 &amp; Jari-jari r:</strong> Diameter <strong>p + q</strong> terbagi sama sebesar <strong>r</strong> dan tak sama menjadi <strong>p</strong> dan <strong>q</strong> (selisih potong = <strong>&frac12;(p &minus; q)</strong>), sehingga berlaku <strong>p&middot;q + [&frac12;(p &minus; q)]&#178; = r&#178;</strong> [Prop. 2.5].</span>
-              </li>
-              <li>
-                <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Pythagoras (Prop. 1.47):</strong> Pada segitiga siku-siku berhipotenusa jari-jari <strong>r</strong>, substitusi <strong>r&#178; = x&#178; + [&frac12;(p &minus; q)]&#178;</strong> [Prop. 1.47] menyisakan <span class="area-tag area-tag--peach">pq</span> = <span class="area-tag area-tag--mint">x&#178;</span>:</span>
-              </li>
-            </ol>
-
-            <div class="prop1-equation">
-              <span class="prop1-equation-label">pq + [&frac12;(p &minus; q)]&#178;</span>
-              <span>= x&#178; + [&frac12;(p &minus; q)]&#178; &rArr; pq = x&#178;</span>
-              <span class="prop1-equation-cont">&there4; luas bangun awal = pq = x&#178;</span>
+            <p class="prop1-section-label">Penjelasan:</p>
+            <div class="prop1-prose">
+              <p>Diberikan bangun datar bersisi lurus; akan dibuat persegi bersisi <strong>x</strong> yang luasnya sama dengan bangun awal. Konstruksi: buat persegi panjang <span class="area-tag area-tag--peach">pq</span> yang sama luas dengan bangun awal [Prop. 1.45]. Jika <strong>p = q</strong>, sudah berupa persegi dan selesai. Jika tidak, perpanjang sisi <strong>p</strong> sejauh <strong>q</strong> menjadi garis <strong>(p + q)</strong> [Prop. 1.3], bagi dua pada pusat berjari-jari <strong>r = &frac12;(p + q)</strong> [Prop. 1.10], lukis setengah lingkaran berjari-jari <strong>r</strong>, perpanjang garis batas <strong>p</strong> dan <strong>q</strong> ke atas hingga busur sebagai tinggi <strong>x</strong>, dan tarik jari-jari miring <strong>r</strong>.</p>
+              <p>Karena diameter <strong>(p + q)</strong> terpotong sama sebesar <strong>r</strong> dan tidak sama menjadi <strong>p</strong> dan <strong>q</strong> (selisih = <strong>&frac12;(p &minus; q)</strong>), maka <strong>p&middot;q + [&frac12;(p &minus; q)]&#178; = r&#178;</strong> [Prop. 2.5]. Pada siku-siku berhipotenusa <strong>r</strong>, berlaku <strong>r&#178; = x&#178; + [&frac12;(p &minus; q)]&#178;</strong> [Prop. 1.47]. Jadi <strong>p&middot;q + [&frac12;(p &minus; q)]&#178; = x&#178; + [&frac12;(p &minus; q)]&#178;</strong>; setelah <strong>[&frac12;(p &minus; q)]&#178;</strong> dikurangkan, <strong>p&middot;q = x&#178;</strong>. Karena luas bangun awal sama dengan <span class="area-tag area-tag--peach">pq</span>, bangun tersebut tepat sama dengan persegi <span class="area-tag area-tag--mint">x&#178;</span>.</p>
             </div>
           </div>
         </div>
@@ -4381,8 +4483,8 @@
       if (index === 0 || slideEl.classList.contains('slide-cover')) {
         return { title: 'Sampul & Anggota Kelompok', shortTitle: 'Sampul', kind: 'Pengantar', kindClass: 'intro' };
       }
-      if (slideEl.classList.contains('slide-definition')) {
-        return { title: 'Definisi', shortTitle: 'Definisi', kind: 'Pengantar', kindClass: 'intro' };
+      if (slideEl.classList.contains('slide-intro') || slideEl.classList.contains('slide-definition')) {
+        return { title: 'Pengantar Materi', shortTitle: 'Pengantar', kind: 'Pengantar', kindClass: 'intro' };
       }
       if (slideEl.id === 'slide-closing' || index === totalSlides - 1) {
         return { title: 'Terima Kasih', shortTitle: 'Penutup', kind: 'Penutup', kindClass: 'intro' };
