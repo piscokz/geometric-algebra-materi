@@ -196,6 +196,12 @@
       ::view-transition-group(root) {
         animation: none !important;
       }
+
+      .prop-badge:has(> .prop-badge-link),
+      .prop-badge:has(> .prop-badge-link):hover {
+        transition: none;
+        transform: none;
+      }
     }
 
     /* Decorative layer */
@@ -580,6 +586,48 @@
       margin-block-end: 2.2cqb;
       line-height: 1.15;
       font-size: clamp(1.3rem, 3vw, 3.2rem);
+    }
+
+    .prop-badge:has(> .prop-badge-link) {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+    }
+
+    .prop-badge-link {
+      color: inherit;
+      text-decoration: none;
+      font: inherit;
+      letter-spacing: inherit;
+      text-transform: inherit;
+      touch-action: manipulation;
+    }
+
+    .prop-badge-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+    }
+
+    .prop-badge:has(> .prop-badge-link):hover {
+      transform: translateY(-0.14cqb);
+      box-shadow: 0 0.34cqb 0.65cqb rgba(43, 45, 92, 0.14);
+      filter: brightness(0.985);
+    }
+
+    .prop-badge:has(> .prop-badge-link):active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    .prop-badge-link:focus-visible {
+      outline: none;
+    }
+
+    .prop-badge:has(> .prop-badge-link:focus-visible) {
+      outline: 0.2cqi solid var(--periwinkle-deep);
+      outline-offset: 0.25cqi;
     }
 
     @supports (font-size: 1cqi) {
@@ -1829,6 +1877,17 @@
         margin-block-end: 0.9rem;
       }
 
+      .prop-badge:has(> .prop-badge-link) {
+        display: inline-flex;
+        align-items: center;
+        min-block-size: 44px;
+      }
+
+      .prop-badge:has(> .prop-badge-link:focus-visible) {
+        outline: 2.5px solid var(--periwinkle-deep);
+        outline-offset: 3px;
+      }
+
       .prop1-quote,
       .prop-left--compact .prop1-quote {
         font-size: clamp(0.92rem, 0.85rem + 0.7vw, 1.08rem);
@@ -2628,7 +2687,7 @@
             <polygon points="105,120 365,36 380,78 235,120" fill="#8EA9FF" opacity="0.55"/>
           </svg>
 
-          <h1 class="prop-badge" lang="en">Proposition 1</h1>
+          <h1 class="prop-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#5" title="Buka simulasi interaktif Proposition 1">Proposition 1</a></h1>
 
           <p class="prop1-quote">
             &ldquo;Jika terdapat dua garis lurus dan salah satu garis dipotong menjadi sejumlah bagian sembarang, maka luas persegi panjang yang dibentuk oleh kedua garis lurus itu sama dengan jumlah dari luas persegi panjang yang dibentuk oleh garis lurus yang tidak dipotong dan setiap bagian dari garis lurus yang terpotong.&rdquo;
@@ -2726,7 +2785,7 @@
         <!-- Left card: Proposition 2 -->
         <article class="pair-card">
           <div class="pair-card-head">
-            <h2 class="prop-badge pair-badge" lang="en">Proposition 2</h2>
+            <h2 class="prop-badge pair-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#7" title="Buka simulasi interaktif Proposition 2">Proposition 2</a></h2>
             <span class="pair-chip pair-chip--mint">Persegi Utuh (a = b + c)</span>
           </div>
 
@@ -2793,7 +2852,7 @@
         <!-- Right card: Proposition 3 -->
         <article class="pair-card">
           <div class="pair-card-head">
-            <h2 class="prop-badge pair-badge" lang="en">Proposition 3</h2>
+            <h2 class="prop-badge pair-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#9" title="Buka simulasi interaktif Proposition 3">Proposition 3</a></h2>
             <span class="pair-chip pair-chip--peach">Tinggi = Bagian c</span>
           </div>
 
@@ -2888,7 +2947,7 @@
             <polygon points="105,120 365,36 380,78 235,120" fill="#8EA9FF" opacity="0.55"/>
           </svg>
 
-          <h1 class="prop-badge" lang="en">Proposition 4</h1>
+          <h1 class="prop-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#11" title="Buka simulasi interaktif Proposition 4">Proposition 4</a></h1>
 
           <p class="prop1-quote">
             &ldquo;Jika sebuah garis lurus dipotong secara sembarang, maka luas persegi pada keseluruhan garis tersebut sama dengan jumlah luas persegi-persegi pada kedua bagiannya dan dua kali persegi panjang yang dibentuk oleh kedua bagian tersebut.&rdquo;
@@ -3015,7 +3074,7 @@
             <polygon points="105,120 365,36 380,78 235,120" fill="#8EA9FF" opacity="0.55"/>
           </svg>
 
-          <h1 class="prop-badge" lang="en">Proposition 5</h1>
+          <h1 class="prop-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#13" title="Buka simulasi interaktif Proposition 5">Proposition 5</a></h1>
 
           <p class="prop1-quote">
             &ldquo;Jika sebuah garis lurus dipotong menjadi dua bagian yang sama panjang dan dua bagian yang tidak sama panjang, maka luas persegi panjang yang dibentuk oleh kedua bagian yang tidak sama panjang tersebut, ditambah luas persegi pada ruas garis di antara kedua titik potongnya, sama dengan luas persegi pada setengah garis tersebut.&rdquo;
@@ -3175,7 +3234,7 @@
             <polygon points="105,120 365,36 380,78 235,120" fill="#8EA9FF" opacity="0.55"/>
           </svg>
 
-          <h1 class="prop-badge" lang="en">Proposition 6</h1>
+          <h1 class="prop-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#15" title="Buka simulasi interaktif Proposition 6">Proposition 6</a></h1>
 
           <p class="prop1-quote">
             &ldquo;Jika sebuah garis lurus terbagi dua sama panjang masing-masing sebesar <strong>a</strong> lalu diperpanjang dengan ruas garis <strong>b</strong> secara segaris, maka luas persegi panjang <strong>(2a + b)&middot;b</strong> ditambah luas persegi bersisi setengah garis <strong>a</strong> sama dengan luas persegi bersisi <strong>(a + b)</strong>.&rdquo;
@@ -3330,7 +3389,7 @@
             <polygon points="105,120 365,36 380,78 235,120" fill="#8EA9FF" opacity="0.55"/>
           </svg>
 
-          <h1 class="prop-badge" lang="en">Proposition 7</h1>
+          <h1 class="prop-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#17" title="Buka simulasi interaktif Proposition 7">Proposition 7</a></h1>
 
           <p class="prop1-quote">
             &ldquo;Jika sebuah garis lurus (<strong>a + b</strong>) dipotong sembarang menjadi bagian <strong>b</strong> dan <strong>a</strong>, maka jumlah luas persegi bersisi keseluruhan (<strong>a + b</strong>) dan persegi bersisi bagian <strong>a</strong> sama dengan dua kali luas persegi panjang <strong>(a + b)&middot;a</strong> ditambah luas persegi bersisi bagian sisanya <strong>b</strong>.&rdquo;
@@ -3472,7 +3531,7 @@
             <polygon points="105,120 365,36 380,78 235,120" fill="#8EA9FF" opacity="0.55"/>
           </svg>
 
-          <h1 class="prop-badge" lang="en">Proposition 8</h1>
+          <h1 class="prop-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#19" title="Buka simulasi interaktif Proposition 8">Proposition 8</a></h1>
 
           <p class="prop1-quote">
             &ldquo;Jika sebuah garis lurus (<strong>a + b</strong>) dipotong sembarang menjadi bagian <strong>b</strong> dan <strong>a</strong>, maka empat kali persegi panjang <strong>(a + b)&middot;a</strong> ditambah luas persegi bersisi bagian sisanya <strong>b</strong> sama dengan luas persegi yang dibentuk pada gabungan <strong>(a + b) + a</strong>.&rdquo;
@@ -3635,7 +3694,7 @@
             <polygon points="105,120 365,36 380,78 235,120" fill="#8EA9FF" opacity="0.55"/>
           </svg>
 
-          <h1 class="prop-badge" lang="en">Proposition 9</h1>
+          <h1 class="prop-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#21" title="Buka simulasi interaktif Proposition 9">Proposition 9</a></h1>
 
           <p class="prop1-quote">
             &ldquo;Jika sebuah garis lurus dibagi dua sama panjang masing-masing sebesar <strong>a</strong>, dan juga dibagi tak sama panjang di titik lain berselisih <strong>b</strong> dari titik tengah (menghasilkan bagian <strong>a + b</strong> dan <strong>a &minus; b</strong>), maka jumlah kuadrat kedua bagian tak sama panjang itu sama dengan dua kali jumlah kuadrat setengah garis <strong>a</strong> dan selisihnya <strong>b</strong>.&rdquo;
@@ -3762,7 +3821,7 @@
             <polygon points="105,120 365,36 380,78 235,120" fill="#8EA9FF" opacity="0.55"/>
           </svg>
 
-          <h1 class="prop-badge" lang="en">Proposition 10</h1>
+          <h1 class="prop-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#23" title="Buka simulasi interaktif Proposition 10">Proposition 10</a></h1>
 
           <p class="prop1-quote">
             &ldquo;Jika sebuah garis lurus terbagi dua sama panjang masing-masing sebesar <strong>a</strong> lalu diperpanjang segaris dengan tambahan <strong>b</strong>, maka jumlah luas persegi pada garis keseluruhan <strong>(2a + b)</strong> dan tambahan <strong>b</strong> sama dengan dua kali jumlah kuadrat setengah garis <strong>a</strong> dan gabungan <strong>(a + b)</strong>.&rdquo;
@@ -3889,7 +3948,7 @@
             <polygon points="105,120 365,36 380,78 235,120" fill="#8EA9FF" opacity="0.55"/>
           </svg>
 
-          <h1 class="prop-badge" lang="en">Proposition 11</h1>
+          <h1 class="prop-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#25" title="Buka simulasi interaktif Proposition 11">Proposition 11</a></h1>
 
           <p class="prop1-quote">
             &ldquo;Memotong sebuah garis lurus sepanjang <strong>a</strong> menjadi bagian <strong>x</strong> dan <strong>(a &minus; x)</strong> sehingga persegi panjang <strong>a(a &minus; x)</strong> (antara keseluruhan garis dan salah satu potongannya) sama luas dengan persegi <strong>x&#178;</strong> pada potongan sisanya.&rdquo;
@@ -3991,7 +4050,7 @@
         <!-- Left card: Proposition 12 (Obtuse triangle) -->
         <article class="pair-card">
           <div class="pair-card-head">
-            <h2 class="prop-badge pair-badge" lang="en">Proposition 12</h2>
+            <h2 class="prop-badge pair-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#27" title="Buka simulasi interaktif Proposition 12">Proposition 12</a></h2>
             <span class="pair-chip pair-chip--peach">Segitiga Tumpul (&gt; 90&deg;)</span>
           </div>
 
@@ -4060,7 +4119,7 @@
         <!-- Right card: Proposition 13 (Acute triangle) -->
         <article class="pair-card">
           <div class="pair-card-head">
-            <h2 class="prop-badge pair-badge" lang="en">Proposition 13</h2>
+            <h2 class="prop-badge pair-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#29" title="Buka simulasi interaktif Proposition 13">Proposition 13</a></h2>
             <span class="pair-chip pair-chip--mint">Segitiga Lancip (&lt; 90&deg;)</span>
           </div>
 
@@ -4161,7 +4220,7 @@
             <polygon points="105,120 365,36 380,78 235,120" fill="#8EA9FF" opacity="0.55"/>
           </svg>
 
-          <h1 class="prop-badge" lang="en">Proposition 14</h1>
+          <h1 class="prop-badge" lang="en"><a class="prop-badge-link" href="https://piscokz.github.io/geometric-algebra-slides/#31" title="Buka simulasi interaktif Proposition 14">Proposition 14</a></h1>
 
           <p class="prop1-quote">
             &ldquo;Diberikan sebuah bangun datar bersisi lurus; akan dikonstruksikan sebuah persegi bersisi <strong>x</strong> yang luasnya tepat sama dengan bangun awal tersebut (<strong>x&#178; = pq</strong>).&rdquo;
@@ -4689,7 +4748,8 @@
       const target = event.target instanceof Element ? event.target : null;
       if (target?.closest('input, select, textarea')) return;
 
-      if (target?.tagName === 'BUTTON' && (event.key === 'Enter' || event.key === ' ')) {
+      if ((target?.tagName === 'BUTTON' && (event.key === 'Enter' || event.key === ' ')) ||
+          (target?.closest('a') && event.key === 'Enter')) {
         return;
       }
 
