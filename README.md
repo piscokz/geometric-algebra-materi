@@ -1,9 +1,9 @@
-# Geometric Algebra — Materi Euclid's Elements Book II (Proposisi 1–14)
+# Euclid's Elements, Book 2 (Proposisi 1–14)
 
-Media pembelajaran interaktif berbasis web untuk materi **Fundamentals of Geometric Algebra** (Euclid's Elements Book II Proposisi 1–14) — **Kelompok 1** (versi ringkas 15 slide tanpa slide simulasi).
+Media pembelajaran interaktif berbasis web untuk materi **Euclid's Elements, Book 2** (Proposisi 1–14) — **Kelompok 1** (versi ringkas 15 slide tanpa slide simulasi).
 
 ## Daftar Slide (15 Slide)
-- **Slide 1**: Sampul & Anggota Kelompok (`Fundamentals of Geometric Algebra | Kelompok 1`)
+- **Slide 1**: Sampul & Anggota Kelompok (`Euclid's Elements, Book 2 | Kelompok 1`)
 - **Slide 2**: Pengantar Materi
 - **Slide 3**: Proposisi 1 (Teorema, Pembuktian, Diagram Geometris & Bentuk Aljabar)
 - **Slide 4**: Proposisi 2 & 3 (Kasus Khusus Proposisi 1)
