@@ -2371,20 +2371,20 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Garis lurus <strong>A</strong> (tak terpotong) dan <strong>BC</strong> (dipotong sembarang di <strong>D</strong> &amp; <strong>E</strong> menjadi <strong>BD</strong>, <strong>DE</strong>, <strong>EC</strong>) membentuk luas persegi panjang:</p>
+            <p class="prop1-intro">Garis lurus <strong>a</strong> (tak terpotong) dan garis alas yang terbagi menjadi potongan <strong>b</strong>, <strong>c</strong>, dan <strong>d</strong> membentuk luas persegi panjang:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi Persegi Panjang BH:</strong> Dari titik <strong>B</strong> ditarik garis <strong>BG &perp; BC</strong> sepanjang <strong>A</strong>, lalu ditarik <strong>GH &#8741; BC</strong> hingga terbentuk persegi panjang <strong>BH</strong>.</span>
+                <span><strong>Konstruksi Persegi Panjang Keseluruhan:</strong> Bentuk persegi panjang setinggi <strong>a</strong> dengan alas total sepanjang <strong>b + c + d</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Garis Sejajar DK, EL &amp; CH:</strong> Dari titik <strong>D</strong>, <strong>E</strong>, dan <strong>C</strong> ditarik garis tegak sejajar <strong>BG</strong>, sehingga seluruh ruas garis tersebut sama panjang dengan <strong>A</strong>.</span>
+                <span><strong>Tarik Garis Pembagi Tegak:</strong> Dari setiap batas potongan <strong>b</strong>, <strong>c</strong>, dan <strong>d</strong> ditarik garis tegak sejajar setinggi <strong>a</strong> hingga alas terbagi tiga bagian.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Identifikasi Bagian Luas:</strong> Persegi panjang <strong>BH</strong> tersusun tepat dari tiga bagian: <span class="area-tag area-tag--mint">BK</span> (<strong>A &times; BD</strong>), <span class="area-tag area-tag--peach">DL</span> (<strong>A &times; DE</strong>), dan <span class="area-tag area-tag--lavender">EH</span> (<strong>A &times; EC</strong>).</span>
+                <span><strong>Identifikasi Bagian Luas:</strong> Persegi panjang keseluruhan tersusun tepat dari tiga petak: <span class="area-tag area-tag--mint">ab</span> (lebar <strong>b</strong>), <span class="area-tag area-tag--peach">ac</span> (lebar <strong>c</strong>), dan <span class="area-tag area-tag--lavender">ad</span> (lebar <strong>d</strong>).</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
@@ -2393,9 +2393,9 @@
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">Luas Persegi Panjang BH</span>
-              <span>= Luas BK + Luas DL + Luas EH</span>
-              <span class="prop1-equation-cont">= (A &times; BD) + (A &times; DE) + (A &times; EC) = A(BD + DE + EC)</span>
+              <span class="prop1-equation-label">Luas Persegi Panjang</span>
+              <span>= a &times; (b + c + d)</span>
+              <span class="prop1-equation-cont">= (a &times; b) + (a &times; c) + (a &times; d) = ab + ac + ad</span>
             </div>
           </div>
         </div>
@@ -2425,32 +2425,39 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 280">
-                <title>Diagram pembuktian Proposisi 1: garis A di atas persegi panjang BH dengan titik potong sembarang D dan E di sisi atas BC serta garis tegak DK dan EL menuju sisi bawah GH sehingga terbentuk tiga persegi panjang tidak sama lebar BK, DL, dan EH</title>
-                <!-- Line segment A above -->
-                <line x1="168" y1="20" x2="168" y2="112" stroke="#232652" stroke-width="3.6" stroke-linecap="square"/>
-                <text x="178" y="72" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">A</text>
+                <title>Diagram pembuktian Proposisi 1: garis a di atas persegi panjang bertinggi a dengan alas terbagi menjadi bagian b, c, dan d sehingga membentuk tiga persegi panjang ab, ac, dan ad</title>
+                <!-- Uncut segment a above -->
+                <line x1="168" y1="20" x2="168" y2="110" stroke="#232652" stroke-width="3.6" stroke-linecap="square"/>
+                <text x="184" y="72" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">a</text>
 
-                <!-- Top labels B, D, E, C -->
-                <text x="40" y="132" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">B</text>
-                <text x="96" y="132" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">D</text>
-                <text x="214" y="132" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">E</text>
-                <text x="286" y="132" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">C</text>
+                <!-- Top segment width labels b, c, d -->
+                <text x="68" y="130" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">b</text>
+                <text x="155" y="130" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">c</text>
+                <text x="250" y="130" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">d</text>
 
-                <!-- Pastel shaded area subdivisions BK, DL, EH (unequal widths) -->
+                <!-- Left height label a -->
+                <text x="24" y="193" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">a</text>
+
+                <!-- Pastel shaded area subdivisions ab, ac, ad -->
                 <rect x="40" y="142" width="56" height="90" fill="#CCF5E1" opacity="0.72"/>
                 <rect x="96" y="142" width="118" height="90" fill="#FFE2CC" opacity="0.72"/>
                 <rect x="214" y="142" width="72" height="90" fill="#E6DCFF" opacity="0.72"/>
 
-                <!-- Rectangle BH and dividing lines DK, EL -->
+                <!-- Rectangle outline and vertical division lines -->
                 <rect x="40" y="142" width="246" height="90" fill="none" stroke="#232652" stroke-width="3.6"/>
                 <line x1="96" y1="142" x2="96" y2="232" stroke="#232652" stroke-width="3.6"/>
                 <line x1="214" y1="142" x2="214" y2="232" stroke="#232652" stroke-width="3.6"/>
 
-                <!-- Bottom labels G, K, L, H -->
-                <text x="40" y="262" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">G</text>
-                <text x="96" y="262" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">K</text>
-                <text x="214" y="262" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">L</text>
-                <text x="286" y="262" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">H</text>
+                <!-- Interior area labels -->
+                <text x="68" y="193" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">ab</text>
+                <text x="155" y="193" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">ac</text>
+                <text x="250" y="193" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">ad</text>
+
+                <!-- Bottom span for total base b + c + d -->
+                <line x1="40" y1="246" x2="286" y2="246" stroke="#5C76D8" stroke-width="2"/>
+                <line x1="40" y1="241" x2="40" y2="251" stroke="#5C76D8" stroke-width="2"/>
+                <line x1="286" y1="241" x2="286" y2="251" stroke="#5C76D8" stroke-width="2"/>
+                <text x="163" y="268" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">b + c + d</text>
               </svg>
             </div>
           </div>
@@ -2483,22 +2490,22 @@
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi Persegi ADEB:</strong> Bentuk persegi <strong>ADEB</strong> bersisi <strong>AB</strong>, lalu tarik <strong>CF &#8741; AD</strong> dari titik potong sembarang <strong>C</strong> menjadi <span class="area-tag area-tag--mint">AF</span> dan <span class="area-tag area-tag--peach">CE</span>.</span>
+                <span><strong>Konstruksi Persegi Bersisi a:</strong> Bentuk persegi bersisi <strong>a = b + c</strong>, lalu tarik garis tegak pemisah antara segmen <strong>b</strong> dan <strong>c</strong> menjadi <span class="area-tag area-tag--mint">ab</span> dan <span class="area-tag area-tag--peach">ac</span>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Luas Tiap Bagian:</strong> Diperoleh persegi panjang <strong>AF = AD &times; AC = AB &times; AC</strong> dan <strong>CE = BE &times; CB = AB &times; CB</strong>.</span>
+                <span><strong>Luas Tiap Bagian:</strong> Sisi tegak sejajar memiliki tinggi penuh <strong>a</strong>, sehingga bagian kiri seluas <strong>a &times; b = ab</strong> dan bagian kanan seluas <strong>a &times; c = ac</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Kesimpulan Luas:</strong> Karena persegi <strong>ADEB</strong> tersusun tepat dari <span class="area-tag area-tag--mint">AF</span> dan <span class="area-tag area-tag--peach">CE</span>, berlaku kesamaan luas:</span>
+                <span><strong>Kesimpulan Luas:</strong> Karena persegi bersisi <strong>a</strong> tersusun tepat dari <span class="area-tag area-tag--mint">ab</span> dan <span class="area-tag area-tag--peach">ac</span>, berlaku kesamaan luas:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">Luas ADEB</span>
-              <span>= (AB &times; AC) + (AB &times; CB) = AB(AC + CB)</span>
-              <span class="prop1-equation-cont">= AB &times; AB = AB&#178;</span>
+              <span class="prop1-equation-label">Luas Persegi a&#178;</span>
+              <span>= ab + ac = a(b + c)</span>
+              <span class="prop1-equation-cont">= a &times; a = a&#178;</span>
             </div>
           </div>
 
@@ -2506,27 +2513,34 @@
             <div class="diagram-grid-card pair-diagram-card">
               <div class="diagram-inner-frame">
                 <svg role="img" viewBox="0 0 320 280">
-                  <title>Diagram pembuktian Proposisi 2: persegi ADEB dibagi oleh garis tegak CF di titik sembarang C menjadi persegi panjang mint AF dan peach CE</title>
-                  <!-- Top labels A, C, B -->
-                  <text x="72" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">A</text>
-                  <text x="136" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">C</text>
-                  <text x="248" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">B</text>
+                  <title>Diagram pembuktian Proposisi 2: persegi bersisi a yang terbagi menjadi jalur mint seluas ab dan jalur peach seluas ac</title>
+                  <!-- Top width labels b, c -->
+                  <text x="104" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">b</text>
+                  <text x="192" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">c</text>
 
-                  <!-- Pastel shaded subdivisions AF and CE (unequal widths) -->
+                  <!-- Left height label a -->
+                  <text x="52" y="148" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">a</text>
+
+                  <!-- Pastel shaded subdivisions ab and ac -->
                   <rect x="72" y="54" width="64" height="176" fill="#CCF5E1" opacity="0.78"/>
                   <rect x="136" y="54" width="112" height="176" fill="#FFE2CC" opacity="0.78"/>
 
-                  <!-- Right-angle corner marker at A -->
+                  <!-- Right-angle corner marker -->
                   <polyline points="86,54 86,68 72,68" fill="none" stroke="#5C76D8" stroke-width="2.4"/>
 
-                  <!-- Square ADEB and dividing line CF -->
+                  <!-- Square and dividing line -->
                   <rect x="72" y="54" width="176" height="176" fill="none" stroke="#232652" stroke-width="3.6"/>
                   <line x1="136" y1="54" x2="136" y2="230" stroke="#232652" stroke-width="3.6"/>
 
-                  <!-- Bottom labels D, F, E -->
-                  <text x="72" y="258" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">D</text>
-                  <text x="136" y="258" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">F</text>
-                  <text x="248" y="258" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">E</text>
+                  <!-- Interior area labels -->
+                  <text x="104" y="148" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">ab</text>
+                  <text x="192" y="148" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">ac</text>
+
+                  <!-- Bottom total span a = b + c -->
+                  <line x1="72" y1="244" x2="248" y2="244" stroke="#5C76D8" stroke-width="2"/>
+                  <line x1="72" y1="239" x2="72" y2="249" stroke="#5C76D8" stroke-width="2"/>
+                  <line x1="248" y1="239" x2="248" y2="249" stroke="#5C76D8" stroke-width="2"/>
+                  <text x="160" y="266" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">a = b + c</text>
                 </svg>
               </div>
             </div>
@@ -2542,7 +2556,7 @@
         <article class="pair-card">
           <div class="pair-card-head">
             <h2 class="prop-badge pair-badge" lang="en">Proposition 3</h2>
-            <span class="pair-chip pair-chip--peach">Tinggi = Bagian CB</span>
+            <span class="pair-chip pair-chip--peach">Tinggi = Bagian c</span>
           </div>
 
           <p class="pair-quote">
@@ -2553,22 +2567,22 @@
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi &amp; Perluasan:</strong> Bentuk persegi <strong>CDEB</strong> pada <strong>CB</strong>, lalu perpanjang <strong>ED</strong> ke <strong>F</strong> sejajar <strong>A</strong> dan tarik <strong>AF &#8741; CD</strong> hingga terbentuk persegi panjang <strong>AE</strong>.</span>
+                <span><strong>Konstruksi &amp; Perluasan:</strong> Bentuk persegi bersisi bagian <strong>c</strong> (<span class="area-tag area-tag--butter">c&#178;</span>), lalu perluas sisi alasnya sejauh <strong>b</strong> sehingga terbentuk persegi panjang selebar total <strong>a = b + c</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Identifikasi Bagian Luas:</strong> Persegi panjang <strong>AE</strong> tersusun tepat dari <span class="area-tag area-tag--lavender">AD</span> (<strong>AC &times; DC = AC &times; CB</strong>) dan persegi <span class="area-tag area-tag--butter">CE</span> (<strong>CB&#178;</strong>).</span>
+                <span><strong>Identifikasi Bagian Luas:</strong> Persegi panjang tersebut tersusun tepat dari <span class="area-tag area-tag--lavender">bc</span> (alas <strong>b</strong> &times; tinggi <strong>c</strong>) dan persegi <span class="area-tag area-tag--butter">c&#178;</span>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Kesimpulan Luas:</strong> Karena panjang <strong>AE</strong> adalah <strong>AB</strong> dan tingginya <strong>BE = CB</strong>, berlaku kesamaan luas:</span>
+                <span><strong>Kesimpulan Luas:</strong> Karena panjang total alas adalah <strong>a = b + c</strong> dan tingginya tepat sama dengan <strong>c</strong>, berlaku kesamaan luas:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">Luas AE</span>
-              <span>= AB &times; BE = AB &times; CB = AD + CE</span>
-              <span class="prop1-equation-cont">&there4; AB &times; CB = (AC &times; CB) + CB&#178;</span>
+              <span class="prop1-equation-label">Luas Total</span>
+              <span>= (b + c) &times; c = bc + c&#178;</span>
+              <span class="prop1-equation-cont">&there4; ac = bc + c&#178; (dengan a = b + c)</span>
             </div>
           </div>
 
@@ -2576,27 +2590,34 @@
             <div class="diagram-grid-card pair-diagram-card">
               <div class="diagram-inner-frame">
                 <svg role="img" viewBox="0 0 320 280">
-                  <title>Diagram pembuktian Proposisi 3: persegi panjang AE terbagi oleh garis CD di titik C menjadi persegi panjang ungu AD dan persegi kuning CE</title>
-                  <!-- Top labels A, C, B -->
-                  <text x="52" y="66" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">A</text>
-                  <text x="136" y="66" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">C</text>
-                  <text x="268" y="66" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">B</text>
+                  <title>Diagram pembuktian Proposisi 3: persegi panjang total beralas b tambah c dan tinggi c terbagi menjadi persegi panjang ungu bc dan persegi kuning c kuadrat</title>
+                  <!-- Top width labels b, c -->
+                  <text x="94" y="66" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">b</text>
+                  <text x="202" y="66" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">c</text>
 
-                  <!-- Pastel shaded subdivisions AD (rectangle) and CE (true square) -->
+                  <!-- Left height label c -->
+                  <text x="34" y="152" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">c</text>
+
+                  <!-- Pastel shaded subdivisions bc (rectangle) and c^2 (true square) -->
                   <rect x="52" y="80" width="84" height="132" fill="#E6DCFF" opacity="0.86"/>
                   <rect x="136" y="80" width="132" height="132" fill="#FFF1A8" opacity="0.86"/>
 
-                  <!-- Right-angle corner marker inside square CE at C -->
+                  <!-- Right-angle corner marker inside square c^2 -->
                   <polyline points="150,80 150,94 136,94" fill="none" stroke="#5C76D8" stroke-width="2.4"/>
 
-                  <!-- Rectangle AE outline and dividing segment CD -->
+                  <!-- Rectangle outline and dividing segment -->
                   <rect x="52" y="80" width="216" height="132" fill="none" stroke="#232652" stroke-width="3.6"/>
                   <line x1="136" y1="80" x2="136" y2="212" stroke="#232652" stroke-width="3.6"/>
 
-                  <!-- Bottom labels F, D, E -->
-                  <text x="52" y="240" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">F</text>
-                  <text x="136" y="240" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">D</text>
-                  <text x="268" y="240" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="22" font-weight="800">E</text>
+                  <!-- Interior area labels -->
+                  <text x="94" y="152" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">bc</text>
+                  <text x="202" y="152" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">c&#178;</text>
+
+                  <!-- Bottom total span a = b + c -->
+                  <line x1="52" y1="228" x2="268" y2="228" stroke="#5C76D8" stroke-width="2"/>
+                  <line x1="52" y1="223" x2="52" y2="233" stroke="#5C76D8" stroke-width="2"/>
+                  <line x1="268" y1="223" x2="268" y2="233" stroke="#5C76D8" stroke-width="2"/>
+                  <text x="160" y="250" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">a = b + c</text>
                 </svg>
               </div>
             </div>
@@ -2604,7 +2625,7 @@
             <div class="algebra-card pair-algebra-card">
               <p class="algebra-title">Bentuk Aljabar</p>
               <p class="algebra-formula">(b + c)c = bc + c&#178; (a = b + c)</p>
-              <p class="algebra-formula algebra-formula--compact">(a + b)a = ab + a&#178; (CB = a, AC = b)</p>
+              <p class="algebra-formula algebra-formula--compact">(variabel bagian: (a + b)a = ab + a&#178;)</p>
             </div>
           </div>
         </article>
@@ -2646,31 +2667,31 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Garis <strong>AB</strong> dipotong sembarang di <strong>C</strong>. Melanjutkan pemotongan vertikal pada Proposisi 2, persegi <strong>ADEB</strong> diurai secara vertikal &amp; horizontal:</p>
+            <p class="prop1-intro">Garis lurus <strong>a</strong> terpotong sembarang menjadi bagian <strong>b</strong> dan <strong>c</strong> (<strong>a = b + c</strong>). Persegi bersisi <strong>a</strong> dibelah secara vertikal &amp; horizontal:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi Persegi ADEB &amp; Diagonal BD:</strong> Pada <strong>AB</strong> dibentuk persegi <strong>ADEB</strong>, lalu ditarik garis diagonal <strong>BD</strong> dari sudut B menuju sudut D.</span>
+                <span><strong>Konstruksi Persegi (b + c)&#178; &amp; Diagonal:</strong> Bentuk persegi bersisi total <strong>a = b + c</strong>, lalu tarik garis diagonal penuh yang membagi sudut siku-siku menjadi 45&deg;.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Tarik Garis Sejajar CF &amp; HK:</strong> Melalui <strong>C</strong> ditarik <strong>CF &#8741; AD, BE</strong> memotong <strong>BD</strong> di <strong>G</strong>; melalui <strong>G</strong> ditarik <strong>HK &#8741; AB, DE</strong>.</span>
+                <span><strong>Garis Pembagi Sejajar Sisi:</strong> Pada batas antara <strong>b</strong> dan <strong>c</strong> ditarik garis tegak memotong diagonal, lalu ditarik garis mendatar sejajar alas melewati titik potong tersebut.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Buktikan Persegi &amp; Komplemen:</strong> Diagonal <strong>BD</strong> membagi sudut siku-siku 45&deg;; <span class="area-tag area-tag--mint">HF</span> terbukti persegi bersisi <em>AC</em> dan <span class="area-tag area-tag--butter">CK</span> persegi bersisi <em>CB</em>, sedang dua komplemennya <span class="area-tag area-tag--peach">AG</span> = <span class="area-tag area-tag--peach">GE</span> (<em>AC &times; CB</em>).</span>
+                <span><strong>Identifikasi Persegi &amp; Komplemen:</strong> Karena diagonal bersudut 45&deg;, <span class="area-tag area-tag--mint">b&#178;</span> dan <span class="area-tag area-tag--butter">c&#178;</span> terbukti persegi bersisi <strong>b</strong> dan <strong>c</strong>, sedang dua komplemennya sama luas <span class="area-tag area-tag--peach">bc</span>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Kesimpulan Luas Keseluruhan:</strong> Persegi <strong>ADEB</strong> tersusun tepat dari kedua persegi tersebut dan dua komplemen yang sama luasnya:</span>
+                <span><strong>Kesimpulan Luas Keseluruhan:</strong> Persegi bersisi <strong>(b + c)</strong> tersusun tepat dari kedua persegi tersebut dan dua komplemen yang sama luasnya:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">Luas ADEB</span>
-              <span>= HF + CK + AG + GE = AC&#178; + CB&#178; + 2(AC &times; CB)</span>
-              <span class="prop1-equation-cont">&there4; AB&#178; = AC&#178; + CB&#178; + 2(AC &times; CB)</span>
+              <span class="prop1-equation-label">Luas Persegi a&#178;</span>
+              <span>= b&#178; + c&#178; + bc + bc = b&#178; + c&#178; + 2bc</span>
+              <span class="prop1-equation-cont">&there4; (b + c)&#178; = b&#178; + c&#178; + 2bc</span>
             </div>
           </div>
         </div>
@@ -2698,44 +2719,43 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 280">
-                <title>Diagram pembuktian Proposisi 4: persegi ADEB dipotong garis CF, HK, dan diagonal BD di titik G menghasilkan persegi hijau HF, persegi kuning CK, serta dua persegi panjang jingga AG dan GE</title>
-                <!-- Top labels A, C, B -->
-                <text x="76" y="40" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="21" font-weight="800">A</text>
-                <text x="139" y="40" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="21" font-weight="800">C</text>
-                <text x="244" y="40" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="21" font-weight="800">B</text>
+                <title>Diagram pembuktian Proposisi 4: persegi bersisi a sama dengan b tambah c dipotong garis tegak, mendatar, dan diagonal menghasilkan persegi hijau b kuadrat, persegi kuning c kuadrat, serta dua persegi panjang peach bc</title>
+                <!-- Top width labels b, c -->
+                <text x="107.5" y="40" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">b</text>
+                <text x="191.5" y="40" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">c</text>
 
-                <!-- Pastel shaded subdivisions: AG (bc), CK (c^2), HF (b^2), GE (bc) -->
+                <!-- Left height labels c, b -->
+                <text x="58" y="110" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">c</text>
+                <text x="58" y="194" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">b</text>
+
+                <!-- Pastel shaded subdivisions: bc, c^2, b^2, bc -->
                 <rect x="76" y="52" width="63" height="105" fill="#FFE2CC" opacity="0.88"/>
                 <rect x="139" y="52" width="105" height="105" fill="#FFF1A8" opacity="0.9"/>
                 <rect x="76" y="157" width="63" height="63" fill="#CCF5E1" opacity="0.9"/>
                 <rect x="139" y="157" width="105" height="63" fill="#FFE2CC" opacity="0.88"/>
 
-                <!-- Right-angle corner markers inside CK and HF -->
+                <!-- Right-angle corner markers inside c^2 and b^2 -->
                 <polyline points="153,52 153,66 139,66" fill="none" stroke="#5C76D8" stroke-width="2.4"/>
                 <polyline points="90,220 90,206 76,206" fill="none" stroke="#5C76D8" stroke-width="2.4"/>
 
-                <!-- Outer square ADEB and internal lines CF, HK, diagonal BD -->
+                <!-- Outer square and internal dividing lines + diagonal -->
                 <rect x="76" y="52" width="168" height="168" fill="none" stroke="#232652" stroke-width="3.4"/>
                 <line x1="139" y1="52" x2="139" y2="220" stroke="#232652" stroke-width="3"/>
                 <line x1="76" y1="157" x2="244" y2="157" stroke="#232652" stroke-width="3"/>
                 <line x1="244" y1="52" x2="76" y2="220" stroke="#5C76D8" stroke-width="2.6"/>
                 <circle cx="139" cy="157" r="4.5" fill="#5C76D8"/>
 
-                <!-- Region expressions avoiding diagonal BD -->
+                <!-- Region expressions avoiding diagonal -->
                 <text x="107.5" y="109" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">bc</text>
                 <text x="168" y="86" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">c&#178;</text>
                 <text x="120" y="205" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">b&#178;</text>
                 <text x="191.5" y="194" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">bc</text>
 
-                <!-- Side & intersection labels H, G, K -->
-                <text x="61" y="164" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="21" font-weight="800">H</text>
-                <text x="126" y="146" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="18" font-weight="800">G</text>
-                <text x="259" y="164" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="21" font-weight="800">K</text>
-
-                <!-- Bottom labels D, F, E -->
-                <text x="76" y="244" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="21" font-weight="800">D</text>
-                <text x="139" y="244" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="21" font-weight="800">F</text>
-                <text x="244" y="244" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="21" font-weight="800">E</text>
+                <!-- Bottom total span a = b + c -->
+                <line x1="76" y1="238" x2="244" y2="238" stroke="#5C76D8" stroke-width="2"/>
+                <line x1="76" y1="233" x2="76" y2="243" stroke="#5C76D8" stroke-width="2"/>
+                <line x1="244" y1="233" x2="244" y2="243" stroke="#5C76D8" stroke-width="2"/>
+                <text x="160" y="261" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">a = b + c</text>
               </svg>
             </div>
           </div>
@@ -2743,7 +2763,7 @@
           <div class="algebra-card">
             <p class="algebra-title">Bentuk Aljabar</p>
             <p class="algebra-formula">(b + c)&#178; = b&#178; + c&#178; + 2bc (a = b + c)</p>
-            <p class="algebra-formula algebra-formula--compact">(a + b)&#178; = a&#178; + b&#178; + 2ab (AC = a, CB = b)</p>
+            <p class="algebra-formula algebra-formula--compact">(variabel bagian: (a + b)&#178; = a&#178; + b&#178; + 2ab)</p>
           </div>
         </div>
       </section>
@@ -2784,31 +2804,31 @@
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Garis <strong>AB</strong> dibagi sama di <strong>C</strong> (<strong>AC = CB</strong>) &amp; tak sama di <strong>D</strong>; luas <strong>AD &times; DB</strong> dipadankan dengan <strong>gnomon NOP</strong> (Definisi 2) pada persegi <strong>CEFB</strong>:</p>
+            <p class="prop1-intro">Garis utuh <strong>a + b</strong> terbagi sama besar menjadi dua potongan <strong>&frac12;(a + b)</strong> dan tak sama panjang menjadi <strong>a</strong> &amp; <strong>b</strong> (selisih titik potong = <strong>&frac12;(a &minus; b)</strong>):</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi CEFB &amp; Garis Bantu:</strong> Pada <strong>CB</strong> dibentuk persegi <strong>CEFB</strong> dan diagonal <strong>BE</strong>; tarik <strong>DG &#8741; BF</strong> memotong <strong>BE</strong> di <strong>H</strong>, <strong>KM &#8741; AB</strong>, dan <strong>AK &#8741; CL</strong>.</span>
+                <span><strong>Konstruksi Persegi [&frac12;(a + b)]&#178;:</strong> Pada setengah garis kanan <strong>&frac12;(a + b)</strong> dibentuk persegi beserta diagonalnya; tarik garis tegak pemisah selebar <strong>b</strong> serta garis mendatar sejarak <strong>b</strong> dari sisi atas.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Buktikan Kesamaan AL = DF:</strong> Karena komplemen diagonal sama luas (<strong>CH = HF</strong>), diperoleh <strong>CM = DF</strong>; karena <strong>AC = CB</strong>, maka <span class="area-tag area-tag--mint">AL</span> = <strong>CM</strong> = <span class="area-tag area-tag--mint">DF</span>.</span>
+                <span><strong>Kesamaan Blok Kiri dengan Jalur Bawah:</strong> Karena komplemen diagonal sama luas (<span class="area-tag area-tag--peach">b&middot;&frac12;(a&minus;b) kiri-atas</span>), jalur kiri <span class="area-tag area-tag--mint">&frac12;(a+b)&middot;b</span> tepat sama luas dengan gabungan dua petak mint kanan (<span class="area-tag area-tag--mint">b&#178; + b&middot;&frac12;(a&minus;b)</span>).</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Padankan Gnomon NOP:</strong> Penambahan <span class="area-tag area-tag--peach">CH</span> memberi <strong>AH = DF + CH = Gnomon NOP</strong>; karena <strong>DH = DB</strong>, maka <strong>AD &times; DB = Gnomon NOP</strong>.</span>
+                <span><strong>Padankan ab dengan Gnomon:</strong> Penambahan petak peach <span class="area-tag area-tag--peach">b&middot;&frac12;(a&minus;b)</span> menyamakan blok persegi panjang penuh selebar <strong>a</strong> &times; tinggi <strong>b</strong> (luas <strong>ab</strong>) dengan bangun gnomon siku di dalam persegi besar.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Lengkapi Persegi LG:</strong> Persegi kecil bersisi <strong>CD</strong> (<span class="area-tag area-tag--butter">LG</span> = <strong>CD&#178;</strong>) tepat melengkapi <strong>gnomon NOP</strong> menjadi persegi <strong>CEFB</strong>:</span>
+                <span><strong>Lengkapi Persegi Kuning:</strong> Persegi kecil bersisi selisih <strong>&frac12;(a &minus; b)</strong> (<span class="area-tag area-tag--butter">[&frac12;(a &minus; b)]&#178;</span>) tepat melengkapi gnomon menjadi persegi utuh <strong>[&frac12;(a + b)]&#178;</strong>:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">Luas CEFB</span>
-              <span>= Gnomon NOP + LG = AH + LG = (AD &times; DB) + CD&#178;</span>
-              <span class="prop1-equation-cont">&there4; CB&#178; = (AD &times; DB) + CD&#178;</span>
+              <span class="prop1-equation-label">Luas Persegi</span>
+              <span>= Gnomon + [&frac12;(a &minus; b)]&#178; = ab + [&frac12;(a &minus; b)]&#178;</span>
+              <span class="prop1-equation-cont">&there4; ab + [&frac12;(a &minus; b)]&#178; = [&frac12;(a + b)]&#178;</span>
             </div>
           </div>
         </div>
@@ -2836,53 +2856,60 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 280">
-                <title>Diagram pembuktian Proposisi 5: persegi panjang hijau AL dan komplemen peach CH berpadanan dengan gnomon NOP (CH ditambah DM dan HF) serta persegi kuning LG</title>
-                <!-- Top labels A, C, D, B -->
-                <text x="38" y="64" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">A</text>
-                <text x="148" y="64" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">C</text>
-                <text x="192" y="64" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">D</text>
-                <text x="258" y="64" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">B</text>
+                <title>Diagram pembuktian Proposisi 5: persegi panjang kiri dan petak peach seluas total ab berpadanan dengan gnomon pada persegi bersisi setengah jumlah a dan b, ditambah persegi kuning bersisi setengah selisih a dan b</title>
+                <!-- Top brackets for unequal cut parts a and b -->
+                <line x1="24" y1="36" x2="198" y2="36" stroke="#5C76D8" stroke-width="1.8"/>
+                <line x1="24" y1="32" x2="24" y2="40" stroke="#5C76D8" stroke-width="1.8"/>
+                <line x1="201" y1="32" x2="201" y2="40" stroke="#5C76D8" stroke-width="1.8"/>
+                <text x="112" y="28" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">a</text>
 
-                <!-- Shaded subdivisions: AL (mint), CH (peach), DM (mint), LG (butter), HF (mint) -->
-                <rect x="38" y="78" width="110" height="66" fill="#CCF5E1" opacity="0.92"/>
-                <rect x="148" y="78" width="44" height="66" fill="#FFE2CC" opacity="0.92"/>
-                <rect x="192" y="78" width="66" height="66" fill="#CCF5E1" opacity="0.92"/>
-                <rect x="148" y="144" width="44" height="44" fill="#FFF1A8" opacity="0.95"/>
-                <rect x="192" y="144" width="66" height="44" fill="#CCF5E1" opacity="0.92"/>
+                <line x1="204" y1="36" x2="274" y2="36" stroke="#5C76D8" stroke-width="1.8"/>
+                <line x1="274" y1="32" x2="274" y2="40" stroke="#5C76D8" stroke-width="1.8"/>
+                <text x="239" y="28" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">b</text>
 
-                <!-- Outer square CEFB, extension AK/KL, DG, KM, diagonal BE -->
-                <rect x="38" y="78" width="110" height="66" fill="none" stroke="#232652" stroke-width="3.2"/>
-                <rect x="148" y="78" width="110" height="110" fill="none" stroke="#232652" stroke-width="3.2"/>
-                <line x1="192" y1="78" x2="192" y2="188" stroke="#232652" stroke-width="2.8"/>
-                <line x1="148" y1="144" x2="258" y2="144" stroke="#232652" stroke-width="2.8"/>
-                <line x1="258" y1="78" x2="148" y2="188" stroke="#5C76D8" stroke-width="2.6"/>
-                <circle cx="192" cy="144" r="4.2" fill="#5C76D8"/>
+                <!-- Segment labels along top edge -->
+                <text x="86.5" y="69" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">&frac12;(a + b)</text>
+                <text x="175" y="69" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="11.5" font-weight="800">&frac12;(a&minus;b)</text>
+                <text x="237.5" y="69" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">b</text>
 
-                <!-- Dashed gnomon arc circling N-O-P around H -->
-                <path d="M 172 119 A 21 21 0 1 1 199 163" fill="none" stroke="#5C76D8" stroke-width="2" stroke-dasharray="4 3"/>
+                <!-- Shaded subdivisions -->
+                <rect x="24" y="80" width="125" height="73" fill="#CCF5E1" opacity="0.92"/>
+                <rect x="149" y="80" width="52" height="73" fill="#FFE2CC" opacity="0.92"/>
+                <rect x="201" y="80" width="73" height="73" fill="#CCF5E1" opacity="0.92"/>
+                <rect x="149" y="153" width="52" height="52" fill="#FFF1A8" opacity="0.95"/>
+                <rect x="201" y="153" width="73" height="52" fill="#CCF5E1" opacity="0.92"/>
 
-                <!-- Region names avoiding diagonal BE & gnomon arc -->
-                <text x="93" y="116" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">AL</text>
-                <text x="170" y="95" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">CH</text>
-                <text x="213" y="98" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">DM</text>
-                <rect x="155" y="156" width="30" height="20" rx="5" fill="#FFF1A8"/>
-                <text x="170" y="171" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">LG</text>
-                <text x="239" y="171" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">HF</text>
+                <!-- Outlines and diagonal -->
+                <rect x="24" y="80" width="125" height="73" fill="none" stroke="#232652" stroke-width="3.1"/>
+                <rect x="149" y="80" width="125" height="125" fill="none" stroke="#232652" stroke-width="3.1"/>
+                <line x1="201" y1="80" x2="201" y2="205" stroke="#232652" stroke-width="2.7"/>
+                <line x1="149" y1="153" x2="274" y2="153" stroke="#232652" stroke-width="2.7"/>
+                <line x1="274" y1="80" x2="149" y2="205" stroke="#5C76D8" stroke-width="2.5"/>
+                <circle cx="201" cy="153" r="4" fill="#5C76D8"/>
 
-                <!-- Gnomon markers N, O, P and vertex H -->
-                <text x="159" y="123" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">N</text>
-                <text x="234" y="129" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">O</text>
-                <text x="208" y="176" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">P</text>
-                <text x="183" y="139" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">H</text>
+                <!-- Dashed gnomon arc around corner (201,153) -->
+                <path d="M 183 135 A 20 20 0 1 1 208 172" fill="none" stroke="#5C76D8" stroke-width="1.9" stroke-dasharray="4 3"/>
 
-                <!-- Side & bottom labels K, M, E, G, F -->
-                <text x="24" y="150" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">K</text>
-                <text x="272" y="150" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">M</text>
-                <text x="148" y="212" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">E</text>
-                <text x="192" y="212" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">G</text>
-                <text x="258" y="212" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">F</text>
+                <!-- Area labels inside compartments avoiding diagonal & arc -->
+                <text x="86.5" y="121" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14" font-weight="800">&frac12;(a+b)&middot;b</text>
+                <text x="175" y="102" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="11.5" font-weight="800">&frac12;(a&minus;b)</text>
+                <text x="175" y="117" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="11.5" font-weight="800">&times; b</text>
+                <text x="223" y="104" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">b&#178;</text>
+                <rect x="151" y="168" width="48" height="21" rx="4" fill="#FFF1A8"/>
+                <text x="175" y="182" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="10.5" font-weight="800">[&frac12;(a&minus;b)]&#178;</text>
+                <text x="242" y="184" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="12" font-weight="800">b&middot;&frac12;(a&minus;b)</text>
 
-                <text x="160" y="246" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">Gnomon NOP = CH + DF  |  AL = DF</text>
+                <!-- Right side height labels -->
+                <text x="291" y="121" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">b</text>
+                <text x="292" y="183" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="10.8" font-weight="800">&frac12;(a&minus;b)</text>
+
+                <!-- Bottom span for main square side -->
+                <line x1="149" y1="220" x2="274" y2="220" stroke="#5C76D8" stroke-width="1.9"/>
+                <line x1="149" y1="215" x2="149" y2="225" stroke="#5C76D8" stroke-width="1.9"/>
+                <line x1="274" y1="215" x2="274" y2="225" stroke="#5C76D8" stroke-width="1.9"/>
+                <text x="211.5" y="239" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">&frac12;(a + b)</text>
+
+                <text x="160" y="264" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">ab = Gnomon &middot; Persegi utuh = [&frac12;(a + b)]&#178;</text>
               </svg>
             </div>
           </div>
@@ -2949,35 +2976,35 @@
           <h1 class="prop-badge" lang="en">Proposition 6</h1>
 
           <p class="prop1-quote">
-            &ldquo;Jika garis lurus <strong>AB</strong> dibagi dua sama panjang di titik <strong>C</strong> dan diperpanjang dengan garis lurus <strong>BD</strong> secara segaris, maka luas persegi panjang <strong>AD &times; DB</strong> ditambah luas persegi bersisi setengah garis <strong>CB</strong> sama dengan luas persegi bersisi <strong>CD</strong>.&rdquo;
+            &ldquo;Jika sebuah garis lurus terbagi dua sama panjang masing-masing sebesar <strong>a</strong> lalu diperpanjang dengan ruas garis <strong>b</strong> secara segaris, maka luas persegi panjang <strong>(2a + b)&middot;b</strong> ditambah luas persegi bersisi setengah garis <strong>a</strong> sama dengan luas persegi bersisi <strong>(a + b)</strong>.&rdquo;
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Pembuktian memadankan persegi panjang <strong>AD &times; DB</strong> dengan bangun siku <strong>gnomon NOP</strong> (Definisi 2) di dalam persegi <strong>CEFD</strong>:</p>
+            <p class="prop1-intro">Pembuktian memadankan persegi panjang <strong>(2a + b)&middot;b</strong> dengan gnomon siku di dalam persegi besar bersisi <strong>(a + b)</strong>:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Bangun CEFD &amp; garis bantu:</strong> Pada gabungan <strong>CD</strong> dibentuk persegi <strong>CEFD</strong> dengan diagonal <strong>ED</strong>; melalui <strong>B</strong> ditarik <strong>BG</strong> sejajar <strong>DF</strong> memotong <strong>ED</strong> di <strong>H</strong>, melalui <strong>H</strong> ditarik <strong>KM</strong> sejajar <strong>AD</strong>, lalu ditarik <strong>AK</strong> sejajar <strong>CL</strong>.</span>
+                <span><strong>Bangun Persegi (a + b)&#178; &amp; Garis Bantu:</strong> Pada gabungan <strong>a + b</strong> bentuk persegi besar bersisi <strong>(a + b)</strong> beserta diagonalnya; tarik garis tegak pemisah batas <strong>a</strong> dan <strong>b</strong>, serta garis mendatar sejarak <strong>b</strong> dari sisi atas.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Buktikan kesamaan AL = HF:</strong> Karena <strong>AC = CB</strong>, diperoleh <span class="area-tag area-tag--mint">AL</span> = <span class="area-tag area-tag--peach">CH</span>. Karena komplemen di sekitar diagonal sama luas (<strong>CH = HF</strong>), diperoleh <span class="area-tag area-tag--mint">AL</span> = <span class="area-tag area-tag--mint">HF</span>.</span>
+                <span><strong>Buktikan Kesamaan Dua Petak Mint:</strong> Karena dua bagian alas awal sama panjang (<strong>a = a</strong>), petak kiri <span class="area-tag area-tag--mint">ab (kiri)</span> = <span class="area-tag area-tag--peach">ab (atas)</span>; karena komplemen diagonal sama luas, diperoleh <span class="area-tag area-tag--mint">ab (kiri) = ab (bawah)</span>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Padankan AM dengan Gnomon NOP:</strong> Penambahan daerah gabungan <strong>CM</strong> (<span class="area-tag area-tag--peach">CH</span> + <span class="area-tag area-tag--lavender">DM</span>) menghasilkan <strong>AM = Gnomon NOP</strong>. Karena <strong>DM = DB</strong>, maka <strong>AD &times; DB = AM = Gnomon NOP</strong>.</span>
+                <span><strong>Padankan (2a + b)&middot;b dengan Gnomon:</strong> Penambahan bagian gabungan (<span class="area-tag area-tag--peach">ab</span> + <span class="area-tag area-tag--lavender">b&#178;</span>) pada <span class="area-tag area-tag--mint">ab (bawah)</span> menyamakan blok persegi panjang selebar <strong>(2a + b)</strong> setinggi <strong>b</strong> dengan bangun gnomon.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Lengkapi dengan persegi LG:</strong> Penambahan persegi <span class="area-tag area-tag--butter">LG</span> (bersisi <strong>CB</strong>, luas <strong>CB&#178;</strong>) pada gnomon <strong>NOP</strong> melengkapi seluruh persegi <strong>CEFD</strong> (luas <strong>CD&#178;</strong>):</span>
+                <span><strong>Lengkapi dengan Persegi a&#178;:</strong> Penambahan persegi kuning <span class="area-tag area-tag--butter">a&#178;</span> (bersisi <strong>a</strong>) pada gnomon tepat melengkapi seluruh persegi besar bersisi <strong>(a + b)</strong>:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">Luas CEFD</span>
-              <span>= Gnomon NOP + LG = AM + LG</span>
-              <span class="prop1-equation-cont">= (AD &times; DB) + CB&#178; &nbsp;&there4;&nbsp; (AD &times; DB) + CB&#178; = CD&#178;</span>
+              <span class="prop1-equation-label">Luas Persegi (a + b)&#178;</span>
+              <span>= Gnomon + a&#178; = (2a + b)&middot;b + a&#178;</span>
+              <span class="prop1-equation-cont">&there4; (2a + b)&middot;b + a&#178; = (a + b)&#178;</span>
             </div>
           </div>
         </div>
@@ -3005,24 +3032,29 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 280">
-                <title>Diagram pembuktian Proposisi 6: persegi panjang hijau AL sama luas dengan HF sehingga bangun AM berpadanan dengan gnomon NOP (CH, DM, dan HF), ditambah persegi kuning LG membentuk persegi CEFD</title>
-                <!-- Top labels A, C, B, D -->
-                <text x="54" y="56" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">A</text>
-                <text x="134" y="56" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">C</text>
-                <text x="214" y="56" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">B</text>
-                <text x="260" y="56" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">D</text>
+                <title>Diagram pembuktian Proposisi 6: persegi panjang kiri seluas ab sama luas dengan jalur mint kanan bawah ab, sehingga persegi panjang utuh selebar 2a tambah b bertinggi b berpadanan dengan gnomon pada persegi bersisi a tambah b yang dilengkapi persegi kuning a kuadrat</title>
+                <!-- Top span 2a + b -->
+                <line x1="54" y1="30" x2="260" y2="30" stroke="#5C76D8" stroke-width="1.8"/>
+                <line x1="54" y1="26" x2="54" y2="34" stroke="#5C76D8" stroke-width="1.8"/>
+                <line x1="260" y1="26" x2="260" y2="34" stroke="#5C76D8" stroke-width="1.8"/>
+                <text x="157" y="23" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14" font-weight="800">2a + b</text>
 
-                <!-- Shaded subdivisions: AL (mint), CH (peach), DM (lavender), LG (butter), HF (mint) -->
+                <!-- Top width labels a, a, b -->
+                <text x="94" y="59" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">a</text>
+                <text x="174" y="59" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">a</text>
+                <text x="237" y="59" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">b</text>
+
+                <!-- Shaded subdivisions: ab (mint left), ab (peach), b^2 (lavender), a^2 (butter), ab (mint right) -->
                 <rect x="54" y="70" width="80" height="46" fill="#CCF5E1" opacity="0.92"/>
                 <rect x="134" y="70" width="80" height="46" fill="#FFE2CC" opacity="0.92"/>
                 <rect x="214" y="70" width="46" height="46" fill="#E6DCFF" opacity="0.92"/>
                 <rect x="134" y="116" width="80" height="80" fill="#FFF1A8" opacity="0.95"/>
                 <rect x="214" y="116" width="46" height="80" fill="#CCF5E1" opacity="0.92"/>
 
-                <!-- Right-angle corner marker inside CEFD at C -->
+                <!-- Right-angle corner marker -->
                 <polyline points="146,70 146,82 134,82" fill="none" stroke="#5C76D8" stroke-width="2.2"/>
 
-                <!-- Outlines AL, square CEFD, BG, KM, diagonal ED -->
+                <!-- Outlines and diagonal -->
                 <rect x="54" y="70" width="80" height="46" fill="none" stroke="#232652" stroke-width="3.2"/>
                 <rect x="134" y="70" width="126" height="126" fill="none" stroke="#232652" stroke-width="3.2"/>
                 <line x1="214" y1="70" x2="214" y2="196" stroke="#232652" stroke-width="2.8"/>
@@ -3030,32 +3062,29 @@
                 <line x1="134" y1="196" x2="260" y2="70" stroke="#5C76D8" stroke-width="2.6"/>
                 <circle cx="214" cy="116" r="4.2" fill="#5C76D8"/>
 
-                <!-- Dashed gnomon arc circling N-O-P around H (CH -> DM -> HF) -->
+                <!-- Dashed gnomon arc around corner (214,116) -->
                 <path d="M 195 110 A 19 19 0 1 1 221 134" fill="none" stroke="#5C76D8" stroke-width="2" stroke-dasharray="4 3"/>
 
-                <!-- Region names avoiding diagonal ED & gnomon arc -->
-                <text x="94" y="98" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16.5" font-weight="800">AL</text>
-                <text x="161" y="97" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">CH</text>
-                <text x="227" y="85" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14" font-weight="800">DM</text>
+                <!-- Area labels inside compartments avoiding diagonal & arc -->
+                <text x="94" y="99" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16.5" font-weight="800">ab</text>
+                <text x="166" y="99" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">ab</text>
+                <text x="230" y="87" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">b&#178;</text>
                 <rect x="167" y="160" width="32" height="22" rx="5" fill="#FFF1A8"/>
-                <text x="183" y="176" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16.5" font-weight="800">LG</text>
-                <text x="240" y="169" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">HF</text>
+                <text x="183" y="176" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">a&#178;</text>
+                <text x="242" y="169" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">ab</text>
 
-                <!-- Gnomon markers N, O, P and vertex H -->
-                <text x="181" y="108" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">N</text>
-                <text x="246" y="108" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">O</text>
-                <text x="229" y="149" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">P</text>
-                <text x="205" y="111" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">H</text>
+                <!-- Left & right height labels -->
+                <text x="38" y="98" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">b</text>
+                <text x="276" y="98" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">b</text>
+                <text x="276" y="162" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">a</text>
 
-                <!-- Side & bottom labels K, L, M, E, G, F -->
-                <text x="38" y="121" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">K</text>
-                <text x="122" y="132" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">L</text>
-                <text x="275" y="121" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">M</text>
-                <text x="134" y="219" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">E</text>
-                <text x="214" y="219" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">G</text>
-                <text x="260" y="219" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">F</text>
+                <!-- Bottom span for main square side a + b -->
+                <line x1="134" y1="210" x2="260" y2="210" stroke="#5C76D8" stroke-width="1.9"/>
+                <line x1="134" y1="205" x2="134" y2="215" stroke="#5C76D8" stroke-width="1.9"/>
+                <line x1="260" y1="205" x2="260" y2="215" stroke="#5C76D8" stroke-width="1.9"/>
+                <text x="197" y="230" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="15" font-weight="800">a + b</text>
 
-                <text x="160" y="252" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">Gnomon NOP = CH + DM + HF  |  AL = HF</text>
+                <text x="160" y="256" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13" font-weight="800">(2a + b)&middot;b = ab + b&#178; + ab (Gnomon)</text>
               </svg>
             </div>
           </div>
@@ -3063,7 +3092,7 @@
           <div class="algebra-card">
             <p class="algebra-title">Bentuk Aljabar</p>
             <p class="algebra-formula">(2a + b)&middot;b + a&#178; = (a + b)&#178;</p>
-            <p class="algebra-formula algebra-formula--compact">(AC = CB = a, BD = b)</p>
+            <p class="algebra-formula algebra-formula--compact">(setengah garis awal = a, perpanjangan = b)</p>
           </div>
         </div>
       </section>
@@ -3100,35 +3129,35 @@
           <h1 class="prop-badge" lang="en">Proposition 7</h1>
 
           <p class="prop1-quote">
-            &ldquo;Jika garis lurus <strong>AB</strong> dipotong sembarang di titik <strong>C</strong>, maka jumlah luas persegi bersisi keseluruhan <strong>AB</strong> dan persegi bersisi bagian <strong>BC</strong> sama dengan dua kali luas persegi panjang <strong>AB &times; BC</strong> ditambah luas persegi bersisi bagian sisanya <strong>AC</strong>.&rdquo;
+            &ldquo;Jika sebuah garis lurus (<strong>a + b</strong>) dipotong sembarang menjadi bagian <strong>b</strong> dan <strong>a</strong>, maka jumlah luas persegi bersisi keseluruhan (<strong>a + b</strong>) dan persegi bersisi bagian <strong>a</strong> sama dengan dua kali luas persegi panjang <strong>(a + b)&middot;a</strong> ditambah luas persegi bersisi bagian sisanya <strong>b</strong>.&rdquo;
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Pembuktian menghubungkan dua persegi panjang tumpang-tindih (<strong>AF</strong> dan <strong>CE</strong>) dengan bangun siku <strong>gnomon KLM</strong> (Definisi 2) di dalam persegi <strong>ADEB</strong>:</p>
+            <p class="prop1-intro">Pembuktian menghubungkan dua persegi panjang tumpang-tindih berukuran <strong>(a + b) &times; a</strong> dengan gnomon siku di dalam persegi besar <strong>(a + b)&#178;</strong>:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Bangun persegi ADEB:</strong> Pada AB dibentuk persegi <strong>ADEB</strong> dengan diagonal <strong>BD</strong>, garis tegak <strong>CN</strong> memotong diagonal di <strong>G</strong>, dan garis mendatar <strong>HF</strong> sejajar <strong>AB</strong>.</span>
+                <span><strong>Bangun Persegi (a + b)&#178;:</strong> Pada garis <strong>a + b</strong> dibentuk persegi besar bersisi <strong>(a + b)</strong> dengan diagonalnya; tarik garis tegak pemisah batas <strong>b</strong> dan <strong>a</strong> serta garis mendatar sejarak <strong>a</strong> dari sisi atas.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Jumlahkan AF &amp; CE:</strong> Karena komplemen di sekitar diagonal sama luas (<span class="area-tag area-tag--peach">AG</span> = <span class="area-tag area-tag--peach">GE</span>), penambahan <span class="area-tag area-tag--butter">CF</span> menghasilkan <strong>AF = CE</strong>, sehingga <strong>AF + CE = 2 &times; AF</strong>.</span>
+                <span><strong>Jumlahkan Dua Jalur (a + b)&middot;a:</strong> Jalur mendatar atas (<span class="area-tag area-tag--peach">ab</span> + <span class="area-tag area-tag--butter">a&#178;</span>) dan jalur tegak kanan (<span class="area-tag area-tag--butter">a&#178;</span> + <span class="area-tag area-tag--peach">ab</span>) masing-masing seluas <strong>(a + b)&middot;a</strong> karena komplemen diagonal sama luas (<span class="area-tag area-tag--peach">ab</span> = <span class="area-tag area-tag--peach">ab</span>).</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Hubungkan dengan Gnomon KLM:</strong> Gabungan <strong>AF + CE</strong> membentuk <strong>gnomon KLM</strong> (<span class="area-tag area-tag--peach">AG</span> + <span class="area-tag area-tag--butter">CF</span> + <span class="area-tag area-tag--peach">GE</span>) ditambah sekali lagi <span class="area-tag area-tag--butter">CF</span>. Karena <strong>BF = BC</strong>, maka <strong>AF = AB &times; BC</strong> dan <strong>KLM + CF = 2(AB &times; BC)</strong>.</span>
+                <span><strong>Hubungkan dengan Gnomon:</strong> Gabungan kedua jalur tersebut membentuk <strong>gnomon</strong> (<span class="area-tag area-tag--peach">ab</span> + <span class="area-tag area-tag--butter">a&#178;</span> + <span class="area-tag area-tag--peach">ab</span>) ditambah satu kali lagi persegi kecil <span class="area-tag area-tag--butter">a&#178;</span>, sehingga luas gabungannya = <strong>2(a + b)&middot;a</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Tambahkan persegi DG (bersisi AC):</strong> Karena <strong>CF = BG</strong> (sudut diagonal berhadapan) dan <strong>GD = DG</strong>, penambahan <span class="area-tag area-tag--mint">DG</span> (= <strong>AC&#178;</strong>) melengkapi <strong>KLM</strong> menjadi persegi <strong>ADEB</strong>:</span>
+                <span><strong>Tambahkan Persegi Mint b&#178;:</strong> Menambahkan persegi sisa bersisi <strong>b</strong> (<span class="area-tag area-tag--mint">b&#178;</span>) pada kedua sisi melengkapi gnomon menjadi persegi penuh <strong>(a + b)&#178;</strong>:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">KLM + BG + GD</span>
-              <span>= (KLM + DG) + CF = ADEB + CF = AB&#178; + BC&#178;</span>
-              <span class="prop1-equation-cont">&there4; AB&#178; + BC&#178; = 2(AB &times; BC) + AC&#178;</span>
+              <span class="prop1-equation-label">Gnomon + a&#178; + b&#178;</span>
+              <span>= (Gnomon + b&#178;) + a&#178; = (a + b)&#178; + a&#178;</span>
+              <span class="prop1-equation-cont">&there4; (a + b)&#178; + a&#178; = 2(a + b)&middot;a + b&#178;</span>
             </div>
           </div>
         </div>
@@ -3156,52 +3185,46 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 280">
-                <title>Diagram pembuktian Proposisi 7: persegi ADEB dibagi di titik C menjadi komplemen peach AG dan GE, persegi kuning CF sama dengan BG, serta persegi mint DG, dengan busur gnomon KLM melewati AG, CF, dan GE</title>
-                <!-- Top labels A, C, B -->
-                <text x="72" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">A</text>
-                <text x="176" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">C</text>
-                <text x="248" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">B</text>
+                <title>Diagram pembuktian Proposisi 7: persegi bersisi a tambah b dibagi menjadi komplemen peach ab, persegi kuning a kuadrat, dan persegi hijau b kuadrat dengan busur gnomon melewati ab, a kuadrat, dan ab</title>
+                <!-- Top width labels b, a -->
+                <text x="124" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">b</text>
+                <text x="212" y="42" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">a</text>
 
-                <!-- Shaded subdivisions: AG (peach), CF (butter), DG (mint), GE (peach) -->
+                <!-- Left height labels a, b -->
+                <text x="54" y="96" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">a</text>
+                <text x="54" y="184" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">b</text>
+
+                <!-- Shaded subdivisions: ab (peach), a^2 (butter), b^2 (mint), ab (peach) -->
                 <rect x="72" y="54" width="104" height="72" fill="#FFE2CC" opacity="0.92"/>
                 <rect x="176" y="54" width="72" height="72" fill="#FFF1A8" opacity="0.95"/>
                 <rect x="72" y="126" width="104" height="104" fill="#CCF5E1" opacity="0.92"/>
                 <rect x="176" y="126" width="72" height="104" fill="#FFE2CC" opacity="0.92"/>
 
-                <!-- Right-angle corner marker at A -->
+                <!-- Right-angle corner marker -->
                 <polyline points="85,54 85,67 72,67" fill="none" stroke="#5C76D8" stroke-width="2.2"/>
 
-                <!-- Outer square ADEB, CN, HF, diagonal BD, dot G -->
+                <!-- Outer square, internal dividing lines, diagonal -->
                 <rect x="72" y="54" width="176" height="176" fill="none" stroke="#232652" stroke-width="3.2"/>
                 <line x1="176" y1="54" x2="176" y2="230" stroke="#232652" stroke-width="2.8"/>
                 <line x1="72" y1="126" x2="248" y2="126" stroke="#232652" stroke-width="2.8"/>
                 <line x1="72" y1="230" x2="248" y2="54" stroke="#5C76D8" stroke-width="2.6"/>
                 <circle cx="176" cy="126" r="4.2" fill="#5C76D8"/>
 
-                <!-- Dashed gnomon arc circling K-L-M around G (AG -> CF -> GE) -->
+                <!-- Dashed gnomon arc around corner (176,126) -->
                 <path d="M 157 120 A 20 20 0 1 1 182 145" fill="none" stroke="#5C76D8" stroke-width="2" stroke-dasharray="4 3"/>
 
-                <!-- Region names avoiding diagonal BD & gnomon arc -->
-                <text x="116" y="88" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16.5" font-weight="800">AG</text>
-                <text x="198" y="75" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">CF</text>
+                <!-- Area labels avoiding diagonal & arc -->
+                <text x="122" y="94" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">ab</text>
+                <text x="198" y="77" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">a&#178;</text>
                 <rect x="108" y="167" width="32" height="22" rx="5" fill="#CCF5E1"/>
-                <text x="124" y="183" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16.5" font-weight="800">DG</text>
-                <text x="215" y="185" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">GE</text>
+                <text x="124" y="183" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17.5" font-weight="800">b&#178;</text>
+                <text x="215" y="185" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">ab</text>
 
-                <!-- Gnomon markers K, L, M and vertex G -->
-                <text x="142" y="117" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14" font-weight="800">K</text>
-                <text x="210" y="116" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14" font-weight="800">L</text>
-                <text x="191" y="160" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14" font-weight="800">M</text>
-                <text x="168" y="120" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12" font-weight="800">G</text>
-
-                <!-- Side & bottom labels H, F, D, N, E -->
-                <text x="55" y="131" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">H</text>
-                <text x="265" y="131" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">F</text>
-                <text x="72" y="253" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">D</text>
-                <text x="176" y="253" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">N</text>
-                <text x="248" y="253" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="20" font-weight="800">E</text>
-
-                <text x="160" y="273" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">Gnomon KLM = AG + CF + GE  |  CF = BG</text>
+                <!-- Bottom span for main square side a + b -->
+                <line x1="72" y1="244" x2="248" y2="244" stroke="#5C76D8" stroke-width="1.9"/>
+                <line x1="72" y1="239" x2="72" y2="249" stroke="#5C76D8" stroke-width="1.9"/>
+                <line x1="248" y1="239" x2="248" y2="249" stroke="#5C76D8" stroke-width="1.9"/>
+                <text x="160" y="263" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">a + b (Gnomon = ab + a&#178; + ab)</text>
               </svg>
             </div>
           </div>
@@ -3209,7 +3232,7 @@
           <div class="algebra-card">
             <p class="algebra-title">Bentuk Aljabar</p>
             <p class="algebra-formula">(a + b)&#178; + a&#178; = 2(a + b)&middot;a + b&#178;</p>
-            <p class="algebra-formula algebra-formula--compact">(BC = a, AC = b, AB = a + b)</p>
+            <p class="algebra-formula algebra-formula--compact">(garis utuh = a + b, potongan = b dan a)</p>
           </div>
         </div>
       </section>
@@ -3246,35 +3269,35 @@
           <h1 class="prop-badge" lang="en">Proposition 8</h1>
 
           <p class="prop1-quote">
-            &ldquo;Jika garis lurus <strong>AB</strong> dipotong sembarang di titik <strong>C</strong>, maka empat kali luas persegi panjang <strong>AB &times; BC</strong> ditambah luas persegi bersisi bagian sisanya <strong>AC</strong> sama dengan luas persegi yang dibentuk pada gabungan <strong>AB</strong> dan <strong>BC</strong> sebagai satu garis lurus.&rdquo;
+            &ldquo;Jika sebuah garis lurus (<strong>a + b</strong>) dipotong sembarang menjadi bagian <strong>b</strong> dan <strong>a</strong>, maka empat kali persegi panjang <strong>(a + b)&middot;a</strong> ditambah luas persegi bersisi bagian sisanya <strong>b</strong> sama dengan luas persegi yang dibentuk pada gabungan <strong>(a + b) + a</strong>.&rdquo;
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Persegi <strong>AEFD</strong> bersisi <strong>AD = AB + BD</strong> (<strong>BD = BC</strong>) terbagi menjadi 9 daerah, dengan 8 daerah pembentuk <strong>gnomon STU</strong> (Definisi 2):</p>
+            <p class="prop1-intro">Persegi besar bersisi <strong>2a + b</strong> terbagi menjadi kisi 3 &times; 3 (9 petak), dengan 8 petak terluar membentuk gnomon pembungkus persegi sudut kiri bawah:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi &amp; garis bantu:</strong> Perpanjangan <strong>BD = BC</strong> membentuk <strong>AD</strong>, lalu dibangun persegi <strong>AEFD</strong>, diagonal <strong>ED</strong>, garis tegak <strong>CH</strong> &amp; <strong>BL</strong>, serta garis mendatar <strong>MN</strong> &amp; <strong>OP</strong>.</span>
+                <span><strong>Konstruksi Kisi 3 &times; 3:</strong> Perpanjang garis <strong>b + a</strong> dengan tambahan <strong>a</strong> menjadi sisi total <strong>b + 2a</strong>, bangun persegi besar bersisi total beserta diagonalnya, lalu belah menjadi jalur selebar <strong>b</strong>, <strong>a</strong>, dan <strong>a</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Empat persegi sama luas:</strong> Karena <strong>CB = BD = GK = KN</strong> dan <strong>QR = RP</strong>, diperoleh <strong>CK = KD</strong> dan <strong>GR = RN</strong>; komplemen pada <strong>CP</strong> memberi <strong>CK = RN</strong>, sehingga <span class="area-tag area-tag--butter">DK = CK = GR = RN = 4&times;CK</span>.</span>
+                <span><strong>Empat Persegi Kuning a&#178;:</strong> Sudut kanan atas memuat empat persegi identik masing-masing bersisi <strong>a</strong> (<span class="area-tag area-tag--butter">4 &times; a&#178;</span>) yang terbukti sama luas melalui kesamaan komplemen pada diagonal.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Empat persegi panjang sama luas:</strong> Karena <strong>CG = GQ</strong> dan komplemen pada <strong>ML</strong> memberi <strong>MQ = QL</strong>, diperoleh kesamaan <span class="area-tag area-tag--peach">AG = MQ = QL = RF = 4&times;AG</span>.</span>
+                <span><strong>Empat Persegi Panjang Peach ab:</strong> Keempat petak berukuran <strong>a &times; b</strong> (<span class="area-tag area-tag--peach">4 &times; ab</span>) terbukti sama luas lewat kesamaan komplemen di sekitar diagonal.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Gnomon STU &amp; persegi OH:</strong> Delapan daerah tersebut membentuk <strong>gnomon STU = 4 &times; AK = 4(AB &times; BD)</strong>. Penambahan persegi <span class="area-tag area-tag--mint">OH</span> (= <strong>AC&#178;</strong>) melengkapi <strong>AEFD</strong> (= <strong>AD&#178;</strong>):</span>
+                <span><strong>Gnomon + Persegi Mint b&#178;:</strong> Kedelapan petak terluar tepat berjumlah <strong>4(ab + a&#178;) = 4(a + b)&middot;a</strong>; penambahan persegi <span class="area-tag area-tag--mint">b&#178;</span> melengkapi persegi penuh <strong>[(a + b) + a]&#178;</strong>:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">STU + OH</span>
-              <span>= 4(AB &times; BD) + AC&#178; = AEFD = AD&#178;</span>
-              <span class="prop1-equation-cont">&there4; 4(AB &times; BC) + AC&#178; = (AB + BC)&#178;</span>
+              <span class="prop1-equation-label">4(ab + a&#178;) + b&#178;</span>
+              <span>= 4(a + b)&middot;a + b&#178;</span>
+              <span class="prop1-equation-cont">&there4; 4(a + b)&middot;a + b&#178; = [(a + b) + a]&#178;</span>
             </div>
           </div>
         </div>
@@ -3302,12 +3325,16 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 280">
-                <title>Diagram pembuktian Proposisi 8: persegi AEFD terbagi 3 kali 3 menjadi 4 persegi panjang peach (AG, MQ, QL, RF), 4 persegi kuning (CK, KD, GR, RN), dan persegi mint OH, dengan busur gnomon STU mengitari sudut Q melewati MQ, GR, dan QL</title>
-                <!-- Top labels A, C, B, D -->
-                <text x="72" y="38" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">A</text>
-                <text x="144" y="38" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">C</text>
-                <text x="196" y="38" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">B</text>
-                <text x="248" y="38" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">D</text>
+                <title>Diagram pembuktian Proposisi 8: persegi besar bersisi b tambah 2a terbagi 3 kali 3 menjadi 4 persegi panjang peach ab, 4 persegi kuning a kuadrat, dan persegi hijau b kuadrat dengan busur gnomon pembungkus</title>
+                <!-- Top width labels b, a, a -->
+                <text x="108" y="38" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18.5" font-weight="800">b</text>
+                <text x="170" y="38" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18.5" font-weight="800">a</text>
+                <text x="222" y="38" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18.5" font-weight="800">a</text>
+
+                <!-- Left height labels a, a, b -->
+                <text x="56" y="81" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18.5" font-weight="800">a</text>
+                <text x="56" y="133" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18.5" font-weight="800">a</text>
+                <text x="56" y="194" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18.5" font-weight="800">b</text>
 
                 <!-- 9 shaded compartments -->
                 <rect x="72" y="50" width="72" height="52" fill="#FFE2CC" opacity="0.92"/>
@@ -3322,10 +3349,10 @@
                 <rect x="144" y="154" width="52" height="72" fill="#FFE2CC" opacity="0.92"/>
                 <rect x="196" y="154" width="52" height="72" fill="#FFE2CC" opacity="0.92"/>
 
-                <!-- Right-angle corner marker at A -->
+                <!-- Right-angle corner marker -->
                 <polyline points="84,50 84,62 72,62" fill="none" stroke="#5C76D8" stroke-width="2.1"/>
 
-                <!-- Outer square AEFD, grid lines CH, BL, MN, OP, diagonal ED -->
+                <!-- Outer square, grid lines, diagonal -->
                 <rect x="72" y="50" width="176" height="176" fill="none" stroke="#232652" stroke-width="3.2"/>
                 <line x1="144" y1="50" x2="144" y2="226" stroke="#232652" stroke-width="2.4"/>
                 <line x1="196" y1="50" x2="196" y2="226" stroke="#232652" stroke-width="2.4"/>
@@ -3335,41 +3362,30 @@
                 <circle cx="144" cy="154" r="4" fill="#5C76D8"/>
                 <circle cx="196" cy="102" r="3.6" fill="#5C76D8"/>
 
-                <!-- Dashed gnomon arc circling S-T-U around Q (MQ -> GR -> QL) -->
+                <!-- Dashed gnomon arc circling corner (144,154) -->
                 <path d="M 123 148 A 21 21 0 1 1 150 175" fill="none" stroke="#5C76D8" stroke-width="2" stroke-dasharray="4 3"/>
 
-                <!-- Region names avoiding diagonal ED & gnomon arc -->
-                <text x="108" y="81" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">AG</text>
-                <text x="170" y="81" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">CK</text>
-                <text x="212" y="68" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="13" font-weight="800">KD</text>
+                <!-- Area labels in 9 cells avoiding diagonal -->
+                <text x="108" y="81" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">ab</text>
+                <text x="170" y="81" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">a&#178;</text>
+                <text x="213" y="69" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14" font-weight="800">a&#178;</text>
 
-                <text x="97" y="132" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">MQ</text>
-                <text x="181" y="145" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">GR</text>
-                <text x="223" y="133" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">RN</text>
+                <text x="98" y="132" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15" font-weight="800">ab</text>
+                <text x="181" y="144" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14" font-weight="800">a&#178;</text>
+                <text x="223" y="133" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">a&#178;</text>
 
                 <rect x="93" y="179" width="30" height="20" rx="5" fill="#CCF5E1"/>
-                <text x="108" y="194" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">OH</text>
-                <text x="175" y="199" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">QL</text>
-                <text x="223" y="195" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">RF</text>
+                <text x="108" y="194" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">b&#178;</text>
+                <text x="175" y="199" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">ab</text>
+                <text x="223" y="195" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">ab</text>
 
-                <!-- Gnomon markers S, T, U and inner vertices Q, K -->
-                <text x="113" y="144" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13" font-weight="800">S</text>
-                <text x="157" y="123" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13" font-weight="800">T</text>
-                <text x="159" y="179" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13" font-weight="800">U</text>
-                <text x="135" y="149" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="11.5" font-weight="800">Q</text>
-                <text x="206" y="114" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="11.5" font-weight="800">K</text>
+                <!-- Bottom span (a + b) + a -->
+                <line x1="72" y1="239" x2="248" y2="239" stroke="#5C76D8" stroke-width="1.9"/>
+                <line x1="72" y1="234" x2="72" y2="244" stroke="#5C76D8" stroke-width="1.9"/>
+                <line x1="248" y1="234" x2="248" y2="244" stroke="#5C76D8" stroke-width="1.9"/>
+                <text x="160" y="258" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">(a + b) + a</text>
 
-                <!-- Perimeter labels M, O, N, P, E, H, L, F -->
-                <text x="56" y="107" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">M</text>
-                <text x="56" y="159" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">O</text>
-                <text x="264" y="107" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">N</text>
-                <text x="264" y="159" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">P</text>
-                <text x="72" y="248" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">E</text>
-                <text x="144" y="248" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">H</text>
-                <text x="196" y="248" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">L</text>
-                <text x="248" y="248" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="19" font-weight="800">F</text>
-
-                <text x="160" y="272" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13" font-weight="800">Gnomon STU = 4&times;CK + 4&times;AG = 4&times;AK</text>
+                <text x="160" y="274" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12" font-weight="800">4(a&#178;) + 4(ab) + b&#178; = 4(a + b)&middot;a + b&#178;</text>
               </svg>
             </div>
           </div>
@@ -3377,7 +3393,7 @@
           <div class="algebra-card">
             <p class="algebra-title">Bentuk Aljabar</p>
             <p class="algebra-formula">4(a + b)&middot;a + b&#178; = [(a + b) + a]&#178;</p>
-            <p class="algebra-formula algebra-formula--compact">(BC = BD = a, AC = b, AB = a + b)</p>
+            <p class="algebra-formula algebra-formula--compact">(awal = a + b, tambahan = a, total = 2a + b)</p>
           </div>
         </div>
       </section>
@@ -3414,35 +3430,35 @@
           <h1 class="prop-badge" lang="en">Proposition 9</h1>
 
           <p class="prop1-quote">
-            &ldquo;Jika garis lurus <strong>AB</strong> dibagi dua sama panjang di <strong>C</strong> dan tak sama panjang di <strong>D</strong>, maka jumlah luas persegi pada kedua bagian tak sama panjang (<strong>AD&#178; + DB&#178;</strong>) sama dengan dua kali jumlah luas persegi pada setengah garis <strong>AC</strong> dan selisihnya <strong>CD</strong>.&rdquo;
+            &ldquo;Jika sebuah garis lurus dibagi dua sama panjang masing-masing sebesar <strong>a</strong>, dan juga dibagi tak sama panjang di titik lain berselisih <strong>b</strong> dari titik tengah (menghasilkan bagian <strong>a + b</strong> dan <strong>a &minus; b</strong>), maka jumlah kuadrat kedua bagian tak sama panjang itu sama dengan dua kali jumlah kuadrat setengah garis <strong>a</strong> dan selisihnya <strong>b</strong>.&rdquo;
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Konstruksi segitiga siku-siku <strong>AEB</strong> di atas alas <strong>AB</strong> menghubungkan kedua pasangan kuadrat lewat hipotenusa <strong>AF</strong>:</p>
+            <p class="prop1-intro">Konstruksi segitiga siku-siku sama kaki dengan garis tinggi <strong>a</strong> di atas alas penuh <strong>2a</strong> menghubungkan kedua pasangan kuadrat lewat hipotenusa bersama <strong>s</strong>:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi &triangle;AEB:</strong> Tarik <strong>CE &perp; AB</strong> dengan <strong>CE = CA = CB</strong>, lalu hubungkan <strong>EA</strong> dan <strong>EB</strong>. Kedua segitiga sama kaki siku-siku <strong>&triangle;ACE</strong> dan <strong>&triangle;ECB</strong> bersudut alas <strong>45&deg;</strong>, sehingga <strong>&ang;AEB = 90&deg;</strong>.</span>
+                <span><strong>Konstruksi Segitiga Siku-siku Berdinding a:</strong> Dari titik tengah alas <strong>2a</strong> tarik tinggi tegak lurus <strong>a</strong> lalu hubungkan ke kedua ujung alas membentuk dua segitiga sama kaki siku-siku bersudut <strong>45&deg;</strong> (sudut puncak tepat <strong>90&deg;</strong>).</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Garis DF &amp; FG:</strong> Tarik <strong>DF &#8741; CE</strong> hingga <strong>EB</strong> di <strong>F</strong>, tarik <strong>FG &#8741; AB</strong> hingga <strong>CE</strong> di <strong>G</strong>, lalu hubungkan <strong>AF</strong>. Diperoleh <span class="area-tag area-tag--butter">DF = DB</span> dan <span class="area-tag area-tag--peach">EG = GF = CD</span>.</span>
+                <span><strong>Potongan Setinggi (a &minus; b) &amp; Segitiga Sisi b:</strong> Pada jarak <strong>b</strong> ke kanan dari titik tengah tarik garis tegak hingga sisi miring kanan (membentuk segitiga siku-siku sama kaki bersisi <span class="area-tag area-tag--butter">a &minus; b</span>) dan garis mendatar hingga tinggi tengah (bersisi <span class="area-tag area-tag--peach">b</span>).</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Kuadrat EA&#178; &amp; EF&#178;:</strong> Menurut Pythagoras, pada <strong>&triangle;ACE</strong> berlaku <strong>EA&#178; = AC&#178; + CE&#178; = 2AC&#178;</strong> dan pada <strong>&triangle;GEF</strong> berlaku <strong>EF&#178; = EG&#178; + GF&#178; = 2CD&#178;</strong>.</span>
+                <span><strong>Kuadrat Kedua Sisi Miring Kecil:</strong> Dengan Pythagoras pada segitiga sama kaki bertinggi <strong>a</strong> dan bersisi <strong>b</strong>: kuadrat sisi miring kiri = <strong>a&#178; + a&#178; = 2a&#178;</strong>, dan kuadrat sisi miring kanan atas = <strong>b&#178; + b&#178; = 2b&#178;</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Hipotenusa bersama AF:</strong> Karena <strong>&ang;AEF = 90&deg;</strong> dan <strong>&ang;ADF = 90&deg;</strong>, diperoleh <span class="area-tag area-tag--mint">AD&#178; + DF&#178; = AF&#178; = EA&#178; + EF&#178;</span> dengan <strong>DF = DB</strong>:</span>
+                <span><strong>Hipotenusa Bersama s:</strong> Kedua segitiga siku-siku (<span class="area-tag area-tag--mint">alas a + b, tinggi a &minus; b</span> dan segitiga di atasnya) berbagi hipotenusa bersama <strong>s</strong>:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">AD&#178; + DB&#178;</span>
-              <span>= AD&#178; + DF&#178; = AF&#178; = EA&#178; + EF&#178;</span>
-              <span class="prop1-equation-cont">&there4; AD&#178; + DB&#178; = 2(AC&#178; + CD&#178;)</span>
+              <span class="prop1-equation-label">s&#178;</span>
+              <span>= (a + b)&#178; + (a &minus; b)&#178; = 2a&#178; + 2b&#178;</span>
+              <span class="prop1-equation-cont">&there4; (a + b)&#178; + (a &minus; b)&#178; = 2(a&#178; + b&#178;)</span>
             </div>
           </div>
         </div>
@@ -3470,46 +3486,50 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 274">
-                <title>Diagram pembuktian Proposisi 9: segitiga siku-siku AEB dengan tinggi CE sama dengan AC dan CB, titik D membagi tak sama panjang, garis DF sejajar CE dan FG sejajar AB, serta hipotenusa bersama AF</title>
-                <!-- Shaded right triangles highlighting equal legs & shared hypotenuse AF -->
+                <title>Diagram pembuktian Proposisi 9: segitiga siku-siku dengan garis tinggi tengah sepanjang a di atas alas 2a terbagi menjadi segmen a, b, dan a kurang b, tinggi tegak a kurang b, serta hipotenusa biru bersama s</title>
+                <!-- Shaded right triangles highlighting equal legs & shared hypotenuse s -->
                 <polygon points="40,192 208,192 208,120" fill="#CCF5E1" opacity="0.62"/>
                 <polygon points="160,120 160,72 208,120" fill="#FFE2CC" opacity="0.86"/>
                 <polygon points="208,192 280,192 208,120" fill="#FFF1A8" opacity="0.88"/>
 
-                <!-- Right-angle markers at E, C, D, and G -->
+                <!-- Right-angle markers -->
                 <polyline points="152,80 160,88 168,80" fill="none" stroke="#5C76D8" stroke-width="2"/>
                 <polyline points="160,181 149,181 149,192" fill="none" stroke="#5C76D8" stroke-width="2"/>
                 <polyline points="198,192 198,182 208,182" fill="none" stroke="#5C76D8" stroke-width="2"/>
                 <polyline points="160,110 170,110 170,120" fill="none" stroke="#5C76D8" stroke-width="2"/>
 
-                <!-- Triangle AEB and internal construction lines CE, DF, FG -->
+                <!-- Triangle and internal construction lines -->
                 <polygon points="40,192 160,72 280,192" fill="none" stroke="#232652" stroke-width="3"/>
                 <line x1="160" y1="72" x2="160" y2="192" stroke="#232652" stroke-width="2.3"/>
                 <line x1="208" y1="120" x2="208" y2="192" stroke="#232652" stroke-width="2.3"/>
                 <line x1="160" y1="120" x2="208" y2="120" stroke="#232652" stroke-width="2.3"/>
 
-                <!-- Shared hypotenuse AF -->
+                <!-- Shared hypotenuse s -->
                 <line x1="40" y1="192" x2="208" y2="120" stroke="#5C76D8" stroke-width="2.9"/>
 
-                <!-- Division point dots C (midpoint) and D -->
+                <!-- Division point dots: midpoint and unequal cut -->
                 <circle cx="160" cy="192" r="4" fill="#FF9C97" stroke="#232652" stroke-width="1.5"/>
                 <circle cx="208" cy="192" r="4" fill="#5C76D8" stroke="#232652" stroke-width="1.5"/>
 
-                <!-- Vertex labels -->
-                <text x="160" y="59" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">E</text>
-                <text x="148" y="124" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">G</text>
-                <text x="220" y="118" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">F</text>
-                <text x="40" y="212" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">A</text>
-                <text x="160" y="212" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">C</text>
-                <text x="208" y="212" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">D</text>
-                <text x="280" y="212" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="18" font-weight="800">B</text>
+                <!-- Line-segment labels clear of lines -->
+                <text x="151" y="106" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">b</text>
+                <text x="184" y="112" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">b</text>
+                <text x="172" y="156" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14" font-weight="800">a</text>
+                <text x="232" y="170" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">a&minus;b</text>
+                <text x="115" y="147" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="17" font-weight="800">s</text>
 
-                <!-- Segment notations -->
-                <text x="100" y="233" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">AC = a</text>
-                <text x="184" y="233" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">CD = b</text>
-                <text x="244" y="233" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">DB = a&minus;b</text>
+                <!-- Bottom base segment lengths -->
+                <text x="100" y="212" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">a</text>
+                <text x="184" y="212" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">b</text>
+                <text x="244" y="212" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15" font-weight="800">a&minus;b</text>
 
-                <text x="160" y="262" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12" font-weight="800">EA&#178; = 2AC&#178; &middot; EF&#178; = 2CD&#178; &middot; AF&#178; = AD&#178; + DB&#178;</text>
+                <!-- Span a + b under first two segments -->
+                <line x1="40" y1="226" x2="208" y2="226" stroke="#5C76D8" stroke-width="1.8"/>
+                <line x1="40" y1="222" x2="40" y2="230" stroke="#5C76D8" stroke-width="1.8"/>
+                <line x1="208" y1="222" x2="208" y2="230" stroke="#5C76D8" stroke-width="1.8"/>
+                <text x="124" y="242" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">a + b</text>
+
+                <text x="160" y="264" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">tinggi = a &middot; s&#178; = (a+b)&#178; + (a&minus;b)&#178; = 2a&#178; + 2b&#178;</text>
               </svg>
             </div>
           </div>
@@ -3517,8 +3537,7 @@
           <div class="algebra-card">
             <p class="algebra-title">Bentuk Aljabar</p>
             <p class="algebra-formula">(a + b)&#178; + (a &minus; b)&#178; = 2(a&#178; + b&#178;)</p>
-            <p class="algebra-formula algebra-formula--compact">AD&#178; + DB&#178; = 2(AC&#178; + CD&#178;)</p>
-            <p class="algebra-formula algebra-formula--compact">(AC = CB = a, CD = b, AD = a + b, DB = a &minus; b)</p>
+            <p class="algebra-formula algebra-formula--compact">(setengah = a, selisih = b, bagian = a &plusmn; b)</p>
           </div>
         </div>
       </section>
@@ -3555,35 +3574,35 @@
           <h1 class="prop-badge" lang="en">Proposition 10</h1>
 
           <p class="prop1-quote">
-            &ldquo;Jika garis lurus <strong>AB</strong> dibagi dua sama panjang di <strong>C</strong> lalu diperpanjang dengan <strong>BD</strong>, maka jumlah luas persegi pada seluruh garis <strong>AD</strong> dan tambahan <strong>BD</strong> sama dengan dua kali jumlah luas persegi pada setengah garis <strong>AC</strong> dan gabungan <strong>CD</strong>.&rdquo;
+            &ldquo;Jika sebuah garis lurus terbagi dua sama panjang masing-masing sebesar <strong>a</strong> lalu diperpanjang segaris dengan tambahan <strong>b</strong>, maka jumlah luas persegi pada garis keseluruhan <strong>(2a + b)</strong> dan tambahan <strong>b</strong> sama dengan dua kali jumlah kuadrat setengah garis <strong>a</strong> dan gabungan <strong>(a + b)</strong>.&rdquo;
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Konstruksi <strong>CE &perp; AD</strong> serta perpanjangan <strong>EB</strong> dan <strong>FD</strong> ke titik <strong>G</strong> menghubungkan kedua pasangan kuadrat lewat hipotenusa <strong>AG</strong>:</p>
+            <p class="prop1-intro">Konstruksi garis tinggi <strong>a</strong> di titik tengah garis awal <strong>2a</strong> serta perpanjangan sisi membentuk segitiga siku-siku besar berhipotenusa bersama <strong>s</strong>:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi &triangle;AEB:</strong> Tarik <strong>CE &perp; AD</strong> dengan <strong>CE = AC = CB</strong>, lalu hubungkan <strong>EA</strong> dan <strong>EB</strong>. Kedua segitiga sama kaki siku-siku <strong>&triangle;ACE</strong> dan <strong>&triangle;ECB</strong> bersudut alas <strong>45&deg;</strong>, sehingga <strong>&ang;AEB = 90&deg;</strong>.</span>
+                <span><strong>Konstruksi Segitiga Siku-siku Dasar:</strong> Pada alas <strong>2a</strong> tarik tinggi tegak lurus <strong>a</strong> di titik tengah, lalu hubungkan ke kedua ujung membentuk dua segitiga siku-siku sama kaki bersudut <strong>45&deg;</strong> (sudut puncak tepat <strong>90&deg;</strong>).</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Garis EF, FD &amp; titik G:</strong> Tarik <strong>EF &#8741; AD</strong> dan <strong>FD &#8741; CE</strong>, perpanjang <strong>EB</strong> dan <strong>FD</strong> bertemu di <strong>G</strong>, lalu hubungkan <strong>AG</strong>. Karena <strong>&ang;DBG = 45&deg;</strong>, diperoleh <span class="area-tag area-tag--butter">DG = DB</span> dan <span class="area-tag area-tag--peach">EF = FG = CD</span>.</span>
+                <span><strong>Perpanjangan b &amp; Kotak (a + b):</strong> Tarik garis mendatar sepanjang <span class="area-tag area-tag--peach">a + b</span> dari puncak tinggi serta garis tegak melewati ujung tambahan <strong>b</strong> hingga bertemu perpanjangan sisi miring, membentuk segitiga siku-siku sama kaki bersisi <span class="area-tag area-tag--butter">b</span>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Kuadrat EA&#178; &amp; EG&#178;:</strong> Menurut Pythagoras, pada <strong>&triangle;ACE</strong> berlaku <strong>EA&#178; = AC&#178; + CE&#178; = 2AC&#178;</strong> dan pada segitiga siku-siku sama kaki <strong>&triangle;EFG</strong> berlaku <strong>EG&#178; = EF&#178; + FG&#178; = 2CD&#178;</strong>.</span>
+                <span><strong>Dua Ruas Siku-siku Kiri &amp; Kanan:</strong> Dari Pythagoras pada segitiga siku-siku sama kaki kiri (penyiku <strong>a</strong>) diperoleh kuadrat miring <strong>2a&#178;</strong>, dan pada segitiga sama kaki atas (penyiku <strong>a + b</strong>) diperoleh kuadrat miring <strong>2(a + b)&#178;</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Hipotenusa bersama AG:</strong> Karena <strong>&ang;AEG = 90&deg;</strong> dan <strong>&ang;ADG = 90&deg;</strong>, diperoleh <span class="area-tag area-tag--mint">AD&#178; + DG&#178; = AG&#178; = EA&#178; + EG&#178;</span> dengan <strong>DG = DB</strong>:</span>
+                <span><strong>Hipotenusa Bersama s:</strong> Kedua segitiga siku-siku (<span class="area-tag area-tag--mint">alas 2a + b, tinggi b</span> dan segitiga miring di atasnya) berbagi hipotenusa bersama <strong>s</strong>:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">AD&#178; + DB&#178;</span>
-              <span>= AD&#178; + DG&#178; = AG&#178; = EA&#178; + EG&#178;</span>
-              <span class="prop1-equation-cont">&there4; AD&#178; + DB&#178; = 2(AC&#178; + CD&#178;)</span>
+              <span class="prop1-equation-label">s&#178;</span>
+              <span>= (2a + b)&#178; + b&#178; = 2a&#178; + 2(a + b)&#178;</span>
+              <span class="prop1-equation-cont">&there4; (2a + b)&#178; + b&#178; = 2[a&#178; + (a + b)&#178;]</span>
             </div>
           </div>
         </div>
@@ -3611,19 +3630,19 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 274">
-                <title>Diagram pembuktian Proposisi 10: garis AB dibagi dua di C dan diperpanjang ke D, tinggi CE sama dengan AC, persegi panjang CEFD, perpanjangan EB dan FD bertemu di G, serta hipotenusa bersama AG</title>
-                <!-- Pastel highlights for △EFG (peach), △ABG strip (mint), and △BDG (butter) -->
+                <title>Diagram pembuktian Proposisi 10: garis awal a dan a diperpanjang b, tinggi tegak tengah sepanjang a, segitiga sama kaki atas bersisi a tambah b, serta hipotenusa biru bersama s</title>
+                <!-- Pastel highlights -->
                 <polygon points="126,56 272,56 272,202" fill="#FFE2CC" opacity="0.58"/>
                 <polygon points="48,134 272,134 272,202" fill="#CCF5E1" opacity="0.58"/>
                 <polygon points="204,134 272,134 272,202" fill="#FFF1A8" opacity="0.88"/>
 
-                <!-- Right-angle markers at E, C, F, and D -->
+                <!-- Right-angle markers -->
                 <polyline points="119,63 126,70 133,63" fill="none" stroke="#5C76D8" stroke-width="2"/>
                 <polyline points="126,124 116,124 116,134" fill="none" stroke="#5C76D8" stroke-width="2"/>
                 <polyline points="262,56 262,66 272,66" fill="none" stroke="#5C76D8" stroke-width="2"/>
                 <polyline points="262,134 262,144 272,144" fill="none" stroke="#5C76D8" stroke-width="2"/>
 
-                <!-- Outer triangles & auxiliary lines AD, EA, EG, CE, EF, FG -->
+                <!-- Outer triangles & auxiliary lines -->
                 <line x1="48" y1="134" x2="272" y2="134" stroke="#232652" stroke-width="2.8"/>
                 <line x1="48" y1="134" x2="126" y2="56" stroke="#232652" stroke-width="2.6"/>
                 <line x1="126" y1="56" x2="272" y2="202" stroke="#232652" stroke-width="2.6"/>
@@ -3631,25 +3650,30 @@
                 <line x1="126" y1="56" x2="272" y2="56" stroke="#232652" stroke-width="2.2"/>
                 <line x1="272" y1="56" x2="272" y2="202" stroke="#232652" stroke-width="2.4"/>
 
-                <!-- Shared hypotenuse AG -->
+                <!-- Shared hypotenuse s -->
                 <line x1="48" y1="134" x2="272" y2="202" stroke="#5C76D8" stroke-width="2.9"/>
 
-                <!-- Midpoint C (coral) and extension boundary B (indigo) -->
+                <!-- Midpoint and boundary dots -->
                 <circle cx="126" cy="134" r="3.8" fill="#FF9C97" stroke="#232652" stroke-width="1.5"/>
                 <circle cx="204" cy="134" r="3.8" fill="#5C76D8" stroke="#232652" stroke-width="1.5"/>
 
-                <!-- Vertex labels placed clear of segments -->
-                <text x="126" y="44" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">E</text>
-                <text x="272" y="44" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">F</text>
-                <text x="34" y="140" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">A</text>
-                <text x="139" y="126" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">C</text>
-                <text x="216" y="126" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">B</text>
-                <text x="285" y="140" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">D</text>
-                <text x="272" y="220" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">G</text>
+                <!-- Segment labels placed clear of lines -->
+                <text x="199" y="45" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">a + b</text>
+                <text x="113" y="102" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">a</text>
+                <text x="87" y="125" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">a</text>
+                <text x="165" y="125" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">a</text>
+                <text x="238" y="125" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">b</text>
+                <text x="285" y="99" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15" font-weight="800">a</text>
+                <text x="285" y="172" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">b</text>
+                <text x="150" y="178" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="17" font-weight="800">s</text>
 
-                <!-- Segment summary and identity note -->
-                <text x="148" y="241" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12" font-weight="800">AC = CB = a &middot; BD = DG = b &middot; EF = FG = a + b</text>
-                <text x="160" y="263" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12" font-weight="800">EA&#178; = 2AC&#178; &middot; EG&#178; = 2CD&#178; &middot; AG&#178; = AD&#178; + DB&#178;</text>
+                <!-- Bottom span for total base 2a + b -->
+                <line x1="48" y1="216" x2="272" y2="216" stroke="#5C76D8" stroke-width="1.8"/>
+                <line x1="48" y1="211" x2="48" y2="221" stroke="#5C76D8" stroke-width="1.8"/>
+                <line x1="272" y1="211" x2="272" y2="221" stroke="#5C76D8" stroke-width="1.8"/>
+                <text x="160" y="234" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="14" font-weight="800">2a + b</text>
+
+                <text x="160" y="261" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">s&#178; = (2a + b)&#178; + b&#178; = 2a&#178; + 2(a + b)&#178;</text>
               </svg>
             </div>
           </div>
@@ -3657,8 +3681,7 @@
           <div class="algebra-card">
             <p class="algebra-title">Bentuk Aljabar</p>
             <p class="algebra-formula">(2a + b)&#178; + b&#178; = 2[a&#178; + (a + b)&#178;]</p>
-            <p class="algebra-formula algebra-formula--compact">AD&#178; + DB&#178; = 2(AC&#178; + CD&#178;)</p>
-            <p class="algebra-formula algebra-formula--compact">(AB = 2a, AC = CB = a, BD = b, CD = a + b)</p>
+            <p class="algebra-formula algebra-formula--compact">(garis awal = 2a, setengah = a, tambahan = b)</p>
           </div>
         </div>
       </section>
@@ -3695,35 +3718,35 @@
           <h1 class="prop-badge" lang="en">Proposition 11</h1>
 
           <p class="prop1-quote">
-            &ldquo;Memotong sebuah garis lurus <strong>AB</strong> yang diberikan di titik <strong>H</strong> sehingga persegi panjang <strong>AB &times; BH</strong> (antara seluruh garis dan salah satu potongannya) sama luas dengan persegi <strong>AH&#178;</strong> pada potongan sisanya.&rdquo;
+            &ldquo;Memotong sebuah garis lurus sepanjang <strong>a</strong> menjadi bagian <strong>x</strong> dan <strong>(a &minus; x)</strong> sehingga persegi panjang <strong>a(a &minus; x)</strong> (antara keseluruhan garis dan salah satu potongannya) sama luas dengan persegi <strong>x&#178;</strong> pada potongan sisanya.&rdquo;
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Konstruksi kompas berpusat di titik tengah <strong>E</strong> menghasilkan potongan rasio emas lewat selisih luas daerah:</p>
+            <p class="prop1-intro">Konstruksi kompas berpusat di titik tengah sisi tegak <strong>(&frac12;a)</strong> menghasilkan potongan rasio emas lewat selisih luas daerah:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi ABDC &amp; FH:</strong> Lukis persegi <strong>ABDC</strong> pada <strong>AB</strong>, bagi <strong>AC</strong> sama di <strong>E</strong>, perpanjang <strong>CA</strong> ke <strong>F</strong> dengan <strong>EF = EB</strong>, bangun persegi <strong>FH</strong> (= <strong>AH&#178;</strong>), lalu perpanjang <strong>GH</strong> sampai <strong>K</strong>.</span>
+                <span><strong>Konstruksi Persegi a&#178; &amp; x&#178;:</strong> Lukis persegi besar bersisi <strong>a</strong>, bagi sisi tegak kirinya sama besar menjadi <strong>&frac12;a</strong>, ayunkan kompas dari jarak miring <strong>&frac12;a + x</strong> ke perpanjangan sisi kiri (tambahan <strong>x</strong>), lalu bangun persegi <span class="area-tag area-tag--mint">x&#178;</span> dan perpanjang sisi tegak kanannya ke bawah.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Prop. 2.6 &amp; Pythagoras:</strong> Karena <strong>AC</strong> terbagi dua di <strong>E</strong> dan diperpanjang dengan <strong>FA</strong>, maka <strong>CF &middot; FA + AE&#178; = EF&#178; = EB&#178; = AB&#178; + AE&#178;</strong>.</span>
+                <span><strong>Prop. 2.6 &amp; Pythagoras:</strong> Sisi tegak kiri terbagi dua sebesar <strong>&frac12;a</strong> dan diperpanjang sejauh <strong>x</strong>, sehingga <strong>(a + x)&middot;x + (&frac12;a)&#178; = (&frac12;a + x)&#178; = a&#178; + (&frac12;a)&#178;</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Kesamaan FK = AD:</strong> Eliminasi <strong>AE&#178;</strong> memberi <strong>CF &middot; FA = AB&#178;</strong>. Karena <strong>FA = FG</strong>, persegi panjang <strong>FK</strong> (= <strong>CF &times; FA</strong>) tepat sama luas dengan persegi <strong>AD</strong> (= <strong>AB&#178;</strong>).</span>
+                <span><strong>Kesamaan (a + x)&middot;x = a&#178;:</strong> Mengurangi <strong>(&frac12;a)&#178;</strong> dari kedua ruas menghasilkan <strong>(a + x)&middot;x = a&#178;</strong>, yakni jalur tegak kiri berukuran <strong>(a + x) &times; x</strong> sama luas dengan persegi besar bersisi <strong>a</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Eliminasi daerah <span class="area-tag area-tag--peach">AK</span>:</strong> Pengurangan <strong>AK</strong> dari <strong>FK = AD</strong> menyisakan <span class="area-tag area-tag--mint">FH</span> (= <strong>AH&#178;</strong>) sama dengan <span class="area-tag area-tag--butter">HD</span> (= <strong>AB &times; BH</strong>):</span>
+                <span><strong>Eliminasi Daerah <span class="area-tag area-tag--peach">ax</span>:</strong> Pengurangan petak bersama <strong>ax</strong> menyisakan <span class="area-tag area-tag--mint">x&#178;</span> sama dengan <span class="area-tag area-tag--butter">a(a &minus; x)</span>:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">FK &minus; AK</span>
-              <span>= AD &minus; AK &rArr; FH = HD</span>
-              <span class="prop1-equation-cont">&there4; AB &times; BH = AH&#178;</span>
+              <span class="prop1-equation-label">(a + x)x &minus; ax</span>
+              <span>= a&#178; &minus; ax &rArr; x&#178; = a&#178; &minus; ax</span>
+              <span class="prop1-equation-cont">&there4; a(a &minus; x) = x&#178;</span>
             </div>
           </div>
         </div>
@@ -3751,47 +3774,49 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 274">
-                <title>Diagram pembuktian Proposisi 11: persegi ABDC bersisi AB, titik tengah E pada AC, busur kompas EB sama dengan EF memperpanjang CA ke F, persegi hijau FH, daerah bersama peach AK, dan persegi panjang kuning HD sama luas dengan FH</title>
-                <!-- Shaded regions FH (Mint), AK (Peach), HD (Butter) -->
+                <title>Diagram pembuktian Proposisi 11: persegi besar bersisi a, sisi kiri terbagi dua sebesar setengah a, busur kompas sebesar setengah a tambah x, persegi hijau x kuadrat, daerah bersama peach a kali x, dan persegi panjang kuning a kali kurung buka a kurang x kurung tutup</title>
+                <!-- Shaded regions x^2 (Mint), ax (Peach), a(a-x) (Butter) -->
                 <rect x="104" y="33" width="69" height="69" fill="#CCF5E1" opacity="0.92"/>
                 <rect x="104" y="102" width="69" height="112" fill="#FFE2CC" opacity="0.8"/>
                 <rect x="173" y="102" width="43" height="112" fill="#FFF1A8" opacity="0.95"/>
 
-                <!-- Right-angle markers at F and A -->
+                <!-- Right-angle markers -->
                 <polyline points="114,33 114,43 104,43" fill="none" stroke="#5C76D8" stroke-width="2"/>
                 <polyline points="114,102 114,112 104,112" fill="none" stroke="#5C76D8" stroke-width="2"/>
 
-                <!-- Main outlines: outer FK rectangle top+left, main square ABDC, vertical GHK -->
+                <!-- Outlines -->
                 <rect x="104" y="33" width="69" height="69" fill="none" stroke="#232652" stroke-width="2.6"/>
                 <rect x="104" y="102" width="112" height="112" fill="none" stroke="#232652" stroke-width="2.9"/>
                 <line x1="173" y1="102" x2="173" y2="214" stroke="#232652" stroke-width="2.4"/>
 
-                <!-- Segment EB and dashed compass arc swinging B to F around E -->
+                <!-- Compass hypotenuse and dashed arc of radius (1/2)a + x -->
                 <line x1="104" y1="158" x2="216" y2="102" stroke="#5C76D8" stroke-width="2.6"/>
                 <path d="M 216 102 A 125.2 125.2 0 0 0 104 33" fill="none" stroke="#5C76D8" stroke-width="2" stroke-dasharray="4 3"/>
 
-                <!-- Region names avoiding EB diagonal -->
-                <text x="138" y="72" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">FH</text>
-                <text x="138" y="178" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">AK</text>
-                <text x="194" y="168" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14.5" font-weight="800">HD</text>
+                <!-- Interior area labels -->
+                <text x="138.5" y="72" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">x&#178;</text>
+                <text x="138.5" y="178" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">ax</text>
+                <text x="194.5" y="154" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="12" font-weight="800">a&middot;</text>
+                <text x="194.5" y="169" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="11.5" font-weight="800">(a&minus;x)</text>
 
-                <!-- Key points F (compass tip), E (midpoint), H (golden cut) -->
+                <!-- Key division dots -->
                 <circle cx="104" cy="33" r="3.6" fill="#5C76D8"/>
                 <circle cx="104" cy="158" r="3.6" fill="#FF9C97" stroke="#232652" stroke-width="1.4"/>
                 <circle cx="173" cy="102" r="4" fill="#FF9C97" stroke="#232652" stroke-width="1.5"/>
 
-                <!-- Vertex labels -->
-                <text x="90" y="38" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">F</text>
-                <text x="179" y="25" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">G</text>
-                <text x="90" y="106" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">A</text>
-                <text x="163" y="95" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">H</text>
-                <text x="228" y="106" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">B</text>
-                <text x="90" y="163" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">E</text>
-                <text x="98" y="232" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">C</text>
-                <text x="173" y="232" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">K</text>
-                <text x="220" y="232" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">D</text>
+                <!-- Side segment labels clear of lines -->
+                <text x="138.5" y="25" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">x</text>
+                <text x="89" y="72" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">x</text>
+                <text x="84" y="135" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14" font-weight="800">&frac12;a</text>
+                <text x="84" y="191" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14" font-weight="800">&frac12;a</text>
+                <text x="232" y="162" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">a</text>
+                <text x="200" y="47" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">&frac12;a + x</text>
 
-                <text x="160" y="262" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">EF = EB &middot; FK = AD &rArr; FH = HD (AH&#178; = AB &times; BH)</text>
+                <!-- Bottom segment lengths x and a - x -->
+                <text x="138.5" y="232" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">x</text>
+                <text x="195" y="232" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14" font-weight="800">a&minus;x</text>
+
+                <text x="160" y="262" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">(a + x)x = a&#178; &rArr; x&#178; = a(a &minus; x)</text>
               </svg>
             </div>
           </div>
@@ -3799,8 +3824,7 @@
           <div class="algebra-card">
             <p class="algebra-title">Bentuk Aljabar</p>
             <p class="algebra-formula">a(a &minus; x) = x&#178; &hArr; x&#178; + ax = a&#178;</p>
-            <p class="algebra-formula algebra-formula--compact">AB &middot; BH = AH&#178;</p>
-            <p class="algebra-formula algebra-formula--compact">(AB = a, AH = x, BH = a &minus; x, x &approx; 0,618a)</p>
+            <p class="algebra-formula algebra-formula--compact">(potongan rasio emas: x &approx; 0,618a)</p>
           </div>
         </div>
       </section>
@@ -3815,33 +3839,33 @@
         <article class="pair-card">
           <div class="pair-card-head">
             <h2 class="prop-badge pair-badge" lang="en">Proposition 12</h2>
-            <span class="pair-chip pair-chip--peach">Segitiga Tumpul (&ang;BAC &gt; 90&deg;)</span>
+            <span class="pair-chip pair-chip--peach">Segitiga Tumpul (&gt; 90&deg;)</span>
           </div>
 
           <p class="pair-quote">
-            <span>&ldquo;Pada segitiga tumpul <strong>ABC</strong> dengan sudut <strong>BAC</strong> tumpul dan <strong>BD &perp;</strong> perpanjangan <strong>CA</strong> [Prop. 1.12], kuadrat sisi <strong>BC&#178;</strong> lebih besar daripada <strong>BA&#178; + AC&#178;</strong> sebesar <strong>2&middot;(CA&middot;AD)</strong>.&rdquo;</span>
+            <span>&ldquo;Pada segitiga tumpul bersisi <strong>a</strong>, <strong>b</strong>, <strong>c</strong> dengan garis tinggi luar <strong>h</strong> tegak lurus perpanjangan alas <strong>b</strong> sepanjang segmen proyeksi <strong>d</strong> [Prop. 1.12], kuadrat sisi terpanjang <strong>a&#178;</strong> lebih besar daripada <strong>b&#178; + c&#178;</strong> sebesar <strong>2bd</strong>.&rdquo;</span>
           </p>
 
           <div class="pair-proof-stack">
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi &amp; Ekspansi Prop. 2.4:</strong> Tarik <strong>BD &perp;</strong> perpanjangan <strong>CA</strong> [Prop. 1.12]; karena <strong>CD = CA + AD</strong> terpotong di <strong>A</strong>, berlaku <strong>DC&#178; = CA&#178; + AD&#178; + 2&middot;(CA&middot;AD)</strong> [Prop. 2.4].</span>
+                <span><strong>Konstruksi &amp; Ekspansi Prop. 2.4:</strong> Tarik garis tinggi <strong>h &perp;</strong> perpanjangan alas <strong>b</strong> sepanjang <strong>d</strong> [Prop. 1.12]; pada alas gabungan <strong>(b + d)</strong> berlaku <strong>(b + d)&#178; = b&#178; + d&#178; + 2bd</strong> [Prop. 2.4].</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Penambahan DB&#178;:</strong> Tambahkan <strong>DB&#178;</strong> ke kedua ruas: <strong>CD&#178; + DB&#178; = CA&#178; + AD&#178; + DB&#178; + 2&middot;(CA&middot;AD)</strong>.</span>
+                <span><strong>Penambahan h&#178;:</strong> Tambahkan kuadrat garis tinggi <strong>h&#178;</strong> ke kedua ruas: <strong>(b + d)&#178; + h&#178; = b&#178; + (d&#178; + h&#178;) + 2bd</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Pythagoras (Prop. 1.47):</strong> Pada siku-siku di <strong>D</strong>, substitusi <span class="area-tag area-tag--lavender">CB&#178;</span> <strong>= CD&#178; + DB&#178;</strong> dan <span class="area-tag area-tag--peach">AB&#178;</span> <strong>= AD&#178; + DB&#178;</strong> [Prop. 1.47] menghasilkan:</span>
+                <span><strong>Pythagoras (Prop. 1.47):</strong> Pada kedua segitiga siku-siku bertinggi <strong>h</strong>, substitusi <span class="area-tag area-tag--lavender">a&#178; = (b + d)&#178; + h&#178;</span> dan <span class="area-tag area-tag--peach">c&#178; = d&#178; + h&#178;</span> [Prop. 1.47] menghasilkan:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">CB&#178;</span>
-              <span>= CA&#178; + AB&#178; + 2&middot;(CA&middot;AD)</span>
-              <span class="prop1-equation-cont">&there4; selisih = 2&middot;(CA&middot;AD)</span>
+              <span class="prop1-equation-label">Kuadrat a&#178;</span>
+              <span>= b&#178; + c&#178; + 2bd</span>
+              <span class="prop1-equation-cont">&there4; selisih = 2bd</span>
             </div>
           </div>
 
@@ -3849,24 +3873,24 @@
             <div class="diagram-grid-card pair-diagram-card">
               <div class="diagram-inner-frame">
                 <svg role="img" viewBox="0 0 320 274">
-                  <title>Diagram pembuktian Proposisi 12: segitiga tumpul ABC dengan sudut tumpul di A, perpanjangan CA ke D, dan garis tinggi BD tegak lurus CD</title>
-                  <!-- Shaded regions: extension triangle BDA (Peach) and obtuse triangle ABC (Lavender) -->
+                  <title>Diagram pembuktian Proposisi 12: segitiga tumpul bersisi a, b, c dengan perpanjangan alas d dan garis tinggi tegak lurus h membentuk segitiga siku-siku luar peach</title>
+                  <!-- Shaded regions: extension triangle (Peach) and obtuse triangle (Lavender) -->
                   <polygon points="58,202 124,202 58,66" fill="#FFE2CC" opacity="0.72"/>
                   <polygon points="124,202 264,202 58,66" fill="#E6DCFF" opacity="0.78"/>
 
-                  <!-- Right-angle marker at D and obtuse angle arc at A -->
+                  <!-- Right-angle marker and obtuse angle arc -->
                   <polyline points="70,202 70,190 58,190" fill="none" stroke="#5C76D8" stroke-width="2.1"/>
                   <path d="M 146 202 A 22 22 0 0 0 114.4 182.2" fill="none" stroke="#FF7E79" stroke-width="2.2"/>
 
-                  <!-- Construction lines BD and DA -->
+                  <!-- Construction altitude h and extension d -->
                   <line x1="58" y1="66" x2="58" y2="202" stroke="#5C76D8" stroke-width="2.6"/>
                   <line x1="58" y1="202" x2="124" y2="202" stroke="#5C76D8" stroke-width="2.6"/>
 
-                  <!-- Main obtuse triangle ABC outline -->
+                  <!-- Main obtuse triangle outline -->
                   <polygon points="58,66 124,202 264,202" fill="none" stroke="#232652" stroke-width="2.9" stroke-linejoin="round"/>
 
-                  <!-- Region / angle indicator -->
-                  <text x="166" y="180" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="11.5" font-weight="800">&ang;BAC &gt; 90&deg;</text>
+                  <!-- Obtuse angle indicator -->
+                  <text x="158" y="183" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="11.5" font-weight="800">&gt; 90&deg;</text>
 
                   <!-- Key point dots -->
                   <circle cx="58" cy="202" r="3.5" fill="#5C76D8"/>
@@ -3874,23 +3898,23 @@
                   <circle cx="264" cy="202" r="3.5" fill="#232652"/>
                   <circle cx="58" cy="66" r="3.5" fill="#232652"/>
 
-                  <!-- Vertex labels -->
-                  <text x="56" y="52" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">B</text>
-                  <text x="58" y="224" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">D</text>
-                  <text x="124" y="224" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">A</text>
-                  <text x="274" y="214" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">C</text>
+                  <!-- Line-segment labels h, d, b, c, a -->
+                  <text x="43" y="140" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="17" font-weight="800">h</text>
+                  <text x="91" y="222" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="16" font-weight="800">d</text>
+                  <text x="194" y="222" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">b</text>
+                  <text x="108" y="130" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16.5" font-weight="800">c</text>
+                  <text x="172" y="122" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">a</text>
 
-                  <text x="160" y="258" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12" font-weight="800">CD = CA + AD &middot; BC&#178; = BA&#178; + AC&#178; + 2(CA &middot; AD)</text>
+                  <text x="160" y="256" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">alas total = b + d &middot; a&#178; = b&#178; + c&#178; + 2bd</text>
                 </svg>
               </div>
             </div>
 
             <div class="algebra-card pair-algebra-card">
               <p class="algebra-title">Bentuk Aljabar</p>
-              <p class="algebra-formula">BC&#178; = BA&#178; + AC&#178; + 2(CA &middot; AD)</p>
-              <p class="algebra-formula algebra-formula--compact">a&#178; = b&#178; + c&#178; + 2bd = b&#178; + c&#178; &minus; 2bc cos A</p>
-              <p class="algebra-formula algebra-formula--compact">(a = BC, b = CA, c = AB, d = AD = &minus;c cos A)</p>
-              <p class="algebra-formula algebra-formula--compact">(&ang;BAC &gt; 90&deg;, sudut tumpul &rArr; cos A &lt; 0)</p>
+              <p class="algebra-formula">a&#178; = b&#178; + c&#178; + 2bd</p>
+              <p class="algebra-formula algebra-formula--compact">a&#178; = (b + d)&#178; + h&#178; &middot; c&#178; = d&#178; + h&#178;</p>
+              <p class="algebra-formula algebra-formula--compact">(alas b ditambah d, tinggi h, sudut &gt; 90&deg;)</p>
             </div>
           </div>
         </article>
@@ -3899,33 +3923,33 @@
         <article class="pair-card">
           <div class="pair-card-head">
             <h2 class="prop-badge pair-badge" lang="en">Proposition 13</h2>
-            <span class="pair-chip pair-chip--mint">Segitiga Lancip (&ang;ABC &lt; 90&deg;)</span>
+            <span class="pair-chip pair-chip--mint">Segitiga Lancip (&lt; 90&deg;)</span>
           </div>
 
           <p class="pair-quote">
-            <span>&ldquo;Pada segitiga lancip <strong>ABC</strong> dengan sudut <strong>B</strong> lancip dan <strong>AD &perp; BC</strong> [Prop. 1.12], kuadrat sisi <strong>AC&#178;</strong> lebih kecil daripada <strong>CB&#178; + BA&#178;</strong> sebesar <strong>2&middot;(CB&middot;BD)</strong>.&rdquo;</span>
+            <span>&ldquo;Pada segitiga lancip bersisi <strong>a</strong>, <strong>b</strong>, <strong>c</strong> dengan garis tinggi <strong>h</strong> memotong alas <strong>a</strong> menjadi segmen proyeksi <strong>d</strong> dan <strong>(a &minus; d)</strong> [Prop. 1.12], kuadrat sisi <strong>b&#178;</strong> lebih kecil daripada <strong>a&#178; + c&#178;</strong> sebesar <strong>2ad</strong>.&rdquo;</span>
           </p>
 
           <div class="pair-proof-stack">
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi &amp; Ekspansi Prop. 2.7:</strong> Tarik <strong>AD &perp; BC</strong> dari puncak <strong>A</strong> [Prop. 1.12]; karena <strong>CB</strong> terpotong di <strong>D</strong>, berlaku <strong>CB&#178; + BD&#178; = 2&middot;(CB&middot;BD) + DC&#178;</strong> [Prop. 2.7].</span>
+                <span><strong>Konstruksi &amp; Ekspansi Prop. 2.7:</strong> Tarik garis tinggi <strong>h &perp;</strong> alas <strong>a</strong> yang terbagi menjadi <strong>d</strong> dan <strong>(a &minus; d)</strong> [Prop. 1.12]; berlaku <strong>a&#178; + d&#178; = 2ad + (a &minus; d)&#178;</strong> [Prop. 2.7].</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Penambahan DA&#178;:</strong> Tambahkan <strong>DA&#178;</strong> pada kedua ruas: <strong>CB&#178; + BD&#178; + DA&#178; = 2&middot;(CB&middot;BD) + AD&#178; + DC&#178;</strong>.</span>
+                <span><strong>Penambahan h&#178;:</strong> Tambahkan kuadrat garis tinggi <strong>h&#178;</strong> ke kedua ruas: <strong>a&#178; + (d&#178; + h&#178;) = 2ad + [(a &minus; d)&#178; + h&#178;]</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Pythagoras (Prop. 1.47):</strong> Pada siku-siku di <strong>D</strong>, substitusi <span class="area-tag area-tag--mint">AB&#178;</span> <strong>= BD&#178; + DA&#178;</strong> dan <span class="area-tag area-tag--lavender">AC&#178;</span> <strong>= AD&#178; + DC&#178;</strong> [Prop. 1.47] menghasilkan:</span>
+                <span><strong>Pythagoras (Prop. 1.47):</strong> Pada kedua segitiga siku-siku bertinggi <strong>h</strong>, substitusi <span class="area-tag area-tag--mint">c&#178; = d&#178; + h&#178;</span> dan <span class="area-tag area-tag--lavender">b&#178; = (a &minus; d)&#178; + h&#178;</span> [Prop. 1.47] menghasilkan:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">CB&#178; + BA&#178;</span>
-              <span>= AC&#178; + 2&middot;(CB&middot;BD)</span>
-              <span class="prop1-equation-cont">&there4; AC&#178; = CB&#178; + BA&#178; &minus; 2&middot;(CB&middot;BD)</span>
+              <span class="prop1-equation-label">a&#178; + c&#178;</span>
+              <span>= b&#178; + 2ad</span>
+              <span class="prop1-equation-cont">&there4; b&#178; = a&#178; + c&#178; &minus; 2ad</span>
             </div>
           </div>
 
@@ -3933,23 +3957,23 @@
             <div class="diagram-grid-card pair-diagram-card">
               <div class="diagram-inner-frame">
                 <svg role="img" viewBox="0 0 320 274">
-                  <title>Diagram pembuktian Proposisi 13: segitiga lancip ABC dengan puncak A, garis tinggi AD tegak lurus alas BC di D, dan sudut B lancip</title>
-                  <!-- Shaded triangles ABD (Mint) and ADC (Lavender) -->
+                  <title>Diagram pembuktian Proposisi 13: segitiga lancip bersisi a, b, c dengan garis tinggi h tegak lurus alas a sehingga terbagi menjadi d dan a kurang d</title>
+                  <!-- Shaded right triangles (Mint) and (Lavender) -->
                   <polygon points="48,202 108,202 108,66" fill="#CCF5E1" opacity="0.72"/>
                   <polygon points="108,202 272,202 108,66" fill="#E6DCFF" opacity="0.78"/>
 
-                  <!-- Right-angle marker at D and acute angle arc at B -->
+                  <!-- Right-angle marker and acute angle arc -->
                   <polyline points="120,202 120,190 108,190" fill="none" stroke="#5C76D8" stroke-width="2.1"/>
                   <path d="M 70 202 A 22 22 0 0 0 56.9 181.9" fill="none" stroke="#FF7E79" stroke-width="2.2"/>
 
-                  <!-- Altitude AD -->
+                  <!-- Altitude h -->
                   <line x1="108" y1="66" x2="108" y2="202" stroke="#5C76D8" stroke-width="2.6"/>
 
-                  <!-- Main acute triangle ABC outline -->
+                  <!-- Main acute triangle outline -->
                   <polygon points="108,66 48,202 272,202" fill="none" stroke="#232652" stroke-width="2.9" stroke-linejoin="round"/>
 
                   <!-- Acute angle indicator -->
-                  <text x="224" y="72" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="11.5" font-weight="800">&ang;ABC &lt; 90&deg;</text>
+                  <text x="86" y="182" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="11" font-weight="800">&lt;90&deg;</text>
 
                   <!-- Key point dots -->
                   <circle cx="48" cy="202" r="3.5" fill="#232652"/>
@@ -3957,23 +3981,29 @@
                   <circle cx="272" cy="202" r="3.5" fill="#232652"/>
                   <circle cx="108" cy="66" r="3.5" fill="#232652"/>
 
-                  <!-- Vertex labels -->
-                  <text x="108" y="52" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">A</text>
-                  <text x="44" y="224" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">B</text>
-                  <text x="108" y="224" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">D</text>
-                  <text x="274" y="224" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">C</text>
+                  <!-- Line-segment labels c, b, h, d, a - d -->
+                  <text x="66" y="128" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">c</text>
+                  <text x="200" y="125" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="17" font-weight="800">b</text>
+                  <text x="120" y="142" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="16.5" font-weight="800">h</text>
+                  <text x="78" y="219" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">d</text>
+                  <text x="190" y="219" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">a &minus; d</text>
 
-                  <text x="160" y="258" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12" font-weight="800">CB = BD + DC &middot; AC&#178; = CB&#178; + BA&#178; &minus; 2(CB &middot; BD)</text>
+                  <!-- Bottom span for full base a -->
+                  <line x1="48" y1="230" x2="272" y2="230" stroke="#5C76D8" stroke-width="1.8"/>
+                  <line x1="48" y1="226" x2="48" y2="234" stroke="#5C76D8" stroke-width="1.8"/>
+                  <line x1="272" y1="226" x2="272" y2="234" stroke="#5C76D8" stroke-width="1.8"/>
+                  <text x="160" y="245" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">alas total = a</text>
+
+                  <text x="160" y="264" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">b&#178; = a&#178; + c&#178; &minus; 2ad</text>
                 </svg>
               </div>
             </div>
 
             <div class="algebra-card pair-algebra-card">
               <p class="algebra-title">Bentuk Aljabar</p>
-              <p class="algebra-formula">AC&#178; = CB&#178; + BA&#178; &minus; 2(CB &middot; BD)</p>
-              <p class="algebra-formula algebra-formula--compact">b&#178; = a&#178; + c&#178; &minus; 2ad = a&#178; + c&#178; &minus; 2ac cos B</p>
-              <p class="algebra-formula algebra-formula--compact">(a = CB, b = AC, c = AB, d = BD = c cos B)</p>
-              <p class="algebra-formula algebra-formula--compact">(&ang;ABC &lt; 90&deg;, sudut lancip &rArr; cos B &gt; 0)</p>
+              <p class="algebra-formula">b&#178; = a&#178; + c&#178; &minus; 2ad</p>
+              <p class="algebra-formula algebra-formula--compact">c&#178; = d&#178; + h&#178; &middot; b&#178; = (a &minus; d)&#178; + h&#178;</p>
+              <p class="algebra-formula algebra-formula--compact">(alas a terpotong d, tinggi h, sudut &lt; 90&deg;)</p>
             </div>
           </div>
         </article>
@@ -4011,35 +4041,35 @@
           <h1 class="prop-badge" lang="en">Proposition 14</h1>
 
           <p class="prop1-quote">
-            &ldquo;Diberikan bangun garis lurus <strong>A</strong>; akan dikonstruksikan sebuah persegi yang luasnya tepat sama dengan bangun <strong>A</strong>.&rdquo;
+            &ldquo;Diberikan sebuah bangun datar bersisi lurus; akan dikonstruksikan sebuah persegi bersisi <strong>x</strong> yang luasnya tepat sama dengan bangun awal tersebut (<strong>x&#178; = pq</strong>).&rdquo;
           </p>
 
           <div class="prop1-proof-stack">
-            <p class="prop1-intro">Konstruksi setengah lingkaran mengubah persegi panjang perantara <strong>BD</strong> menjadi persegi <strong>EH&#178;</strong>:</p>
+            <p class="prop1-intro">Konstruksi setengah lingkaran berjari-jari <strong>r = &frac12;(p + q)</strong> mengubah persegi panjang perantara berukuran <strong>p &times; q</strong> menjadi persegi <strong>x&#178;</strong>:</p>
 
             <ol class="prop1-steps-list">
               <li>
                 <span class="step-num" aria-hidden="true">1</span>
-                <span><strong>Konstruksi BD &amp; BF:</strong> Buat persegi panjang <strong>BD</strong> sama dengan <strong>A</strong> [Prop. 1.45]; jika <strong>BE &ne; ED</strong>, perpanjang <strong>BE</strong> ke <strong>F</strong> dengan <strong>EF = ED</strong>, lalu bagi dua <strong>BF</strong> di <strong>G</strong>.</span>
+                <span><strong>Persegi Panjang pq &amp; Garis p + q:</strong> Ubah bangun awal menjadi persegi panjang seluas sama berukuran <strong>p &times; q</strong> [Prop. 1.45]; perpanjang sisi <strong>p</strong> sejauh <strong>q</strong> menjadi garis total <strong>p + q</strong>, lalu bagi dua pada pusat berjarak <strong>r = &frac12;(p + q)</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">2</span>
-                <span><strong>Setengah Lingkaran BHF:</strong> Lukis setengah lingkaran <strong>BHF</strong> berpusat di <strong>G</strong> berjari-jari <strong>GB</strong>; perpanjang <strong>DE</strong> hingga memotong lengkung di <strong>H</strong> dan hubungkan <strong>GH</strong>.</span>
+                <span><strong>Setengah Lingkaran Berjari-jari r:</strong> Lukis setengah lingkaran berdiameter <strong>p + q</strong> berjari-jari <strong>r</strong>, lalu tarik garis tegak lurus ke atas tepat dari batas antara <strong>p</strong> dan <strong>q</strong> hingga memotong busur sebagai tinggi <strong>x</strong>.</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">3</span>
-                <span><strong>Prop. 2.5 &amp; Jari-jari:</strong> Karena <strong>BF</strong> terpotong sama di <strong>G</strong> dan tak sama di <strong>E</strong>, berlaku <strong>BE&middot;EF + EG&#178; = GF&#178; = GH&#178;</strong> [Prop. 2.5].</span>
+                <span><strong>Prop. 2.5 &amp; Jari-jari r:</strong> Diameter <strong>p + q</strong> terbagi sama sebesar <strong>r</strong> dan tak sama menjadi <strong>p</strong> dan <strong>q</strong> (selisih potong = <strong>&frac12;(p &minus; q)</strong>), sehingga berlaku <strong>p&middot;q + [&frac12;(p &minus; q)]&#178; = r&#178;</strong> [Prop. 2.5].</span>
               </li>
               <li>
                 <span class="step-num" aria-hidden="true">4</span>
-                <span><strong>Pythagoras (Prop. 1.47):</strong> Pada siku-siku <strong>E</strong>, substitusi <strong>GH&#178; = HE&#178; + EG&#178;</strong> [Prop. 1.47] lalu pengurangan <strong>EG&#178;</strong> menyisakan <span class="area-tag area-tag--peach">BD</span> (= <strong>BE&middot;EF</strong>) = <span class="area-tag area-tag--mint">EH&#178;</span>:</span>
+                <span><strong>Pythagoras (Prop. 1.47):</strong> Pada segitiga siku-siku berhipotenusa jari-jari <strong>r</strong>, substitusi <strong>r&#178; = x&#178; + [&frac12;(p &minus; q)]&#178;</strong> [Prop. 1.47] menyisakan <span class="area-tag area-tag--peach">pq</span> = <span class="area-tag area-tag--mint">x&#178;</span>:</span>
               </li>
             </ol>
 
             <div class="prop1-equation">
-              <span class="prop1-equation-label">BE&middot;EF + EG&#178;</span>
-              <span>= HE&#178; + EG&#178; &rArr; BD = EH&#178;</span>
-              <span class="prop1-equation-cont">&there4; A = BD = EH&#178;</span>
+              <span class="prop1-equation-label">pq + [&frac12;(p &minus; q)]&#178;</span>
+              <span>= x&#178; + [&frac12;(p &minus; q)]&#178; &rArr; pq = x&#178;</span>
+              <span class="prop1-equation-cont">&there4; luas bangun awal = pq = x&#178;</span>
             </div>
           </div>
         </div>
@@ -4067,57 +4097,55 @@
 
             <div class="diagram-inner-frame">
               <svg role="img" viewBox="0 0 320 274">
-                <title>Diagram pembuktian Proposisi 14: bangun A setara dengan persegi panjang BD, perpanjangan EF sama dengan ED, setengah lingkaran BHF berpusat di G, dan tinggi EH sebagai sisi persegi</title>
-                <!-- Given rectilinear figure A -->
+                <title>Diagram pembuktian Proposisi 14: bangun awal setara dengan persegi panjang peach p kali q, perpanjangan sepanjang q, setengah lingkaran berjari-jari r, dan tinggi hijau x sehingga x kuadrat sama dengan p kali q</title>
+                <!-- Given rectilinear figure pq -->
                 <polygon points="32,148 54,172 32,196 10,172" fill="#E6DCFF" stroke="#232652" stroke-width="2.4" stroke-linejoin="round"/>
-                <text x="32" y="177" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14" font-weight="800">A</text>
+                <text x="32" y="177" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="13.5" font-weight="800">pq</text>
 
-                <!-- Semicircle BHF shading and Peach rectangle BD -->
+                <!-- Semicircle shading and Peach rectangle pq -->
                 <path d="M 78 134 A 104 104 0 0 1 286 134 Z" fill="#DDF3FF" opacity="0.52"/>
                 <rect x="78" y="134" width="144" height="64" fill="#FFE2CC" opacity="0.82"/>
 
-                <!-- Right-angle marker at E inside triangle GEH -->
+                <!-- Right-angle marker inside triangle -->
                 <polyline points="212,134 212,124 222,124" fill="none" stroke="#5C76D8" stroke-width="2"/>
 
-                <!-- Semicircle arc BHF, diameter BF, and rectangle outlines -->
+                <!-- Semicircle arc, diameter p + q, and rectangle outlines -->
                 <path d="M 78 134 A 104 104 0 0 1 286 134" fill="none" stroke="#5C76D8" stroke-width="2.4"/>
                 <rect x="78" y="134" width="144" height="64" fill="none" stroke="#232652" stroke-width="2.6"/>
                 <line x1="222" y1="134" x2="286" y2="134" stroke="#232652" stroke-width="2.4"/>
 
-                <!-- Radius GH and constructed square side EH -->
+                <!-- Radius r and constructed square side x -->
                 <line x1="182" y1="134" x2="222" y2="38" stroke="#5C76D8" stroke-width="2.3"/>
                 <line x1="222" y1="134" x2="222" y2="38" stroke="#2B8A62" stroke-width="3"/>
 
-                <!-- Interior label BD cleanly left of midpoint G -->
-                <text x="128" y="172" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="14" font-weight="800">BD</text>
+                <!-- Interior area label pq cleanly inside peach rectangle -->
+                <text x="150" y="172" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="16" font-weight="800">pq</text>
 
-                <!-- Key points B, G, E, F, H -->
+                <!-- Key points: left end, circle center, cut point, right end, arc intersection -->
                 <circle cx="78" cy="134" r="3.4" fill="#232652"/>
                 <circle cx="182" cy="134" r="3.6" fill="#5C76D8"/>
                 <circle cx="222" cy="134" r="4" fill="#FF9C97" stroke="#232652" stroke-width="1.4"/>
                 <circle cx="286" cy="134" r="3.4" fill="#232652"/>
                 <circle cx="222" cy="38" r="3.8" fill="#2B8A62"/>
 
-                <!-- Vertex labels kept clear of lines -->
-                <text x="72" y="124" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">B</text>
-                <text x="182" y="152" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15" font-weight="800">G</text>
-                <text x="234" y="151" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15" font-weight="800">E</text>
-                <text x="296" y="148" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">F</text>
-                <text x="232" y="29" text-anchor="middle" fill="#2B8A62" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">H</text>
-                <text x="78" y="216" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">C</text>
-                <text x="222" y="216" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">D</text>
+                <!-- Line-segment labels kept clear of lines -->
+                <text x="128" y="126" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">p</text>
+                <text x="254" y="126" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">q</text>
+                <text x="234" y="170" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15" font-weight="800">q</text>
+                <text x="191" y="84" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">r</text>
+                <text x="234" y="88" text-anchor="middle" fill="#2B8A62" font-family="Nunito, sans-serif" font-size="16.5" font-weight="800">x</text>
+                <text x="150" y="217" text-anchor="middle" fill="#2b2d5c" font-family="Nunito, sans-serif" font-size="15.5" font-weight="800">p</text>
 
-                <text x="160" y="258" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12" font-weight="800">EF = ED &middot; BD = BE &middot; EF = EH&#178; &middot; x = &radic;(pq)</text>
+                <text x="160" y="256" text-anchor="middle" fill="#5C76D8" font-family="Nunito, sans-serif" font-size="12.5" font-weight="800">r = &frac12;(p + q) &middot; x&#178; = p&middot;q &hArr; x = &radic;(pq)</text>
               </svg>
             </div>
           </div>
 
           <div class="algebra-card">
             <p class="algebra-title">Bentuk Aljabar</p>
-            <p class="algebra-formula">BD = BE &middot; EF = EH&#178; &nbsp;(EF = ED)</p>
             <p class="algebra-formula">x&#178; = p &middot; q &hArr; x = &radic;(pq)</p>
             <p class="algebra-formula algebra-formula--compact">[(p + q)/2]&#178; &minus; [(p &minus; q)/2]&#178; = pq</p>
-            <p class="algebra-formula algebra-formula--compact">(p = BE, q = ED, x = EH, r = (p + q)/2)</p>
+            <p class="algebra-formula algebra-formula--compact">(jari-jari r = &frac12;(p + q), bangun awal seluas pq)</p>
           </div>
         </div>
       </section>
